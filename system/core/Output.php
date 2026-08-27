@@ -1,5 +1,10 @@
 <?php
 /**
+ * 输出类是个核心类，它的功能只有一个：发送 Web页面内容到请求的浏览器。
+ * 如果你开启缓存，它也负责缓存你的 Web页面。
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 输出类是个核心类，它的功能只有一个：发送 Web页面内容到请求的浏览器。
- * 如果你开启缓存，它也负责缓存你的 Web页面。
- */
  
 /**
  * Output Class
@@ -132,6 +132,7 @@ class CI_Output {
 
 	/**
 	 * Parse markers flag
+	 * 解析标记标志
 	 *
 	 * Whether or not to parse variables like {elapsed_time} and {memory_usage}.
 	 *

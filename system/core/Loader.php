@@ -1,5 +1,11 @@
 <?php
 /**
+ * 加载器，加载入Controller.php
+ * 是用于加载元素的，加载的元素可以是库（类），视图文件，驱动器，辅助函数，
+ * 模型或其他自己的函数。
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,12 +42,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 加载器，加载入Controller.php
- * 是用于加载元素的，加载的元素可以是库（类），视图文件，驱动器，辅助函数，
- * 模型或其他自己的函数。
- */
  
 /**
  * Loader Class
@@ -145,8 +145,10 @@ class CI_Loader {
 
 	/**
 	 * Class constructor
+	 * 构造函数
 	 *
 	 * Sets component load paths, gets the initial output buffering level.
+	 * 设置组件加载路径，获取初始输出缓冲级别。
 	 *
 	 * @return	void
 	 */
@@ -162,6 +164,7 @@ class CI_Loader {
 
 	/**
 	 * Initializer
+	 * 初始化程序
 	 *
 	 * @todo	Figure out a way to move this to the constructor
 	 *		without breaking *package_path*() methods.

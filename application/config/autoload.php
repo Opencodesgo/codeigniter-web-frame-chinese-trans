@@ -3,8 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-| AUTO-LOADER
-| 自动加载
+| AUTO-LOADER	自动加载
 | -------------------------------------------------------------------
 | This file specifies which systems should be loaded by default.
 |
@@ -16,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | request.
 |
 | -------------------------------------------------------------------
-| Instructions
+| Instructions	说明
 | -------------------------------------------------------------------
 |
 | These are the things you can load automatically:
@@ -35,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Packages
+|  Auto-load Packages	自动加载包
 | -------------------------------------------------------------------
 | Prototype:
 |
@@ -46,7 +45,7 @@ $autoload['packages'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Libraries
+|  Auto-load Libraries	自动加载类
 | -------------------------------------------------------------------
 | These are the classes located in system/libraries/ or your
 | application/libraries/ directory, with the addition of the
@@ -65,7 +64,7 @@ $autoload['libraries'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Drivers
+|  Auto-load Drivers	自动加载驱动
 | -------------------------------------------------------------------
 | These classes are located in system/libraries/ or in your
 | application/libraries/ directory, but are also placed inside their
@@ -86,7 +85,7 @@ $autoload['drivers'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Helper Files
+|  Auto-load Helper Files	自动加载帮助文件
 | -------------------------------------------------------------------
 | Prototype:
 |
@@ -96,7 +95,7 @@ $autoload['helper'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Config files
+|  Auto-load Config files	自动加载配置文件
 | -------------------------------------------------------------------
 | Prototype:
 |
@@ -110,7 +109,7 @@ $autoload['config'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Language files
+|  Auto-load Language files	自动加载语言文件
 | -------------------------------------------------------------------
 | Prototype:
 |
@@ -124,7 +123,7 @@ $autoload['language'] = array();
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Models
+|  Auto-load Models	自动加载模型
 | -------------------------------------------------------------------
 | Prototype:
 |

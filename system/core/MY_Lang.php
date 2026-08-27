@@ -1,4 +1,7 @@
 <?php
+/**
+ * 语言类扩展类，主要提供对扩展语言的支持。
+ */
 
 /**
  * CodeIgniter
@@ -37,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 语言类扩展类，主要提供对扩展语言的支持。
- */
 
 /**
  * Language Class extension.

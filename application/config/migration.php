@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
-| Enable/Disable Migrations
+| Enable/Disable Migrations		启用/禁用迁移
 |--------------------------------------------------------------------------
 |
 | Migrations are disabled by default for security reasons.
@@ -15,7 +15,7 @@ $config['migration_enabled'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
-| Migration Type
+| Migration Type	迁移类型
 |--------------------------------------------------------------------------
 |
 | Migration file names may be based on a sequential identifier or on
@@ -33,7 +33,7 @@ $config['migration_type'] = 'timestamp';
 
 /*
 |--------------------------------------------------------------------------
-| Migrations table
+| Migrations table		迁移表
 |--------------------------------------------------------------------------
 |
 | This is the name of the table that will store the current migrations state.
@@ -47,7 +47,7 @@ $config['migration_table'] = 'migrations';
 
 /*
 |--------------------------------------------------------------------------
-| Auto Migrate To Latest
+| Auto Migrate To Latest	自动迁移到最新的
 |--------------------------------------------------------------------------
 |
 | If this is set to TRUE when you load the migrations class and have
@@ -61,7 +61,7 @@ $config['migration_auto_latest'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
-| Migrations version
+| Migrations version	迁移版本
 |--------------------------------------------------------------------------
 |
 | This is used to set migration version that the file system should be on.
@@ -73,7 +73,7 @@ $config['migration_version'] = 0;
 
 /*
 |--------------------------------------------------------------------------
-| Migrations Path
+| Migrations Path	迁移路径
 |--------------------------------------------------------------------------
 |
 | Path to your migrations folder.

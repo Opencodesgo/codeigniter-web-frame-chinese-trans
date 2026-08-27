@@ -1,5 +1,13 @@
 <?php
 /**
+ * CI框架Router路由类将URI映射到对应的控制器及方法，Router类大量代码处理的是自定义路由
+ * 该类主要提供以下几个功能点：
+ * 1、自定义路由规则
+ * 2、支持回调函数
+ * 3、支持使用HTTP动态
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,14 +44,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * CI框架Router路由类将URI映射到对应的控制器及方法，Router类大量代码处理的是自定义路由
- * 该类主要提供以下几个功能点：
- * 1、自定义路由规则
- * 2、支持回调函数
- * 3、支持使用HTTP动态
- */
 
 /**
  * Router Class

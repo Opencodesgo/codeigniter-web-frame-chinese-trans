@@ -1,5 +1,10 @@
 <?php
 /**
+ * 日志记录类
+ * 只用于记录 CI框架信息的一些操作日志（错误日志、调试日志、信息日志等等）。
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 日志记录类
- * 只用于记录 CI框架信息的一些操作日志（错误日志、调试日志、信息日志等等）。
- */
  
 /**
  * Logging Class

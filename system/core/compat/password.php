@@ -1,5 +1,10 @@
 <?php
 /**
+ * 系统，核心，密码
+ * 兼容性密码处理，加载入CodeIgniter.php
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 兼容性密码处理，加载入CodeIgniter.php
- */
 
 /**
  * PHP ext/standard/password compatibility package

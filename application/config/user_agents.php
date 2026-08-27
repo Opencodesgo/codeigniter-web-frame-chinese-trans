@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-| USER AGENT TYPES
+| USER AGENT TYPES	用户代理类型
 | -------------------------------------------------------------------
 | This file contains four arrays of user agent data. It is used by the
 | User Agent Class to help identify browser, platform, robot, and

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Blog
+ */
 
 class Blog extends CI_Controller {
 	

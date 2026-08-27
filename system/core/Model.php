@@ -1,5 +1,9 @@
 <?php
 /**
+ * 模型类文件
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 模型类文件
- */
  
 /**
  * Model Class
@@ -55,6 +55,7 @@ class CI_Model {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @link	https://github.com/bcit-ci/CodeIgniter/issues/5332
 	 * @return	void
@@ -66,6 +67,7 @@ class CI_Model {
 	 *
 	 * Allows models to access CI's loaded classes using the same
 	 * syntax as controllers.
+	 * 允许模型使用相同的方法访问CI加载的类
 	 *
 	 * @param	string	$key
 	 */

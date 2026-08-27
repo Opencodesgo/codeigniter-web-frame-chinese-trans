@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-| SMILEYS
+| SMILEYS	笑脸
 | -------------------------------------------------------------------
 | This file contains an array of smileys for use with the emoticon helper.
 | Individual images can be used to replace multiple smileys.  For example:

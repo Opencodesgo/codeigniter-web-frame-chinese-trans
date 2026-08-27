@@ -1,5 +1,10 @@
 <?php
 /**
+ * BenchMark 这是一个基准测试类组件。
+ * BM组件的主要功能就是记录程序的运行时间、内存使用、cpu使用等情况。
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +43,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * BenchMark 这是一个基准测试类组件。
- * BM组件的主要功能就是记录程序的运行时间、内存使用、cpu使用等情况。
- */
-
-/**
  * Benchmark Class
  * 基准类
  *
@@ -71,6 +71,7 @@ class CI_Benchmark {
 	 *
 	 * Multiple calls to this function can be made so that several
 	 * execution points can be timed.
+	 * 这个函数的多个调用都可以这样做以便执行点可以计时。
 	 *
 	 * @param	string	$name	Marker name
 	 * @return	void
@@ -133,6 +134,7 @@ class CI_Benchmark {
 	 * 内存占用
 	 *
 	 * Simply returns the {memory_usage} marker.
+	 * 简单地返回{ memory_use }标记
 	 *
 	 * This permits it to be put it anywhere in a template
 	 * without the memory being calculated until the end.

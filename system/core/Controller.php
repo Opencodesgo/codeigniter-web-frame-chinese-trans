@@ -1,5 +1,10 @@
 <?php
 /**
+ * 控制器基类文件
+ * 在这个类里通过加载其他类，实现了模型和数据库的连接
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 控制器基类文件
- * 在这个类里通过加载其他类，实现了模型和数据库的连接
- */
  
 /**
  * Application Controller Class

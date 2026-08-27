@@ -1,5 +1,11 @@
 <?php
 /**
+ * 定义了一系列的全局函数，加载入CodeIgniter.php 96
+ * 一般来说，全局函数具有最高的加载优先权，因此大多数的框架中 BootStrap引导文件都会最先引入
+ * 相当于对php内置的函数进行一些优化和补充
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,12 +42,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 定义了一系列的全局函数，加载入CodeIgniter.php 96
- * 一般来说，全局函数具有最高的加载优先权，因此大多数的框架中 BootStrap引导文件都会最先引入
- * 相当于对php内置的函数进行一些优化和补充
- */
 
 /**
  * Common Functions

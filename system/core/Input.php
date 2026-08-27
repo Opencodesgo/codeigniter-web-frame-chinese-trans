@@ -1,5 +1,15 @@
 <?php
 /**
+ * 输入类，加载入CodeIgniter.php
+ * 有两个用途：一、为了安全性，对输入数据进行预处理；二、提供了一些辅助方法来获取输入
+ * 数据并处理。并且该类由系统自动加载，你无需手工加载。
+ * 1、输入性进行过滤
+ *	安全性过渡，当访问控制器时，安全过滤方法会自动被调用
+ * 2、访问表单数据
+ *	使用 POST、GET、COOKIE 和 SERVER 数据
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,16 +46,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 输入类，加载入CodeIgniter.php
- * 有两个用途：一、为了安全性，对输入数据进行预处理；二、提供了一些辅助方法来获取输入
- * 数据并处理。并且该类由系统自动加载，你无需手工加载。
- * 1、输入性进行过滤
- *	安全性过渡，当访问控制器时，安全过滤方法会自动被调用
- * 2、访问表单数据
- *	使用 POST、GET、COOKIE 和 SERVER 数据
- */
 
 /**
  * Input Class
@@ -132,6 +132,7 @@ class CI_Input {
 
 	/**
 	 * Parsed input stream data
+	 *解析输入流数据
 	 *
 	 * Parsed from php://input at runtime
 	 *

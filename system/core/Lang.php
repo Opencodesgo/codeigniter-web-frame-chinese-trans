@@ -1,5 +1,10 @@
 <?php
 /**
+ * 语言类，加载入CodeIgniter.php
+ * 提供了一些方法用于获取语言文件和不同语言的文本来实现国际化。
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 语言类，加载入CodeIgniter.php
- * 提供了一些方法用于获取语言文件和不同语言的文本来实现国际化。
- */
 
 /**
  * Language Class

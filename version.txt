@@ -1,0 +1,6 @@
+
+CI Version:3.1.11
+PHP Version:7.4
+Start Datte:2024-05-14
+Date: 2022-11-19
+version2:1.0.0

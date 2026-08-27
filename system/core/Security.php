@@ -1,5 +1,10 @@
 <?php
 /**
+ * CI框架安全类包含了一些方法，加载入CodeIgniter.php
+ * CI框架安全类提供了全局防御 CSRF攻击和 XSS攻击策略，只需要在配置文件开启即可并提供了使用方法
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +41,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * CI框架安全类包含了一些方法，加载入CodeIgniter.php
- * CI框架安全类提供了全局防御 CSRF攻击和 XSS攻击策略，只需要在配置文件开启即可并提供了使用方法
- */
  
 /**
  * Security Class
@@ -987,6 +987,7 @@ class CI_Security {
 
 	/**
 	 * Attribute Conversion
+	 * 属性转换
 	 *
 	 * @used-by	CI_Security::xss_clean()
 	 * @param	array	$match
@@ -1001,6 +1002,7 @@ class CI_Security {
 
 	/**
 	 * Filter Attributes
+	 * 属性过滤器
 	 *
 	 * Filters tag attributes for consistency and safety.
 	 *
@@ -1027,6 +1029,7 @@ class CI_Security {
 
 	/**
 	 * HTML Entity Decode Callback
+	 * HTML实体解码回调
 	 *
 	 * @used-by	CI_Security::xss_clean()
 	 * @param	array	$match
@@ -1050,6 +1053,7 @@ class CI_Security {
 
 	/**
 	 * Do Never Allowed
+	 * 不同允许
 	 *
 	 * @used-by	CI_Security::xss_clean()
 	 * @param 	string
@@ -1071,6 +1075,7 @@ class CI_Security {
 
 	/**
 	 * Set CSRF Hash and Cookie
+	 * 设置CSRF Hash和Cookie
 	 *
 	 * @return	string
 	 */

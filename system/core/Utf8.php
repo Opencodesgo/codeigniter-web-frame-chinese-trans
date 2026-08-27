@@ -1,5 +1,9 @@
 <?php
 /**
+ * UTF8编码转换类，主要提供对UTF-8环境的支持
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * UTF8编码转换类，主要提供对UTF-8环境的支持
- */
 
 /**
  * Utf8 Class
@@ -135,6 +135,7 @@ class CI_Utf8 {
 	 * Convert to UTF-8
 	 *
 	 * Attempts to convert a string to UTF-8.
+	 * 尝试转换字符串为UTF-8
 	 *
 	 * @param	string	$str		Input string
 	 * @param	string	$encoding	Input encoding

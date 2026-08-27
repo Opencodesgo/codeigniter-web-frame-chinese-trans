@@ -1,5 +1,15 @@
 <?php
 /**
+ * CodeIgniter这是一个核心文件，与框架同名，是一个初始化文件
+ * 一共完成以下几种工作
+ * 1、加载框架常量、函数库以及框架初始化
+ * 2、加载核心类组件
+ * 3、路由的设置与判断
+ * 4、解析请求的类，并调用请求的方法
+ * 5、输出
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,16 +46,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * CodeIgniter这是一个核心文件，与框架同名，是一个初始化文件
- * 一共完成以下几种工作
- * 1、加载框架常量、函数库以及框架初始化
- * 2、加载核心类组件
- * 3、路由的设置与判断
- * 4、解析请求的类，并调用请求的方法
- * 5、输出
- */
 
 /**
  * System Initialization File
@@ -366,6 +366,7 @@ if ( ! is_php('5.4'))
 /*
  * -----------------------------------------------------
  * Load the security class for xss and csrf support
+ * 为xss和csrf支持加载安全类
  * -----------------------------------------------------
  */
 	$SEC =& load_class('Security', 'core');
@@ -424,7 +425,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Sanity checks
+ *  Sanity checks	理智检查
  * ------------------------------------------------------
  *
  *  The Router class has already validated the request,
@@ -477,6 +478,7 @@ if ( ! is_php('5.4'))
 		}
 		/**
 		 * DO NOT CHANGE THIS, NOTHING ELSE WORKS!
+		 * 不要改变这个,没有别的工作!
 		 *
 		 * - method_exists() returns true for non-public methods, which passes the previous elseif
 		 * - is_callable() returns false for PHP 4-style constructors, even if there's a __construct()
@@ -534,6 +536,7 @@ if ( ! is_php('5.4'))
 		}
 
 		// Did we reset the $e404 flag? If so, set the rsegments, starting from index 1
+		// 我们重置了$e404标志吗?如果是这样,设置r分段,从索引1开始
 		if ( ! $e404)
 		{
 			$class = $error_class;

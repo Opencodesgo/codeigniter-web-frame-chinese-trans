@@ -1,5 +1,9 @@
 <?php
 /**
+ * 此类包含允许管理配置文件的函数
+ */
+ 
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 此类包含允许管理配置文件的函数
- */
 
 /**
  * Config Class

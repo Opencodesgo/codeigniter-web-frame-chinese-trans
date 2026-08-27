@@ -1,5 +1,11 @@
 <?php
 /**
+ * URI地址解析类，主要处理地址字符串，将uri分解成对应的片断，存到segments数组中。
+ * querystring分解后存到 $_GET数组，ROUTER路由类在之后解析路由动作中，也主要依靠URI的segments
+ * 属性数组来获取当前上下文的请求URI信息。
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,12 +42,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * URI地址解析类，主要处理地址字符串，将uri分解成对应的片断，存到segments数组中。
- * querystring分解后存到 $_GET数组，ROUTER路由类在之后解析路由动作中，也主要依靠URI的segments
- * 属性数组来获取当前上下文的请求URI信息。
- */
  
 /**
  * URI Class

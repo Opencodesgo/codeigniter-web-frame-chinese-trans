@@ -35,7 +35,7 @@ defined('DIR_WRITE_MODE')  OR define('DIR_WRITE_MODE', 0755);		#目录写模式
 
 /*
 |--------------------------------------------------------------------------
-| File Stream Modes
+| File Stream Modes		文件流模式
 |--------------------------------------------------------------------------
 |
 | These modes are used when working with fopen()/popen()
@@ -53,7 +53,7 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 
 /*
 |--------------------------------------------------------------------------
-| Exit Status Codes
+| Exit Status Codes		退出状态码
 |--------------------------------------------------------------------------
 |
 | Used to indicate the conditions under which the script is exit()ing.

@@ -78,9 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<p>The corresponding controller for this page is found at:</p>
 		<code>application/controllers/Welcome.php</code>
-		
-		<p>This port is 8023, CodeIgniter source chinese trans</p>
-		<code>url <a href='http://localhost:8023/' target='_blank'>go</a></code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
