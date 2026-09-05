@@ -48,6 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * This class enables you to mark points and calculate the time difference
  * between them. Memory consumption can also be displayed.
+ * 该功能可让您标记点并计算它们之间的时差，同时还能显示内存使用情况。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
