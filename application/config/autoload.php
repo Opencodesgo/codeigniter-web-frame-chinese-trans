@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，自动加载
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*

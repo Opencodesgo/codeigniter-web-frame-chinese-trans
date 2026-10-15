@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Trackback
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * Trackback
- */
 
 /**
  * Trackback Class

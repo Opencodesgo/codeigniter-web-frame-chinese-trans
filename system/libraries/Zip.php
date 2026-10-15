@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，ZIP 编码
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,13 +40,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * ZIP 编码
- */
  
 /**
  * Zip Compression Class
+ * Zip 压缩类。
  *
  * This class is based on a library I found at Zend:
  * http://www.zend.com/codex.php?id=696&single=1
@@ -92,6 +93,7 @@ class CI_Zip {
 
 	/**
 	 * relative offset of local header
+	 * 本地标头的相对偏移量
 	 *
 	 * @var int
 	 */

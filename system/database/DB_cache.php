@@ -1,5 +1,10 @@
 <?php
 /**
+ * 系统，数据库，DB_Cache
+ * 数据库默认引入文件，加载到core/Loader.php，通过方法database
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,13 +41,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 这些需要对这个类整体功能做下说明
- */
  
 /**
  * Database Cache Class
+ * 数据库缓存类。
  *
  * @category	Database
  * @author		EllisLab Dev Team

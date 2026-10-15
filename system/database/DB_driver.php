@@ -1,5 +1,10 @@
 <?php
 /**
+ * 系统，数据库，DB_driver
+ * DB驱动核心，加载到DB.php   174行
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +43,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * DB驱动核心，加载到DB.php   174行
- */
-
-/**
  * Database Driver Class
+ * 数据库驱动类。
  *
  * This is the platform-independent base DB implementation class.
  * This class will not be called directly. Rather, the adapter

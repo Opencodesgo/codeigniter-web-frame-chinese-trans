@@ -1,9 +1,13 @@
 <?php
+/**
+ * 配置，Memcached
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
-| Memcached settings
+| Memcached settings	Memcached 设置
 | -------------------------------------------------------------------------
 | Your Memcached servers can be specified below.
 |

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，XML-RPC 类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * XML-RPC 类
- */
  
 if ( ! function_exists('xml_parser_create'))
 {

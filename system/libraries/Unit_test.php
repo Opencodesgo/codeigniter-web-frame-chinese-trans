@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，单元测试类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,13 +40,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 单元测试类
- */
  
 /**
  * Unit Testing Class
+ * 单元测试类。
  *
  * Simple testing class
  *

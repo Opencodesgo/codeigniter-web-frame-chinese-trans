@@ -1,6 +1,7 @@
 <?php
 /**
- * UTF8编码转换类，主要提供对UTF-8环境的支持
+ * 系统，核心，UTF8编码转换类
+ * 主要提供对UTF-8环境的支持
  */
 
 /**
@@ -159,6 +160,7 @@ class CI_Utf8 {
 
 	/**
 	 * Is ASCII?
+	 * 是否ASCII？ 
 	 *
 	 * Tests if a string is standard 7-bit ASCII or not.
 	 *

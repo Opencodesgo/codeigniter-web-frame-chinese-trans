@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，User-Agent 类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * User-Agent 类
- */
  
 /**
  * User Agent Class

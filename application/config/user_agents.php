@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，用户代理
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -9,6 +13,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | User Agent Class to help identify browser, platform, robot, and
 | mobile device data. The array keys are used to identify the device
 | and the array values are used to set the actual name of the item.
+| 该文件包含四个用户代理数据数组。用户代理类使用这些数组来帮助识别浏览器、平台、机器人和移动设备的数据。
+| 数组键用于标识设备，数组值则用于设置项目的实际名称。
+| 
 */
 $platforms = array(
 	'windows nt 10.0'	=> 'Windows 10',
@@ -58,6 +65,7 @@ $platforms = array(
 
 // The order of this array should NOT be changed. Many browsers return
 // multiple browser types so we want to identify the sub-type first.
+// 此数组的顺序不应被更改。由于许多浏览器会返回多种浏览器类型，因此我们需要先识别子类型。
 $browsers = array(
 	'OPR'			=> 'Opera',
 	'Flock'			=> 'Flock',
@@ -193,6 +201,7 @@ $mobiles = array(
 );
 
 // There are hundreds of bots but these are the most common.
+// 机器人有数百种，但这些是最常见的。
 $robots = array(
 	'googlebot'		=> 'Googlebot',
 	'msnbot'		=> 'MSNBot',

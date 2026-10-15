@@ -1,5 +1,6 @@
 <?php
 /**
+ * 系统，核心，安全
  * CI框架安全类包含了一些方法，加载入CodeIgniter.php
  * CI框架安全类提供了全局防御 CSRF攻击和 XSS攻击策略，只需要在配置文件开启即可并提供了使用方法
  */
@@ -100,6 +101,7 @@ class CI_Security {
 
 	/**
 	 * CSRF Hash
+	 * CSRF散列。
 	 *
 	 * Random hash for Cross Site Request Forgery protection cookie
 	 *

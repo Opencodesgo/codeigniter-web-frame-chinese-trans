@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，DB_query_builder
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,13 +42,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 这些需要对这个类整体功能做下说明
- */
-
-/**
  * Query Builder Class
+ * 查询生成器类。
  *
  * This is the platform-independent base Query Builder implementation class.
+ * 这是独立于平台的基本Query Builder实现类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers

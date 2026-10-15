@@ -1,5 +1,10 @@
 <?php
 /**
+ * 系统，数据库，DB
+ * 数据库默认引入文件，加载到core/Loader.php，通过方法database
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,12 +43,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 数据库默认引入文件，加载到core/Loader.php，通过方法database
- */
-
-/**
  * Initialize the database
- * 初始化数据库
+ * 初始化数据库。
  *
  * @category	Database
  * @author	EllisLab Dev Team

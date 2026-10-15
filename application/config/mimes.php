@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，MIME
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -7,6 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | -------------------------------------------------------------------
 | This file contains an array of mime types.  It is used by the
 | Upload class to help identify allowed file types.
+| 该文件包含一组 MIME 类型，Upload 类使用它来帮助识别允许的文件类型。
 |
 */
 return array(

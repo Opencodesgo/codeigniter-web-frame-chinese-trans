@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，DB_utility
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,12 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 数据库公共操作类
- */
-
-/**
  * Database Utility Class
- * 数据库公共类
+ * 数据库公共类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -53,6 +53,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Database object
+	 * 数据库对象
 	 *
 	 * @var	object
 	 */

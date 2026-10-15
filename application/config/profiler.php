@@ -1,9 +1,13 @@
 <?php
+/**
+ * 配置，分析器
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
-| Profiler Sections		剖面截面
+| Profiler Sections		分析器部分
 | -------------------------------------------------------------------------
 | This file lets you determine whether or not various sections of Profiler
 | data are displayed when the Profiler is enabled.

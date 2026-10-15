@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，路由
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -22,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	https://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
-| RESERVED ROUTES	预定航线
+| RESERVED ROUTES	预定路由
 | -------------------------------------------------------------------------
 |
 | There are three reserved routes:

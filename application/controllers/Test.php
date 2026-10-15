@@ -1,4 +1,7 @@
 <?php
+/**
+ * 控制器，测试
+ */
 
 class Test extends CI_Controller {
 	

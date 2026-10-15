@@ -1,9 +1,13 @@
 <?php
+/**
+ * 配置，常量
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
-| Display Debug backtrace
+| Display Debug backtrace	显示调试回溯
 |--------------------------------------------------------------------------
 |
 | If set to TRUE, a backtrace will be displayed along with php errors. If
@@ -12,11 +16,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | 返回php的错误提示
 |
 */
-defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);	#显示调试跟踪
+defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);	
 
 /*
 |--------------------------------------------------------------------------
-| File and Directory Modes
+| File and Directory Modes	文件和目录模式
 |--------------------------------------------------------------------------
 |
 | These prefs are used when checking and setting modes when working

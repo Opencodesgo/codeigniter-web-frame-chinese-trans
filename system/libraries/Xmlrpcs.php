@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，XML-RPC 类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -47,10 +51,6 @@ if ( ! class_exists('CI_Xmlrpc', FALSE))
 	show_error('You must load the Xmlrpc class before loading the Xmlrpcs class in order to create a server.');
 }
 
-/**
- * XML-RPC 类
- */
-
 // ------------------------------------------------------------------------
 
 /**
@@ -66,6 +66,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Array of methods mapped to function names and signatures
+	 * 映射到函数名和签名的方法数组
 	 *
 	 * @var array
 	 */

@@ -1,9 +1,13 @@
 <?php
+/**
+ * 配置，外键字符
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-| Foreign Characters
+| Foreign Characters	外键字符
 | -------------------------------------------------------------------
 | This file contains an array of foreign characters for transliteration
 | conversion used by the Text helper

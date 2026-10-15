@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，doctypes
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $_doctypes = array(

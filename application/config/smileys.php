@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，SMILEYS
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*

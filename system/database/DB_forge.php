@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，DB_forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,12 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 数据库制造类
- */
-
-/**
  * Database Forge Class
- * 数据库制造类
+ * 数据库制造类。
  *
  * @category	Database
  * @author		EllisLab Dev Team

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，DB_result
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 这些需要对这个类整体功能做下说明
- */
-
-/**
  * Database Result Class
+ * 数据库结果类。
  *
  * This is the platform-independent result class.
  * This class will not be called directly. Rather, the adapter
@@ -56,6 +57,7 @@ class CI_DB_result {
 
 	/**
 	 * Connection ID
+	 * 连接ID
 	 *
 	 * @var	resource|object
 	 */

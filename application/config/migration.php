@@ -1,4 +1,8 @@
 <?php
+/**
+ * 配置，迁移
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -9,6 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Migrations are disabled by default for security reasons.
 | You should enable migrations whenever you intend to do a schema migration
 | and disable it back when you're done.
+| 出于安全考虑，默认情况下迁移功能已禁用。
+| 当您需要执行模式迁移时，应启用迁移功能，完成后则将其关闭。
 |
 */
 $config['migration_enabled'] = FALSE;

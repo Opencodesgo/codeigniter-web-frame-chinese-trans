@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog
+ * 控制器，Blog
  */
 
 class Blog extends CI_Controller {

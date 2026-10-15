@@ -1,9 +1,13 @@
 <?php
+/**
+ * 配置，数据库
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-| DATABASE CONNECTIVITY SETTINGS
+| DATABASE CONNECTIVITY SETTINGS	数据库连接设置
 | -------------------------------------------------------------------
 | This file will contain the settings needed to access your database.
 |

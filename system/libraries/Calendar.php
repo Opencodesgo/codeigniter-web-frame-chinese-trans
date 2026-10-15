@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，日历
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,14 +42,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 日历
- */
-
-/**
  * CodeIgniter Calendar Class
- * 日历类，可以创建日历
+ * 日历类，可以创建日历。
  *
  * This class enables the creation of calendars
+ * 这个类支持创建日历。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -57,6 +58,7 @@ class CI_Calendar {
 
 	/**
 	 * Calendar layout template
+	 * 日历布局模板
 	 *
 	 * @var mixed
 	 */

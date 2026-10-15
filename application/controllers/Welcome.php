@@ -1,4 +1,8 @@
 <?php
+/**
+ * 控制器，Welcome
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {

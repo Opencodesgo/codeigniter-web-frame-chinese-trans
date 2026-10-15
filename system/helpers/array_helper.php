@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，数组相关函数
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,10 +42,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 数组相关函数
- */
-
-/**
  * CodeIgniter Array Helpers
  *
  * @package		CodeIgniter
@@ -57,10 +57,11 @@ if ( ! function_exists('element'))
 {
 	/**
 	 * Element
-	 * 元素，返回值
+	 * 元素，返回值。
 	 *
 	 * Lets you determine whether an array index is set and whether it has a value.
 	 * If the element is empty it returns NULL (or whatever you specify as the default value.)
+	 * 让您确定是否设置了数组索引以及它是否具有值。
 	 *
 	 * @param	string
 	 * @param	array
