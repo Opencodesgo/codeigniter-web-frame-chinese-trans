@@ -65,6 +65,7 @@ class CI_DB_result {
 
 	/**
 	 * Result ID
+	 * 结果ID
 	 *
 	 * @var	resource|object
 	 */

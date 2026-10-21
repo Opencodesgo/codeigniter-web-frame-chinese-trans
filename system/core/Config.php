@@ -1,6 +1,6 @@
 <?php
 /**
- * 此类包含允许管理配置文件的函数
+ * 系统，核心，配置
  */
  
 /**
@@ -43,9 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Config Class
- * 配置类
+ * 配置类。
  *
  * This class contains functions that enable config files to be managed
+ * 这个类包含可以管理配置文件的函数。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -84,9 +85,10 @@ class CI_Config {
 
 	/**
 	 * Class constructor
-	 * 类结构化
+	 * 类结构化。
 	 *
 	 * Sets the $config data from the primary config.php file as a class variable.
+	 * 将主config.php文件中的$config数据设置为类变量。
 	 *
 	 * @return	void
 	 */
@@ -245,6 +247,7 @@ class CI_Config {
 
 	/**
 	 * Site URL
+	 * 站点地址。
 	 *
 	 * Returns base_url . index_page [. uri_string]
 	 *
@@ -308,6 +311,7 @@ class CI_Config {
 
 	/**
 	 * Base URL
+	 * 基本URL。
 	 *
 	 * Returns base_url [. uri_string]
 	 *
@@ -341,6 +345,7 @@ class CI_Config {
 
 	/**
 	 * Build URI string
+	 * 构建URI字符串
 	 *
 	 * @used-by	CI_Config::site_url()
 	 * @used-by	CI_Config::base_url()
@@ -367,6 +372,7 @@ class CI_Config {
 
 	/**
 	 * System URL
+	 * 系统URL
 	 *
 	 * @deprecated	3.0.0	Encourages insecure practices
 	 * @return	string
@@ -381,6 +387,7 @@ class CI_Config {
 
 	/**
 	 * Set a config file item
+	 * 设置一个配置文件项
 	 *
 	 * @param	string	$item	Config item key
 	 * @param	string	$value	Config item value

@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，文件上传类
  */
 
 /**
@@ -40,13 +40,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 文件上传类
- */
  
 /**
  * File Uploading Class
+ * 文件上传类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -106,6 +103,7 @@ class CI_Upload {
 
 	/**
 	 * Maximum duplicate filename increment ID
+	 * 最大重复文件名增量ID
 	 *
 	 * @var	int
 	 */
@@ -121,6 +119,7 @@ class CI_Upload {
 
 	/**
 	 * Temporary filename
+	 * 临时文件名
 	 *
 	 * @var	string
 	 */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，加密
  */
 
 /**
@@ -40,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 加密
- */
 
 /**
  * CodeIgniter Encryption Class

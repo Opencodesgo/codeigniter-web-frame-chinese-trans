@@ -46,9 +46,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 /**
  * URI Class
- * URI 类，同Router类一起使用
+ * URI 类，同Router类一起使用。
  *
  * Parses URIs and determines routing
+ * 解析uri并确定路由。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries

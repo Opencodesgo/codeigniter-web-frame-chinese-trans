@@ -77,6 +77,7 @@ class MY_Lang extends CI_Lang {
 
 	/**
 	 * Refactor: base language provided inside system/language
+	 * 重构：系统/语言内部提供的基本语言
 	 * 
 	 * @var string
 	 */
@@ -84,6 +85,7 @@ class MY_Lang extends CI_Lang {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @return	void
 	 */

@@ -190,6 +190,7 @@ if ( ! function_exists('hash_pbkdf2'))
 
 		// Pre-hash password inputs longer than the algorithm's block size
 		// (i.e. prepare HMAC key) to mitigate potential DoS attacks.
+		// 对长度超过算法块大小的密码输入进行预哈希处理（即生成HMAC密钥），以缓解潜在的DoS攻击。
 		static $block_sizes;
 		empty($block_sizes) && $block_sizes = array(
 			'gost' => 32,
@@ -252,6 +253,7 @@ if ( ! function_exists('hash_pbkdf2'))
 		}
 
 		// This is not RFC-compatible, but we're aiming for natural PHP compatibility
+		// 这不是rfc兼容的，但我们的目标是自然的PHP兼容性。
 		if ( ! $raw_output)
 		{
 			$hash = bin2hex($hash);

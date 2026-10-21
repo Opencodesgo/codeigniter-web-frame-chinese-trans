@@ -46,9 +46,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Common Functions
- * 公共函数，加载入CodeIgniter.php
+ * 公共函数，加载入CodeIgniter.php。
  *
  * Loads the base classes and executes the request.
+ * 加载基类并执行请求。
  *
  * @package		CodeIgniter
  * @subpackage	CodeIgniter
@@ -419,6 +420,7 @@ if ( ! function_exists('is_cli'))
 	 * 是否是CLI客户端，这个用得少
 	 *
 	 * Test to see if a request was made from the command line.
+	 * 测试是否从命令行发出请求。
 	 *
 	 * @return 	bool
 	 */
@@ -442,7 +444,7 @@ if ( ! function_exists('show_error'))
 	 * in application/views/errors/error_general.php
 	 * This function will send the error page directly to the
 	 * browser and exit.
-	 * 这个函数让我们调用异常类且显示错误至浏览器
+	 * 这个函数让我们调用异常类且显示错误至浏览器。
 	 *
 	 * @param	string
 	 * @param	int
@@ -636,7 +638,7 @@ if ( ! function_exists('_error_handler'))
 {
 	/**
 	 * Error Handler
-	 * 错误处理子方法
+	 * 错误处理子方法。
 	 *
 	 * This is the custom error handler that is declared at the (relative)
 	 * top of CodeIgniter.php. The main reason we use this is to permit
@@ -645,6 +647,7 @@ if ( ! function_exists('_error_handler'))
 	 * intercepts PHP errors, however, we also need to display errors
 	 * based on the current error_reporting level.
 	 * We do that with the use of a PHP error template.
+	 * 这是在 CodeIgniter.php 文件（相对）顶部声明的自定义错误处理程序。
 	 *
 	 * @param	int	$severity
 	 * @param	string	$message
@@ -701,11 +704,12 @@ if ( ! function_exists('_exception_handler'))
 {
 	/**
 	 * Exception Handler
-	 * 异常处理子方法
+	 * 异常处理子方法。
 	 *
 	 * Sends uncaught exceptions to the logger and displays them
 	 * only if display_errors is On so that they don't show up in
 	 * production environments.
+	 * 将未捕获的异常发送到日志器，并仅在 display_errors 为开启时显示，以防止其出现在生产环境中。
 	 *
 	 * @param	Exception	$exception
 	 * @return	void
@@ -838,6 +842,7 @@ if ( ! function_exists('_stringify_attributes'))
 {
 	/**
 	 * Stringify attributes for use in HTML tags.
+	 * 对HTML标签中使用的属性进行字符串化。
 	 *
 	 * Helper function used to convert a string, array, or object
 	 * of attributes to a string.

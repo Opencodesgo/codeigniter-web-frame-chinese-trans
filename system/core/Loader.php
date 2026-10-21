@@ -62,6 +62,7 @@ class CI_Loader {
 	// All these are set automatically. Don't mess with them.
 	/**
 	 * Nesting level of the output buffering mechanism
+	 * 输出缓冲机制的嵌套级别
 	 *
 	 * @var	int
 	 */

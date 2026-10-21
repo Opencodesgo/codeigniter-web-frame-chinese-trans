@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysql，mysql 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQL Result Class
+ * MySQL结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *

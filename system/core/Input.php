@@ -50,9 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Input Class
- * 输入类
+ * 输入类。
  *
  * Pre-processes global input data for security
+ * 为了安全，预处理全局输入数据。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -72,9 +73,10 @@ class CI_Input {
 
 	/**
 	 * Allow GET array flag
-	 * 允许得到数组标记
+	 * 允许得到数组标记。
 	 *
 	 * If set to FALSE, then $_GET will be set to an empty array.
+	 * 如果设置为FALSE，则$_GET将设置为空数组。
 	 *
 	 * @var	bool
 	 */
@@ -256,6 +258,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the GET array
+	 * 从GET数组中获取一个项
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -270,6 +273,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the POST array
+	 * 从POST数组中获取一个项目
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_POST
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -284,6 +288,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from POST data with fallback to GET
+	 * 从POST数据中获取项目，并回退到GET。
 	 *
 	 * @param	string	$index		Index for item to be fetched from $_POST or $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -300,6 +305,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from GET data with fallback to POST
+	 * 从回退到POST的GET数据中获取项
 	 *
 	 * @param	string	$index		Index for item to be fetched from $_GET or $_POST
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -316,6 +322,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the COOKIE array
+	 * 从COOKIE数组中获取一个项
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_COOKIE
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering

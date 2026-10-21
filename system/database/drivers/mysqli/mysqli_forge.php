@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysqli，mysqli forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * mysqli Forge
- */
-
 
 /**
  * MySQLi Forge Class

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，日期助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 日期相关函数
- */
-
-/**
  * CodeIgniter Date Helpers
+ * 日期助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -92,6 +93,7 @@ if ( ! function_exists('mdate'))
 {
 	/**
 	 * Convert MySQL Style Datecodes
+	 * 转换MySQL样式日期码。
 	 *
 	 * This function is identical to PHPs date() function,
 	 * except that it allows date codes to be formatted using

@@ -50,10 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * System Initialization File
- * 系统初始化文件
+ * 系统初始化文件。
  *
  * Loads the base classes and executes the request.
- * 加载基础类并执行请求
+ * 加载基础类并执行请求。
  *
  * @package		CodeIgniter
  * @subpackage	CodeIgniter
@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Version
+ * CodeIgniter 版本。
  *
  * @var	string
  *
@@ -324,7 +325,7 @@ if ( ! is_php('5.4'))
 	
 /*
  * ------------------------------------------------------
- *  Instantiate the UTF-8 class
+ *  Instantiate the UTF-8 class	实例化UTF-8类
  * ------------------------------------------------------
  */
 	$UNI =& load_class('Utf8', 'core');
@@ -332,7 +333,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Instantiate the URI class
+ *  Instantiate the URI class	实例化URI类
  * ------------------------------------------------------
  */
 	$URI =& load_class('URI', 'core');
@@ -340,7 +341,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Instantiate the routing class and set the routing
+ *  Instantiate the routing class and set the routing	实例化路由类并设置路由
  * ------------------------------------------------------
  */
 	$RTR =& load_class('Router', 'core', isset($routing) ? $routing : NULL);
@@ -348,7 +349,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Instantiate the output class
+ *  Instantiate the output class	实例化输出类
  * ------------------------------------------------------
  */
 	$OUT =& load_class('Output', 'core');
@@ -357,6 +358,7 @@ if ( ! is_php('5.4'))
 /*
  * ------------------------------------------------------
  *	Is there a valid cache file? If so, we're done...
+ *  是否存在有效的缓存文件？如果是这样，我们就完成了……
  * ------------------------------------------------------
  */
 	if ($EXT->call_hook('cache_override') === FALSE && $OUT->_display_cache($CFG, $URI) === TRUE)
@@ -376,6 +378,7 @@ if ( ! is_php('5.4'))
 /*
  * ------------------------------------------------------
  *  Load the Input class and sanitize globals
+ *  加载Input类并清理全局变量
  * ------------------------------------------------------
  */
 	$IN	=& load_class('Input', 'core');
@@ -383,7 +386,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Load the Language class
+ *  Load the Language class	加载语言类
  * ------------------------------------------------------
  */
 	$LANG =& load_class('Lang', 'core');
@@ -431,6 +434,7 @@ if ( ! is_php('5.4'))
  *
  *  The Router class has already validated the request,
  *  leaving us with 3 options here:
+ *  路由器类已经验证了请求，现在我们有以下三种选择：
  *
  *	1) an empty class name, if we reached the default
  *	   controller, but it didn't exist;
@@ -568,7 +572,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Instantiate the requested controller
+ *  Instantiate the requested controller	实例化请求的控制器
  * ------------------------------------------------------
  */
 	// Mark a start point so we can benchmark the controller

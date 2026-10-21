@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，助手，数组相关函数
+ * 系统，助手，数组助手
  */
 
 /**
@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Array Helpers
+ * 数组助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers

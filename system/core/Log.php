@@ -81,6 +81,7 @@ class CI_Log {
 
 	/**
 	 * Array of threshold levels to log
+	 * 要记录的阈值级别数组
 	 *
 	 * @var array
 	 */
@@ -211,6 +212,7 @@ class CI_Log {
 		{
 			$newfile = TRUE;
 			// Only add protection to php files
+			// 只对php文件添加保护
 			if ($this->_file_ext === 'php')
 			{
 				$message .= "<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>\n\n";

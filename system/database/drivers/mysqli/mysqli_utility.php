@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysqli，mysqli 工具类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,11 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * mysqli utility
- * MySQLi 公共类
- */
 
 /**
  * MySQLi Utility Class

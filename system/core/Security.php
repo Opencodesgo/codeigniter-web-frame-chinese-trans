@@ -91,9 +91,10 @@ class CI_Security {
 
 	/**
 	 * XSS Hash
-	 * XSS 哈希
+	 * XSS 哈希。
 	 *
 	 * Random Hash for protecting URLs.
+	 * 用于保护url的随机哈希。
 	 *
 	 * @var	string
 	 */
@@ -104,6 +105,7 @@ class CI_Security {
 	 * CSRF散列。
 	 *
 	 * Random hash for Cross Site Request Forgery protection cookie
+	 * 跨站请求伪造保护cookie的随机散列。
 	 *
 	 * @var	string
 	 */
@@ -111,9 +113,11 @@ class CI_Security {
 
 	/**
 	 * CSRF Expire time
+	 * CSRF过期时间。
 	 *
 	 * Expiration time for Cross Site Request Forgery protection cookie.
 	 * Defaults to two hours (in seconds).
+	 * 跨站请求伪造保护 Cookie 的过期时间，默认为两小时（以秒为单位）。
 	 *
 	 * @var	int
 	 */

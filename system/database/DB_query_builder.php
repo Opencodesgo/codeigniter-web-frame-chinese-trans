@@ -59,6 +59,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Return DELETE SQL flag
+	 * 返回DELETE SQL标志
 	 *
 	 * @var	bool
 	 */
@@ -66,6 +67,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Reset DELETE data flag
+	 * 重置DELETE数据标志
 	 *
 	 * @var	bool
 	 */

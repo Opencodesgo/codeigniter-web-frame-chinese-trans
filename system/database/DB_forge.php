@@ -53,6 +53,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Database object
+	 * 数据库对象
 	 *
 	 * @var	object
 	 */

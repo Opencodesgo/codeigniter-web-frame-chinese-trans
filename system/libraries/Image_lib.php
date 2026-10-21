@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，图像类
  */
 
 /**
@@ -40,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 图像处理库（裁剪、缩放、旋转），支持GD、ImageMagick和NetPBM
- */
 
 /**
  * Image Manipulation class

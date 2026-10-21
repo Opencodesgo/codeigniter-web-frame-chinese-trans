@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * This is the platform-independent base DB implementation class.
  * This class will not be called directly. Rather, the adapter
  * class for the specific database will extend and instantiate it.
+ * 这是独立于平台的基本DB实现类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -250,6 +251,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Data cache
+	 * 数据高速缓存。
 	 *
 	 * An internal generic value cache.
 	 *
@@ -259,6 +261,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction enabled flag
+	 * 事务启用标志
 	 *
 	 * @var	bool
 	 */

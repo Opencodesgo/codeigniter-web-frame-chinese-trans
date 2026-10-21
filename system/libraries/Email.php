@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，发送邮件类，支持附件、HTML或文本邮件、多协议 (sendmail、SMTP、Mail)及更多
  */
 
 /**
@@ -40,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 发送邮件类，支持附件、HTML或文本邮件、多协议 (sendmail、SMTP、Mail)及更多
- */
 
 /**
  * CodeIgniter Email Class

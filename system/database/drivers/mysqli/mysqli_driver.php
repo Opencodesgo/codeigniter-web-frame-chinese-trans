@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysqli，mysqli 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * mysqli驱动
- */
-
-/**
  * MySQLi Database Adapter Class
+ * 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder

@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Exceptions Class
- * 异常类
+ * 异常类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -62,6 +62,7 @@ class CI_Exceptions {
 
 	/**
 	 * Nesting level of the output buffering mechanism
+	 * 输出缓冲机构的嵌套水平
 	 *
 	 * @var	int
 	 */
@@ -69,6 +70,7 @@ class CI_Exceptions {
 
 	/**
 	 * List of available error levels
+	 * 可用错误级别列表
 	 *
 	 * @var	array
 	 */
@@ -89,6 +91,7 @@ class CI_Exceptions {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @return	void
 	 */

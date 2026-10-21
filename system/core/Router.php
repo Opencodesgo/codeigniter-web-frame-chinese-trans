@@ -110,10 +110,11 @@ class CI_Router {
 
 	/**
 	 * Translate URI dashes
-	 * 转换UIR - _
+	 * 转换UIR破折号。
 	 *
 	 * Determines whether dashes in controller & method segments
 	 * should be automatically replaced by underscores.
+	 * 确定控制器和方法段中的连字符是否应自动替换为下划线。
 	 *
 	 * @var	bool
 	 */

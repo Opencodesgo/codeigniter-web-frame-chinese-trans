@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，表单验证
  */
 
 /**
@@ -42,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 表单验证
- */
-
-/**
  * Form Validation Class
+ * 表单验证类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，cubrid，cubrid 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP

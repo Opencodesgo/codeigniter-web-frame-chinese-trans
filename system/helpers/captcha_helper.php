@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，验证码相关函数
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -36,10 +40,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 验证码相关函数
- */
 
 /**
  * CodeIgniter CAPTCHA Helper

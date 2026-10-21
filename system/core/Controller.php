@@ -75,6 +75,7 @@ class CI_Controller {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @return	void
 	 */
@@ -102,6 +103,7 @@ class CI_Controller {
 
 	/**
 	 * Get the CI singleton
+	 * 获取CI单例
 	 *
 	 * @static
 	 * @return	object
