@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，Smiley 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 笑脸相关函数
- */
-
-/**
  * CodeIgniter Smiley Helpers
+ * CodeIgniter Smiley 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -61,6 +62,7 @@ if ( ! function_exists('smiley_js'))
 	 *
 	 * Returns the javascript required for the smiley insertion.  Optionally takes
 	 * an array of aliases to loosely couple the smiley array to the view.
+	 * 返回插入表情符号所需的 JavaScript 代码。可选地接受一个别名数组，以松耦合表情符号数组与视图。
 	 *
 	 * @param	mixed	alias name or array of alias->field_id pairs
 	 * @param	string	field_id if alias name was passed in
@@ -142,6 +144,7 @@ if ( ! function_exists('get_clickable_smileys'))
 {
 	/**
 	 * Get Clickable Smileys
+	 * 获得可点击的笑脸。
 	 *
 	 * Returns an array of image tag links that can be clicked to be inserted
 	 * into a form field.

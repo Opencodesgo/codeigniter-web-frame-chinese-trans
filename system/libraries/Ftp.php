@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，FTP 类
  */
 
 /**
@@ -40,13 +40,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * FTP 类
- */
  
 /**
  * FTP Class
+ * FTP 类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -82,7 +79,7 @@ class CI_FTP {
 
 	/**
 	 * FTP Server port
-	 * 服务端口，默认21
+	 * 服务端口，默认21。
 	 *
 	 * @var	int
 	 */
@@ -90,6 +87,7 @@ class CI_FTP {
 
 	/**
 	 * Passive mode flag
+	 * 被动模式标志
 	 *
 	 * @var	bool
 	 */

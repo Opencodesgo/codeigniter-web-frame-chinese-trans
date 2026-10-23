@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，数据库，DB_forge
+ * 系统，数据库，DB forge
  */
 
 /**
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Database Forge Class
- * 数据库制造类。
+ * 数据库Forge类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -53,6 +53,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Database object
+	 * 数据库对象
 	 *
 	 * @var	object
 	 */
@@ -60,6 +61,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Fields data
+	 * 字段数据
 	 *
 	 * @var	array
 	 */
@@ -74,6 +76,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Primary Keys data
+	 * 主键数据
 	 *
 	 * @var	array
 	 */
@@ -81,6 +84,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Database character set
+	 * 数据库字符集
 	 *
 	 * @var	string
 	 */
@@ -90,6 +94,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * CREATE DATABASE statement
+	 * 创建数据库语句
 	 *
 	 * @var	string
 	 */
@@ -97,6 +102,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * DROP DATABASE statement
+	 * 删除数据库语句
 	 *
 	 * @var	string
 	 */
@@ -104,6 +110,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * CREATE TABLE statement
+	 * 创建表语句
 	 *
 	 * @var	string
 	 */

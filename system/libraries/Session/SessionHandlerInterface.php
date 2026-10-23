@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，会话处理程序接口
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SessionHandlerInterface
+ * 会话处理程序接口。
  *
  * PHP 5.4 compatibility interface
  *

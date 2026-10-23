@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，cubrid，cubrid 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CUBRID Database Adapter Class
+ * 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -61,6 +67,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Auto-commit flag
+	 * 自动提交标志
 	 *
 	 * @var	bool
 	 */
@@ -70,6 +77,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Identifier escape character
+	 * 标识符转义字符
 	 *
 	 * @var	string
 	 */
@@ -77,6 +85,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 按随机关键字排序
 	 *
 	 * @var	array
 	 */
@@ -86,6 +95,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	array	$params
 	 * @return	void
@@ -104,6 +114,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 		else
 		{
 			// If no port is defined by the user, use the default value
+			// 如果用户没有自定义端口，则使用默认值。
 			empty($this->port) OR $this->port = 33000;
 		}
 	}
@@ -112,6 +123,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Non-persistent database connection
+	 * 非持久化数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	resource
@@ -136,6 +148,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Reconnect
+	 * 重连。
 	 *
 	 * Keep / reestablish the db connection if no queries have been
 	 * sent for a length of time exceeding the server's idle timeout
@@ -154,6 +167,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -173,6 +187,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	resource
@@ -186,6 +201,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开启事务
 	 *
 	 * @return	bool
 	 */
@@ -207,6 +223,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -229,6 +246,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -251,6 +269,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Platform-dependent string escape
+	 * 与平台相关的字符串转义
 	 *
 	 * @param	string
 	 * @return	string
@@ -264,6 +283,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Affected Rows
+	 * 受影响的行
 	 *
 	 * @return	int
 	 */
@@ -276,6 +296,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Insert ID
+	 * 插入ID
 	 *
 	 * @return	int
 	 */
@@ -288,8 +309,10 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * List table query
+	 * 列表查询。
 	 *
 	 * Generates a platform-specific query string so that the table names can be fetched
+	 * 生成特定于平台的查询字符串，以便获取表名。
 	 *
 	 * @param	bool	$prefix_limit
 	 * @return	string
@@ -310,8 +333,10 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Show column query
+	 * 显示列查询。
 	 *
 	 * Generates a platform-specific query string so that the column names can be fetched
+	 * 生成一个特定于平台的查询字符串,以便获取列名。
 	 *
 	 * @param	string	$table
 	 * @return	string
@@ -325,6 +350,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Returns an object with field data
+	 * 返回一个带有字段数据的对象
 	 *
 	 * @param	string	$table
 	 * @return	array
@@ -359,9 +385,11 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Error
+	 * 错误。
 	 *
 	 * Returns an array containing code and message of the last
 	 * database error that has occurred.
+	 * 返回一个包含最近发生数据库错误的代码和消息的数组。
 	 *
 	 * @return	array
 	 */
@@ -374,9 +402,11 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * FROM tables
+	 * 从表。
 	 *
 	 * Groups tables in FROM clauses if needed, so there is no confusion
 	 * about operator precedence.
+	 * 根据需要在 FROM 子句中使用分组表，以避免对运算符优先级产生混淆。
 	 *
 	 * @return	string
 	 */
@@ -394,6 +424,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 
 	/**
 	 * Close DB Connection
+	 * 关闭DB连接
 	 *
 	 * @return	void
 	 */

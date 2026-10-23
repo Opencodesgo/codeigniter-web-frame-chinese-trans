@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite3，sqlite3 forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite3 Forge Class
+ * SQLite3 Forge 类。
  *
  * @category	Database
  * @author	Andrey Andreev

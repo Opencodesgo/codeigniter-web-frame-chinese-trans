@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，pdo，pdo forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * PDO Forge Class
+ * PDO Forge 类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -50,6 +55,7 @@ class CI_DB_pdo_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 创建表IF语句
 	 *
 	 * @var	string
 	 */
@@ -57,6 +63,7 @@ class CI_DB_pdo_forge extends CI_DB_forge {
 
 	/**
 	 * DROP TABLE IF statement
+	 * 删除表IF语句
 	 *
 	 * @var	string
 	 */

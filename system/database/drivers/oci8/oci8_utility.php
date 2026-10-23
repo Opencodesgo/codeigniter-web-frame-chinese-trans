@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，oci8，oci8 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Oracle Utility Class
+ * Oracle 工具类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_oci8_utility extends CI_DB_utility {
 
 	/**
 	 * List databases statement
+	 * 列表数据库语句
 	 *
 	 * @var	string
 	 */

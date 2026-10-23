@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysql，mysql 工具类
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQL Utility Class
+ * MySQL 工具类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_mysql_utility extends CI_DB_utility {
 
 	/**
 	 * List databases statement
+	 * 列表数据库语句
 	 *
 	 * @var	string
 	 */
@@ -55,6 +61,7 @@ class CI_DB_mysql_utility extends CI_DB_utility {
 
 	/**
 	 * OPTIMIZE TABLE statement
+	 * 优化表语句
 	 *
 	 * @var	string
 	 */
@@ -62,6 +69,7 @@ class CI_DB_mysql_utility extends CI_DB_utility {
 
 	/**
 	 * REPAIR TABLE statement
+	 * 修理表语句
 	 *
 	 * @var	string
 	 */
@@ -200,6 +208,7 @@ class CI_DB_mysql_utility extends CI_DB_utility {
 		}
 
 		// Do we need to include a statement to re-enable foreign key checks?
+		// 我们是否需要包含一个语句来重新启用外键检查？
 		if ($foreign_key_checks === FALSE)
 		{
 			$output .= 'SET foreign_key_checks = 1;'.$newline;

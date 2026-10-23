@@ -66,6 +66,7 @@ class CI_Calendar {
 
 	/**
 	 * Replacements array for template
+	 * 替换模板数组
 	 *
 	 * @var array
 	 */
@@ -73,6 +74,7 @@ class CI_Calendar {
 
 	/**
 	 * Day of the week to start the calendar on
+	 * 日历在一周中的哪一天开始
 	 *
 	 * @var string
 	 */
@@ -80,6 +82,7 @@ class CI_Calendar {
 
 	/**
 	 * How to display months
+	 * 如何显示月份
 	 *
 	 * @var string
 	 */
@@ -87,6 +90,7 @@ class CI_Calendar {
 
 	/**
 	 * How to display names of days
+	 * 如何显示日期名称
 	 *
 	 * @var string
 	 */
@@ -94,6 +98,7 @@ class CI_Calendar {
 
 	/**
 	 * Whether to show next/prev month links
+	 * 是否显示下个月/上个月的链接
 	 *
 	 * @var bool
 	 */
@@ -101,6 +106,7 @@ class CI_Calendar {
 
 	/**
 	 * Url base to use for next/prev month links
+	 * Url库用于下一个月/前一个月的链接
 	 *
 	 * @var bool
 	 */
@@ -108,6 +114,7 @@ class CI_Calendar {
 
 	/**
 	 * Show days of other months
+	 * 显示其他月份的日期
 	 *
 	 * @var bool
 	 */
@@ -117,6 +124,7 @@ class CI_Calendar {
 
 	/**
 	 * CI Singleton
+	 * 单例
 	 *
 	 * @var object
 	 */
@@ -126,8 +134,10 @@ class CI_Calendar {
 
 	/**
 	 * Class constructor
+	 * 类构造函数。
 	 *
 	 * Loads the calendar language file and sets the default time reference.
+	 * 加载日历语言文件并设置默认时间引用。
 	 *
 	 * @uses	CI_Lang::$is_loaded
 	 *
@@ -151,6 +161,7 @@ class CI_Calendar {
 	 * 初始化用户首选项
 	 *
 	 * Accepts an associative array as input, containing display preferences
+	 * 接受包含显示首选项的关联数组作为输入。
 	 *
 	 * @param	array	config preferences
 	 * @return	CI_Calendar
@@ -178,6 +189,7 @@ class CI_Calendar {
 
 	/**
 	 * Generate the calendar
+	 * 生成日历
 	 *
 	 * @param	int	the year
 	 * @param	int	the month
@@ -351,9 +363,11 @@ class CI_Calendar {
 
 	/**
 	 * Get Month Name
+	 * 获取月份名称。
 	 *
 	 * Generates a textual month name based on the numeric
 	 * month provided.
+	 * 根据提供的数字月份生成对应的中文月份名称。
 	 *
 	 * @param	int	the month
 	 * @return	string

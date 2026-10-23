@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，偏转器助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 偏转相关函数
- */
-
-/**
  * CodeIgniter Inflector Helpers
+ * CodeIgniter 偏转器助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,8 +58,10 @@ if ( ! function_exists('singular'))
 {
 	/**
 	 * Singular
+	 * 单数。
 	 *
 	 * Takes a plural word and makes it singular
+	 * 取一个复数的词,使它与众不同。
 	 *
 	 * @param	string	$str	Input string
 	 * @return	string

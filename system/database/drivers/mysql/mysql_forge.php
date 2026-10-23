@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysql，mysql Forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQL Forge Class
+ * MySQL Forge 类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE DATABASE statement
+	 * 创建数据库语句
 	 *
 	 * @var	string
 	 */
@@ -55,9 +61,11 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE keys flag
+	 * 创建表键标志。
 	 *
 	 * Whether table keys are created from within the
 	 * CREATE TABLE statement.
+	 * 表键是否在 CREATE TABLE 语句内部创建
 	 *
 	 * @var	bool
 	 */
@@ -65,6 +73,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * UNSIGNED support
+	 * 无符号的支持
 	 *
 	 * @var	array
 	 */
@@ -85,6 +94,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
+	 * 在CREATE/ALTER TABLE语句中表示NULL值
 	 *
 	 * @var	string
 	 */
@@ -94,6 +104,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE attributes
+	 * 创建表属性
 	 *
 	 * @param	array	$attributes	Associative array of table attributes
 	 * @return	string
@@ -127,6 +138,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * ALTER TABLE
+	 * 修改表
 	 *
 	 * @param	string	$alter_type	ALTER type
 	 * @param	string	$table		Table name
@@ -171,6 +183,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * Process column
+	 * 处理列
 	 *
 	 * @param	array	$field
 	 * @return	string
@@ -202,6 +215,7 @@ class CI_DB_mysql_forge extends CI_DB_forge {
 
 	/**
 	 * Process indexes
+	 * 进程索引
 	 *
 	 * @param	string	$table	(ignored)
 	 * @return	string

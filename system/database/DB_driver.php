@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * This is the platform-independent base DB implementation class.
  * This class will not be called directly. Rather, the adapter
  * class for the specific database will extend and instantiate it.
+ * 这是独立于平台的基本DB实现类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -250,6 +251,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Data cache
+	 * 数据高速缓存。
 	 *
 	 * An internal generic value cache.
 	 *
@@ -259,6 +261,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction enabled flag
+	 * 事务启用标志
 	 *
 	 * @var	bool
 	 */
@@ -266,6 +269,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Strict transaction mode flag
+	 * 严格的事务模式标志
 	 *
 	 * @var	bool
 	 */
@@ -273,6 +277,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction depth level
+	 * 事务深度级别
 	 *
 	 * @var	int
 	 */
@@ -280,6 +285,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction status flag
+	 * 事务状态标志。
 	 *
 	 * Used with transactions to determine if a rollback should occur.
 	 *
@@ -289,6 +295,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction failure flag
+	 * 事务失败标志。
 	 *
 	 * Used with transactions to determine if a transaction has failed.
 	 *
@@ -298,6 +305,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Cache On flag
+	 * 缓存开启标志
 	 *
 	 * @var	bool
 	 */
@@ -305,6 +313,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Cache directory path
+	 * 缓存目录路径
 	 *
 	 * @var	bool
 	 */

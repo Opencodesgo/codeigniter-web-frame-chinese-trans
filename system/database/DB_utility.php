@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Database Utility Class
- * 数据库公共类。
+ * 数据库工具类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -63,6 +63,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * List databases statement
+	 * 列表数据库语句
 	 *
 	 * @var	string
 	 */
@@ -70,6 +71,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * OPTIMIZE TABLE statement
+	 * 优化表语句
 	 *
 	 * @var	string
 	 */
@@ -77,6 +79,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * REPAIR TABLE statement
+	 * 修理表语句
 	 *
 	 * @var	string
 	 */
@@ -86,6 +89,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	object	&$db	Database object
 	 * @return	void
@@ -136,6 +140,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Determine if a particular database exists
+	 * 确定是否存在特定的数据库
 	 *
 	 * @param	string	$database_name
 	 * @return	bool
@@ -238,6 +243,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Generate CSV from a query result object
+	 * 从查询结果对象生成CSV
 	 *
 	 * @param	object	$query		Query result object
 	 * @param	string	$delim		Delimiter (default: ,)
@@ -279,6 +285,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Generate XML data from a query result object
+	 * 从查询结果对象生成XML数据
 	 *
 	 * @param	object	$query	Query result object
 	 * @param	array	$params	Any preferences

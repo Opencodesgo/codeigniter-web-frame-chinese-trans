@@ -196,8 +196,10 @@ class CI_Lang {
 
 	/**
 	 * Language line
+	 * 语言翻译服务。
 	 *
 	 * Fetches a single line of text from the language array
+	 * 从语言数组中获取一行文本。
 	 *
 	 * @param	string	$line		Language line key
 	 * @param	bool	$log_errors	Whether to log an error message if the line is not found

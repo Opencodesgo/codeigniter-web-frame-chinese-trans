@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，mssql，mssql 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MS SQL Database Adapter Class
+ * 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -63,6 +69,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 按随机关键字排序
 	 *
 	 * @var	array
 	 */
@@ -70,6 +77,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Quoted identifier flag
+	 * 引用标识符标志。
 	 *
 	 * Whether to use SQL-92 standard quoted identifier
 	 * (double quotes) or brackets for identifier escaping.
@@ -82,8 +90,10 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Class constructor
+	 * 类构造器。
 	 *
 	 * Appends the port number to the hostname, if needed.
+	 * 如果需要，将端口号附加到主机名。
 	 *
 	 * @param	array	$params
 	 * @return	void
@@ -102,6 +112,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Non-persistent database connection
+	 * 非持久化数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	resource
@@ -142,6 +153,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Select the database
+	 * 选择数据库
 	 *
 	 * @param	string	$database
 	 * @return	bool
@@ -169,6 +181,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	mixed	resource if rows are returned, bool otherwise
@@ -182,6 +195,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -194,6 +208,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -206,6 +221,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -230,6 +246,7 @@ class CI_DB_mssql_driver extends CI_DB {
 
 	/**
 	 * Insert ID
+	 * 插入ID。
 	 *
 	 * Returns the last id created in the Identity column.
 	 *

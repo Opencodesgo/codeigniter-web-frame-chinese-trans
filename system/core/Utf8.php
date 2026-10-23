@@ -44,9 +44,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Utf8 Class
- * Utf8 类
+ * Utf8 类。
  *
  * Provides support for UTF-8 environments
+ * 提供对UTF-8环境的支持。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -58,9 +59,10 @@ class CI_Utf8 {
 
 	/**
 	 * Class constructor
-	 * 类初始化
+	 * 类初始化。
 	 *
 	 * Determines if UTF-8 support is to be enabled.
+	 * 确定是否要启用UTF-8支持。
 	 *
 	 * @return	void
 	 */
@@ -88,9 +90,10 @@ class CI_Utf8 {
 
 	/**
 	 * Clean UTF-8 strings
-	 * 清理UTF-8字符串
+	 * 清理UTF-8字符串。
 	 *
 	 * Ensures strings contain only valid UTF-8 characters.
+	 * 确保字符串只包含有效的UTF-8字符。
 	 *
 	 * @param	string	$str	String to clean
 	 * @return	string
@@ -116,11 +119,12 @@ class CI_Utf8 {
 
 	/**
 	 * Remove ASCII control characters
-	 * 删除ASCII控制字符
+	 * 删除ASCII控制字符。
 	 *
 	 * Removes all ASCII control characters except horizontal tabs,
 	 * line feeds, and carriage returns, as all others can cause
 	 * problems in XML.
+	 * 移除所有ASCII控制字符，仅保留制表符、换行符和回车符，因为其他所有字符都可能在XML中引发问题。
 	 *
 	 * @param	string	$str	String to clean
 	 * @return	string
@@ -134,9 +138,10 @@ class CI_Utf8 {
 
 	/**
 	 * Convert to UTF-8
+	 * 转换为UTF-8。
 	 *
 	 * Attempts to convert a string to UTF-8.
-	 * 尝试转换字符串为UTF-8
+	 * 尝试转换字符串为UTF-8。
 	 *
 	 * @param	string	$str		Input string
 	 * @param	string	$encoding	Input encoding
@@ -163,6 +168,7 @@ class CI_Utf8 {
 	 * 是否ASCII？ 
 	 *
 	 * Tests if a string is standard 7-bit ASCII or not.
+	 * 测试字符串是否为标准7位ASCII。
 	 *
 	 * @param	string	$str	String to check
 	 * @return	bool

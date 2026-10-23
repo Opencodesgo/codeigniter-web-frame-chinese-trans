@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache 文件
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter File Caching Class
+ * CodeIgniter 文件缓存类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Directory in which to save cache files
+	 * 保存缓存文件的目录
 	 *
 	 * @var string
 	 */
@@ -57,6 +63,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Initialize file-based cache
+	 * 初始化基于文件的缓存
 	 *
 	 * @return	void
 	 */
@@ -72,6 +79,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Fetch from cache
+	 * 从缓存获取
 	 *
 	 * @param	string	$id	Cache ID
 	 * @return	mixed	Data on success, FALSE on failure
@@ -86,6 +94,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Save into cache
+	 * 保存到缓存
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	mixed	$data	Data to store
@@ -114,6 +123,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Delete from Cache
+	 * 从缓存中删除
 	 *
 	 * @param	mixed	unique identifier of item in cache
 	 * @return	bool	true on success/false on failure
@@ -127,6 +137,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Increment a raw value
+	 * 增加原始值
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to add
@@ -155,6 +166,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Decrement a raw value
+	 * 对原始值进行减量
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to reduce by
@@ -183,6 +195,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Clean the Cache
+	 * 清理缓存
 	 *
 	 * @return	bool	false on failure/true on success
 	 */
@@ -195,8 +208,10 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Cache Info
+	 * 缓存信息。
 	 *
 	 * Not supported by file-based caching
+	 * 基于文件的缓存不支持。
 	 *
 	 * @param	string	user/filehits
 	 * @return	mixed	FALSE
@@ -210,6 +225,7 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Get Cache Metadata
+	 * 获取缓存元数据
 	 *
 	 * @param	mixed	key to get cache metadata on
 	 * @return	mixed	FALSE on failure, array on success.
@@ -245,8 +261,10 @@ class CI_Cache_file extends CI_Driver {
 
 	/**
 	 * Is supported
+	 * 支持。
 	 *
 	 * In the file driver, check to see that the cache directory is indeed writable
+	 * 在文件驱动程序中,检查缓存目录确实是可写的。
 	 *
 	 * @return	bool
 	 */

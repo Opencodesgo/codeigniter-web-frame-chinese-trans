@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，字符串助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 字符串相关函数
- */
-
-/**
  * CodeIgniter String Helpers
+ * CodeIgniter 字符串助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,6 +58,7 @@ if ( ! function_exists('trim_slashes'))
 {
 	/**
 	 * Trim Slashes
+	 * 修剪斜杠。
 	 *
 	 * Removes any leading/trailing slashes from a string:
 	 *

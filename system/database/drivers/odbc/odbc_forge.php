@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，odbc，odbc forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * ODBC Forge Class
+ * ODBC Forge类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -50,6 +55,7 @@ class CI_DB_odbc_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 如果语句创建表
 	 *
 	 * @var	string
 	 */

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite，sqlite 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite Database Adapter Class
+ * SQLite 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动程序
 	 *
 	 * @var	string
 	 */
@@ -63,6 +69,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 按随机关键字排序
 	 *
 	 * @var	array
 	 */
@@ -92,6 +99,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -106,6 +114,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	resource
@@ -121,6 +130,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -133,6 +143,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -145,6 +156,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -182,6 +194,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Insert ID
+	 * 插入ID
 	 *
 	 * @return	int
 	 */
@@ -232,6 +245,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Returns an object with field data
+	 * 返回一个带有字段数据的对象
 	 *
 	 * @param	string	$table
 	 * @return	array
@@ -301,6 +315,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Truncate statement
+	 * 截断声明。
 	 *
 	 * Generates a platform-specific truncate string from the supplied data
 	 *
@@ -319,6 +334,7 @@ class CI_DB_sqlite_driver extends CI_DB {
 
 	/**
 	 * Close DB Connection
+	 * 关闭DB连接
 	 *
 	 * @return	void
 	 */

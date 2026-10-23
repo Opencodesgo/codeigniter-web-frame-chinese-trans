@@ -54,6 +54,7 @@ class CI_DB_Cache {
 
 	/**
 	 * CI Singleton
+	 * CI单例
 	 *
 	 * @var	object
 	 */
@@ -61,6 +62,7 @@ class CI_DB_Cache {
 
 	/**
 	 * Database object
+	 * 数据库表。
 	 *
 	 * Allows passing of DB object so that multiple database connections
 	 * and returned DB objects can be supported.
@@ -73,6 +75,7 @@ class CI_DB_Cache {
 
 	/**
 	 * Constructor
+	 * 构造函数
 	 *
 	 * @param	object	&$db
 	 * @return	void

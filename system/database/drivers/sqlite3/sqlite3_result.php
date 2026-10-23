@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite3，sqlite3 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite3 Result Class
+ * SQLite3 结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -50,6 +55,7 @@ class CI_DB_sqlite3_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中字段的数目
 	 *
 	 * @return	int
 	 */

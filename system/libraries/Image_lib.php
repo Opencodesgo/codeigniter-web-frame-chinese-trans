@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，图像类
  */
 
 /**
@@ -42,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 图像处理库（裁剪、缩放、旋转），支持GD、ImageMagick和NetPBM
- */
-
-/**
  * Image Manipulation class
+ * 图像处理类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -59,6 +56,7 @@ class CI_Image_lib {
 	/**
 	 * PHP extension/library to use for image manipulation
 	 * Can be: imagemagick, netpbm, gd, gd2
+	 * 用于图像处理的PHP扩展/库，可选：imagemagick、netpbm、gd、gd2。
 	 *
 	 * @var string
 	 */
@@ -66,6 +64,7 @@ class CI_Image_lib {
 
 	/**
 	 * Path to the graphic library (if applicable)
+	 * 图形库的路径（如果适用）
 	 *
 	 * @var string
 	 */
@@ -73,6 +72,7 @@ class CI_Image_lib {
 
 	/**
 	 * Whether to send to browser or write to disk
+	 * 是发送到浏览器还是写入磁盘
 	 *
 	 * @var bool
 	 */
@@ -80,6 +80,7 @@ class CI_Image_lib {
 
 	/**
 	 * Path to original image
+	 * 原始图像路径
 	 *
 	 * @var string
 	 */
@@ -87,6 +88,7 @@ class CI_Image_lib {
 
 	/**
 	 * Path to the modified image
+	 * 修改后映像的路径
 	 *
 	 * @var string
 	 */
@@ -94,6 +96,7 @@ class CI_Image_lib {
 
 	/**
 	 * Image width
+	 * 图像宽度
 	 *
 	 * @var int
 	 */
@@ -101,6 +104,7 @@ class CI_Image_lib {
 
 	/**
 	 * Image height
+	 * 图像高度
 	 *
 	 * @var int
 	 */
@@ -108,6 +112,7 @@ class CI_Image_lib {
 
 	/**
 	 * Quality percentage of new image
+	 * 新图像的质量百分比
 	 *
 	 * @var int
 	 */
@@ -115,6 +120,7 @@ class CI_Image_lib {
 
 	/**
 	 * Whether to create a thumbnail
+	 * 是否创建缩略图
 	 *
 	 * @var bool
 	 */
@@ -122,6 +128,7 @@ class CI_Image_lib {
 
 	/**
 	 * String to add to thumbnail version of image
+	 * 要添加到图像缩略图版本的字符串
 	 *
 	 * @var string
 	 */
@@ -129,6 +136,7 @@ class CI_Image_lib {
 
 	/**
 	 * Whether to maintain aspect ratio when resizing or use hard values
+	 * 在调整大小或使用硬值时是否保持长宽比
 	 *
 	 * @var bool
 	 */
@@ -136,6 +144,7 @@ class CI_Image_lib {
 
 	/**
 	 * auto, height, or width.  Determines what to use as the master dimension
+	 * 自动、高度或宽度。确定使用哪个维度作为主维度。
 	 *
 	 * @var string
 	 */
@@ -143,6 +152,7 @@ class CI_Image_lib {
 
 	/**
 	 * Angle at to rotate image
+	 * 旋转图像的角度
 	 *
 	 * @var string
 	 */
@@ -150,6 +160,7 @@ class CI_Image_lib {
 
 	/**
 	 * X Coordinate for manipulation of the current image
+	 * 用于操作当前图像的X坐标
 	 *
 	 * @var int
 	 */
@@ -157,17 +168,19 @@ class CI_Image_lib {
 
 	/**
 	 * Y Coordinate for manipulation of the current image
+	 * 操纵当前图像的Y坐标
 	 *
 	 * @var int
 	 */
 	public $y_axis			= '';
 
 	// --------------------------------------------------------------------------
-	// Watermark Vars
+	// Watermark Vars	水印var
 	// --------------------------------------------------------------------------
 
 	/**
 	 * Watermark text if graphic is not used
+	 * 如果不使用图形，则使用水印文本。
 	 *
 	 * @var string
 	 */

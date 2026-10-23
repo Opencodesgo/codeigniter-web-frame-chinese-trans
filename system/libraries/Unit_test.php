@@ -46,6 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 单元测试类。
  *
  * Simple testing class
+ * 简单测试类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -57,6 +58,7 @@ class CI_Unit_test {
 
 	/**
 	 * Active flag
+	 * 活动标志
 	 *
 	 * @var	bool
 	 */
@@ -64,6 +66,7 @@ class CI_Unit_test {
 
 	/**
 	 * Test results
+	 * 测试结果
 	 *
 	 * @var	array
 	 */
@@ -71,6 +74,7 @@ class CI_Unit_test {
 
 	/**
 	 * Strict comparison flag
+	 * 严格比较标志。
 	 *
 	 * Whether to use === or == when comparing
 	 *
@@ -80,6 +84,7 @@ class CI_Unit_test {
 
 	/**
 	 * Template
+	 * 模板
 	 *
 	 * @var	string
 	 */
@@ -87,6 +92,7 @@ class CI_Unit_test {
 
 	/**
 	 * Template rows
+	 * 模板行
 	 *
 	 * @var	string
 	 */
@@ -94,6 +100,7 @@ class CI_Unit_test {
 
 	/**
 	 * List of visible test items
+	 * 可见测试项目列表
 	 *
 	 * @var	array
 	 */
@@ -111,6 +118,7 @@ class CI_Unit_test {
 
 	/**
 	 * Constructor
+	 * 构造函数
 	 *
 	 * @return	void
 	 */
@@ -123,6 +131,7 @@ class CI_Unit_test {
 
 	/**
 	 * Run the tests
+	 * 运行测试。
 	 *
 	 * Runs the supplied tests
 	 *

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，Typography 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 排版相关函数
- */
-
-/**
  * CodeIgniter Typography Helpers
+ * CodeIgniter Typography 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,6 +58,7 @@ if ( ! function_exists('nl2br_except_pre'))
 {
 	/**
 	 * Convert newlines to HTML line breaks except within PRE tags
+	 * 将换行符转换为HTML换行符（PRE标记除外）
 	 *
 	 * @param	string
 	 * @return	string
@@ -75,6 +77,7 @@ if ( ! function_exists('auto_typography'))
 {
 	/**
 	 * Auto Typography Wrapper Function
+	 * 自动排版包装函数
 	 *
 	 * @param	string	$str
 	 * @param	bool	$reduce_linebreaks = FALSE	whether to reduce multiple instances of double newlines to two
@@ -94,6 +97,7 @@ if ( ! function_exists('entity_decode'))
 {
 	/**
 	 * HTML Entities Decode
+	 * HTML实体解码。
 	 *
 	 * This function is a replacement for html_entity_decode()
 	 *

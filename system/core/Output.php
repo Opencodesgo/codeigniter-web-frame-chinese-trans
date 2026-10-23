@@ -45,11 +45,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 /**
  * Output Class
- * 输出类
+ * 输出类。
  *
  * Responsible for sending final output to the browser.
- * 负责发送最终的输出到浏览器
- * 
+ * 负责发送最终的输出到浏览器。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -133,7 +132,7 @@ class CI_Output {
 
 	/**
 	 * Parse markers flag
-	 * 解析标记标志
+	 * 解析标记标志。
 	 *
 	 * Whether or not to parse variables like {elapsed_time} and {memory_usage}.
 	 *
@@ -151,9 +150,10 @@ class CI_Output {
 
 	/**
 	 * Class constructor
-	 * 构造函数
+	 * 构造函数。
 	 *
 	 * Determines whether zLib output compression will be used.
+	 * 决定是否使用zLib输出压缩。
 	 *
 	 * @return	void
 	 */
@@ -181,9 +181,10 @@ class CI_Output {
 
 	/**
 	 * Get Output
+	 * 获取输出。
 	 *
 	 * Returns the current output string.
-	 * 返回当前的输出
+	 * 返回当前的输出。
 	 *
 	 * @return	string
 	 */
@@ -196,9 +197,10 @@ class CI_Output {
 
 	/**
 	 * Set Output
+	 * 设置输出。
 	 *
 	 * Sets the output string.
-	 * 设置当前输出
+	 * 设置当前输出。
 	 *
 	 * @param	string	$output	Output data
 	 * @return	CI_Output
@@ -213,8 +215,10 @@ class CI_Output {
 
 	/**
 	 * Append Output
+	 * 附加的输出。
 	 *
 	 * Appends data onto the output string.
+	 * 将数据附加到输出字符串上。
 	 *
 	 * @param	string	$output	Data to append
 	 * @return	CI_Output
@@ -229,9 +233,10 @@ class CI_Output {
 
 	/**
 	 * Set Header
-	 * 设置头
+	 * 设置头。
 	 *
 	 * Lets you set a server header which will be sent with the final output.
+	 * 让您设置一个服务器头，它将与最终输出一起发送。
 	 *
 	 * Note: If a file is cached, headers will not be sent.
 	 * @todo	We need to figure out how to permit headers to be cached.

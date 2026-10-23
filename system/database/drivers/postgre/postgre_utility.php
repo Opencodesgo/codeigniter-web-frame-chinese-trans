@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，postgre，postgre 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Postgre Utility Class
+ * Postgre 工具类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -50,6 +55,7 @@ class CI_DB_postgre_utility extends CI_DB_utility {
 
 	/**
 	 * List databases statement
+	 * 列表数据库语句
 	 *
 	 * @var	string
 	 */
@@ -57,6 +63,7 @@ class CI_DB_postgre_utility extends CI_DB_utility {
 
 	/**
 	 * OPTIMIZE TABLE statement
+	 * 优化表语句
 	 *
 	 * @var	string
 	 */

@@ -59,6 +59,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Return DELETE SQL flag
+	 * 返回DELETE SQL标志
 	 *
 	 * @var	bool
 	 */
@@ -66,6 +67,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Reset DELETE data flag
+	 * 重置DELETE数据标志
 	 *
 	 * @var	bool
 	 */
@@ -80,6 +82,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * QB DISTINCT flag
+	 * QB标志
 	 *
 	 * @var	bool
 	 */
@@ -280,8 +283,10 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Select
+	 * 查询。
 	 *
 	 * Generates the SELECT portion of the query
+	 * 生成查询的选择部分。
 	 *
 	 * @param	string
 	 * @param	mixed
@@ -295,6 +300,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		}
 
 		// If the escape value was not set, we will base it on the global setting
+		// 如果不确定逃逸值,我们将在全局设置中建立它。
 		is_bool($escape) OR $escape = $this->_protect_identifiers;
 
 		foreach ($select as $val)
@@ -434,6 +440,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Determines the alias name based on the table
+	 * 根据表确定别名
 	 *
 	 * @param	string	$item
 	 * @return	string

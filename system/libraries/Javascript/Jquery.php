@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Javascript，Jquery
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Jquery 类
- */
-
-/**
  * Jquery Class
+ * Jquery 类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -54,6 +55,7 @@ class CI_Jquery extends CI_Javascript {
 
 	/**
 	 * JavaScript directory location
+	 * JavaScript 本地目录。
 	 *
 	 * @var	string
 	 */
@@ -61,6 +63,7 @@ class CI_Jquery extends CI_Javascript {
 
 	/**
 	 * JQuery code for load
+	 * JQuery加载代码
 	 *
 	 * @var	array
 	 */
@@ -68,6 +71,7 @@ class CI_Jquery extends CI_Javascript {
 
 	/**
 	 * JQuery code for compile
+	 * JQuery编译代码
 	 *
 	 * @var	array
 	 */
@@ -75,6 +79,7 @@ class CI_Jquery extends CI_Javascript {
 
 	/**
 	 * JQuery corner active flag
+	 * JQuery corner 活动标记
 	 *
 	 * @var	bool
 	 */

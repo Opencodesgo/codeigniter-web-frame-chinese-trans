@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，oci8，oci8 forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Oracle Forge Class
+ * Oracle Forge 类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_oci8_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE DATABASE statement
+	 * 创建数据库语句
 	 *
 	 * @var	string
 	 */
@@ -55,6 +61,7 @@ class CI_DB_oci8_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 创建表IF语句
 	 *
 	 * @var	string
 	 */

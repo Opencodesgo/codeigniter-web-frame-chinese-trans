@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，驱动，Session 数据库驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Database Driver
+ * CodeIgniter 会话数据库驱动程序。
  *
  * @package	CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 	/**
 	 * DB object
+	 * DB对象
 	 *
 	 * @var	object
 	 */
@@ -57,6 +63,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 	/**
 	 * Row exists flag
+	 * 行存在标志
 	 *
 	 * @var	bool
 	 */
@@ -73,6 +80,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void

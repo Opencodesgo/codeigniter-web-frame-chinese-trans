@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，cubrid，cubrid 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CUBRID Utility Class
+ * CUBRID 实用程序类。
  *
  * @category	Database
  * @author		Esen Sagynov
@@ -48,6 +53,7 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 
 	/**
 	 * List databases
+	 * 列表数据库
 	 *
 	 * @return	array
 	 */
@@ -65,6 +71,7 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 
 	/**
 	 * CUBRID Export
+	 * CUBRID 导出
 	 *
 	 * @param	array	Preferences
 	 * @return	mixed
@@ -74,6 +81,8 @@ class CI_DB_cubrid_utility extends CI_DB_utility {
 		// No SQL based support in CUBRID as of version 8.4.0. Database or
 		// table backup can be performed using CUBRID Manager
 		// database administration tool.
+		// 从 CUBRID 8.4.0 版本开始，不支持基于 SQL 的操作。
+		// 可通过 CUBRID 管理器数据库管理工具进行数据库或表的备份。
 		return $this->db->display_error('db_unsupported_feature');
 	}
 }

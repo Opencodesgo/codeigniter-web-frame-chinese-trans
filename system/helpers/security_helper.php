@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，安全助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 加密相关函数
- */
-
-/**
  * CodeIgniter Security Helpers
+ * CodeIgniter 安全助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,6 +58,7 @@ if ( ! function_exists('xss_clean'))
 {
 	/**
 	 * XSS Filtering
+	 * 跨站脚本过滤
 	 *
 	 * @param	string
 	 * @param	bool	whether or not the content is an image file
@@ -74,6 +76,7 @@ if ( ! function_exists('sanitize_filename'))
 {
 	/**
 	 * Sanitize Filename
+	 * Sanitize文件名
 	 *
 	 * @param	string
 	 * @return	string
@@ -90,6 +93,7 @@ if ( ! function_exists('do_hash'))
 {
 	/**
 	 * Hash encode a string
+	 * 哈希编码字符串
 	 *
 	 * @todo	Remove in version 3.1+.
 	 * @deprecated	3.0.0	Use PHP's native hash() instead.
@@ -114,6 +118,7 @@ if ( ! function_exists('strip_image_tags'))
 {
 	/**
 	 * Strip Image Tags
+	 * 条形图像标签
 	 *
 	 * @param	string
 	 * @return	string

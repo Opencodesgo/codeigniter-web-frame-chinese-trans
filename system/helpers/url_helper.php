@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，url 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * URL相关函数
- */
-
-/**
  * CodeIgniter URL Helpers
+ * CodeIgniter URL 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,10 +58,11 @@ if ( ! function_exists('site_url'))
 {
 	/**
 	 * Site URL
-	 * 站点URL
+	 * 站点URL。
 	 *
 	 * Create a local URL based on your basepath. Segments can be passed via the
 	 * first parameter either as a string or an array.
+	 * 根据您的基础路径创建本地 URL。可以通过第一个参数传递段，既可以是字符串，也可以是数组。
 	 *
 	 * @param	string	$uri
 	 * @param	string	$protocol
@@ -156,6 +158,7 @@ if ( ! function_exists('anchor'))
 {
 	/**
 	 * Anchor Link
+	 * 锚链接。
 	 *
 	 * Creates an anchor based on the local URL.
 	 *

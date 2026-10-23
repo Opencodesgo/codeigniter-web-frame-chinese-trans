@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，发送邮件类，支持附件、HTML或文本邮件、多协议 (sendmail、SMTP、Mail)及更多
  */
 
 /**
@@ -42,13 +42,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 发送邮件类，支持附件、HTML或文本邮件、多协议 (sendmail、SMTP、Mail)及更多
- */
-
-/**
  * CodeIgniter Email Class
+ * CodeIgniter Email 类。
  *
  * Permits email to be sent using Mail, Sendmail, or SMTP.
+ * 允许使用Mail、Sendmail或SMTP发送电子邮件。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -60,6 +58,7 @@ class CI_Email {
 
 	/**
 	 * Used as the User-Agent and X-Mailer headers' value.
+	 * 用作User-Agent和X-Mailer标头的值
 	 *
 	 * @var	string
 	 */
@@ -67,6 +66,7 @@ class CI_Email {
 
 	/**
 	 * Path to the Sendmail binary.
+	 * Sendmail二进制文件的路径
 	 *
 	 * @var	string
 	 */
@@ -74,6 +74,7 @@ class CI_Email {
 
 	/**
 	 * Which method to use for sending e-mails.
+	 * 使用哪种方法发送电子邮件
 	 *
 	 * @var	string	'mail', 'sendmail' or 'smtp'
 	 */
@@ -81,6 +82,7 @@ class CI_Email {
 
 	/**
 	 * STMP Server host
+	 * STMP服务器主机
 	 *
 	 * @var	string
 	 */
@@ -88,6 +90,7 @@ class CI_Email {
 
 	/**
 	 * SMTP Username
+	 * SMTP用户名
 	 *
 	 * @var	string
 	 */
@@ -95,6 +98,7 @@ class CI_Email {
 
 	/**
 	 * SMTP Password
+	 * SMTP密码
 	 *
 	 * @var	string
 	 */
@@ -102,6 +106,7 @@ class CI_Email {
 
 	/**
 	 * SMTP Server port
+	 * SMTP服务器端口
 	 *
 	 * @var	int
 	 */
@@ -109,6 +114,7 @@ class CI_Email {
 
 	/**
 	 * SMTP connection timeout in seconds
+	 * SMTP连接超时
 	 *
 	 * @var	int
 	 */
@@ -116,6 +122,7 @@ class CI_Email {
 
 	/**
 	 * SMTP persistent connection
+	 * SMTP持久连接
 	 *
 	 * @var	bool
 	 */
@@ -123,6 +130,7 @@ class CI_Email {
 
 	/**
 	 * SMTP Encryption
+	 * SMTP加密
 	 *
 	 * @var	string	empty, 'tls' or 'ssl'
 	 */
@@ -130,6 +138,7 @@ class CI_Email {
 
 	/**
 	 * Whether to apply word-wrapping to the message body.
+	 * 是否对邮件正文应用换行
 	 *
 	 * @var	bool
 	 */
@@ -137,6 +146,7 @@ class CI_Email {
 
 	/**
 	 * Number of characters to wrap at.
+	 * 换行的字符数
 	 *
 	 * @see	CI_Email::$wordwrap
 	 * @var	int
@@ -145,6 +155,7 @@ class CI_Email {
 
 	/**
 	 * Message format.
+	 * 消息格式
 	 *
 	 * @var	string	'text' or 'html'
 	 */
@@ -159,6 +170,7 @@ class CI_Email {
 
 	/**
 	 * Alternative message (for HTML messages only)
+	 * 备选消息（仅适用于HTML消息）
 	 *
 	 * @var	string
 	 */
@@ -166,6 +178,7 @@ class CI_Email {
 
 	/**
 	 * Whether to validate e-mail addresses.
+	 * 是否验证电子邮件地址
 	 *
 	 * @var	bool
 	 */
@@ -189,6 +202,7 @@ class CI_Email {
 
 	/**
 	 * CRLF character sequence
+	 * CRLF字符序列。
 	 *
 	 * RFC 2045 specifies that for 'quoted-printable' encoding,
 	 * "\r\n" must be used. However, it appears that some servers
@@ -203,6 +217,7 @@ class CI_Email {
 
 	/**
 	 * Whether to use Delivery Status Notification.
+	 * 是否使用递送状态通知
 	 *
 	 * @var	bool
 	 */
@@ -218,6 +233,7 @@ class CI_Email {
 
 	/**
 	 * Whether to send messages to BCC recipients in batches.
+	 * 是否批量向密件抄送收件人发送消息
 	 *
 	 * @var	bool
 	 */
@@ -225,6 +241,7 @@ class CI_Email {
 
 	/**
 	 * BCC Batch max number size.
+	 * 使用页面编号标志
 	 *
 	 * @see	CI_Email::$bcc_batch_mode
 	 * @var	int
@@ -235,6 +252,7 @@ class CI_Email {
 
 	/**
 	 * Whether PHP is running in safe mode. Initialized by the class constructor.
+	 * PHP是否运行安全模式。由类构造函数初始化。
 	 *
 	 * @var	bool
 	 */
@@ -242,6 +260,7 @@ class CI_Email {
 
 	/**
 	 * Subject header
+	 * 主题标题
 	 *
 	 * @var	string
 	 */

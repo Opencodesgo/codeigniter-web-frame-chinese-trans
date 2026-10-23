@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Exceptions Class
- * 异常类
+ * 异常类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -62,6 +62,7 @@ class CI_Exceptions {
 
 	/**
 	 * Nesting level of the output buffering mechanism
+	 * 输出缓冲机构的嵌套水平
 	 *
 	 * @var	int
 	 */
@@ -69,6 +70,7 @@ class CI_Exceptions {
 
 	/**
 	 * List of available error levels
+	 * 可用错误级别列表
 	 *
 	 * @var	array
 	 */
@@ -89,6 +91,7 @@ class CI_Exceptions {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @return	void
 	 */
@@ -102,9 +105,10 @@ class CI_Exceptions {
 
 	/**
 	 * Exception Logger
-	 * 记录异常
+	 * 记录异常。
 	 *
 	 * Logs PHP generated error messages
+	 * 记录PHP生成的错误消息。
 	 *
 	 * @param	int	$severity	Log level
 	 * @param	string	$message	Error message
@@ -144,6 +148,7 @@ class CI_Exceptions {
 		}
 
 		// By default we log this, but allow a dev to skip it
+		// 默认情况下，我们记录这个，但允许开发人员跳过它。
 		if ($log_error)
 		{
 			log_message('error', $heading.': '.$page);
@@ -157,10 +162,11 @@ class CI_Exceptions {
 
 	/**
 	 * General Error Page
-	 * 一般错误
+	 * 一般错误。
 	 *
 	 * Takes an error message as input (either as a string or an array)
 	 * and displays it using the specified template.
+	 * 接收一个错误消息作为输入（可以是字符串或数组），并使用指定的模板进行显示。
 	 *
 	 * @param	string		$heading	Page heading
 	 * @param	string|string[]	$message	Error message
@@ -263,6 +269,7 @@ class CI_Exceptions {
 		$severity = isset($this->levels[$severity]) ? $this->levels[$severity] : $severity;
 
 		// For safety reasons we don't show the full file path in non-CLI requests
+		// 出于安全考虑，我们不会在非cli请求中显示完整的文件路径。
 		if ( ! is_cli())
 		{
 			$filepath = str_replace('\\', '/', $filepath);

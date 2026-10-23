@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite，sqlite forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite Forge Class
+ * SQLite Forge 类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_sqlite_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 创建表IF语句
 	 *
 	 * @var	string
 	 */

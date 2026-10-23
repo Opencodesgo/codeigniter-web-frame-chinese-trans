@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，助手，数组相关函数
+ * 系统，助手，数组助手
  */
 
 /**
@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Array Helpers
+ * CodeIgniter 数组助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -97,9 +98,11 @@ if ( ! function_exists('elements'))
 {
 	/**
 	 * Elements
+	 * 基础。
 	 *
 	 * Returns only the array items specified. Will return a default value if
 	 * it is not set.
+	 * 只返回指定的数组项。如果不设置,将返回默认值。
 	 *
 	 * @param	array
 	 * @param	array

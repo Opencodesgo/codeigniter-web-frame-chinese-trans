@@ -77,6 +77,7 @@ class MY_Lang extends CI_Lang {
 
 	/**
 	 * Refactor: base language provided inside system/language
+	 * 重构：系统/语言内部提供的基本语言
 	 * 
 	 * @var string
 	 */
@@ -84,6 +85,7 @@ class MY_Lang extends CI_Lang {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @return	void
 	 */
@@ -96,7 +98,7 @@ class MY_Lang extends CI_Lang {
 	
 	/**
 	 * Load a language file, with fallback to english.
-	 * 加载一个语文文件，并回退英语
+	 * 加载一个语文文件，并回退英语。
 	 *
 	 * @param	mixed	$langfile	Language file name
 	 * @param	string	$idiom		Language name (english, etc.)
@@ -147,6 +149,7 @@ class MY_Lang extends CI_Lang {
 		}
 
 		// Load the base file, so any others found can override it
+		// 加载基本文件，以便找到的任何其他文件都可以覆盖它。
 		$basepath = BASEPATH . 'language/' . $idiom . '/' . $langfile;
 		if (($found = file_exists($basepath)) === TRUE)
 		{
@@ -154,6 +157,7 @@ class MY_Lang extends CI_Lang {
 		}
 
 		// Do we have an alternative path to look in?
+		// 尝试验证URI请求并确定控制器路径。
 		if ($alt_path !== '')
 		{
 			$alt_path .= 'language/' . $idiom . '/' . $langfile;

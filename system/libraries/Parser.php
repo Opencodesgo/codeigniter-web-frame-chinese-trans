@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Parser Class
+ * 解析器类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -54,6 +55,7 @@ class CI_Parser {
 
 	/**
 	 * Left delimiter character for pseudo vars
+	 * 伪变量的左分隔符
 	 *
 	 * @var string
 	 */
@@ -61,6 +63,7 @@ class CI_Parser {
 
 	/**
 	 * Right delimiter character for pseudo vars
+	 * 伪变量的右分隔符
 	 *
 	 * @var string
 	 */
@@ -68,6 +71,7 @@ class CI_Parser {
 
 	/**
 	 * Reference to CodeIgniter instance
+	 * CodeIgniter实例的引用
 	 *
 	 * @var object
 	 */
@@ -77,6 +81,7 @@ class CI_Parser {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @return	void
 	 */
@@ -90,9 +95,11 @@ class CI_Parser {
 
 	/**
 	 * Parse a template
+	 * 解析模板。
 	 *
 	 * Parses pseudo-variables contained in the specified template view,
 	 * replacing them with the data in the second param
+	 * 将指定模板视图中的伪变量解析，并用第二个参数中的数据替换它们。
 	 *
 	 * @param	string
 	 * @param	array
@@ -110,6 +117,7 @@ class CI_Parser {
 
 	/**
 	 * Parse a String
+	 * 解析字符串。
 	 *
 	 * Parses pseudo-variables contained in the specified string,
 	 * replacing them with the data in the second param
@@ -128,6 +136,7 @@ class CI_Parser {
 
 	/**
 	 * Parse a template
+	 * 解析模板。
 	 *
 	 * Parses pseudo-variables contained in the specified template,
 	 * replacing them with the data in the second param
@@ -170,6 +179,7 @@ class CI_Parser {
 
 	/**
 	 * Set the left/right variable delimiters
+	 * 设置左/右变量分隔符
 	 *
 	 * @param	string
 	 * @param	string

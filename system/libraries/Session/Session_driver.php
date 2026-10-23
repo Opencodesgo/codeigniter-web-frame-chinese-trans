@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，会话驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Driver Class
+ * CodeIgniter 会话驱动程序类。
  *
  * @package	CodeIgniter
  * @subpackage	Libraries
@@ -52,6 +57,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Data fingerprint
+	 * 数据指纹
 	 *
 	 * @var	bool
 	 */
@@ -59,6 +65,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Lock placeholder
+	 * 锁占位符
 	 *
 	 * @var	mixed
 	 */
@@ -66,6 +73,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Read session ID
+	 * 读会话ID。
 	 *
 	 * Used to detect session_regenerate_id() calls because PHP only calls
 	 * write() after regenerating the ID.
@@ -76,10 +84,13 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Success and failure return values
+	 * 成功和失败返回值。
 	 *
 	 * Necessary due to a bug in all PHP 5 versions where return values
 	 * from userspace handlers are not handled properly. PHP 7 fixes the
 	 * bug, so we need to return different values depending on the version.
+	 * 由于所有 PHP 5 版本中存在一个漏洞，导致用户空间处理程序的返回值未被正确处理。
+	 * PHP 7 已修复该漏洞，因此我们需要根据版本返回不同的值。
 	 *
 	 * @see	https://wiki.php.net/rfc/session.user.return-value
 	 * @var	mixed
@@ -90,6 +101,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
@@ -131,6 +143,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 
 	/**
 	 * Cookie destroy
+	 * Cookie摧毁。
 	 *
 	 * Internal method to force removal of a cookie by the client
 	 * when session_destroy() is called.

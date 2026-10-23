@@ -55,6 +55,7 @@ if ( ! class_exists('CI_Xmlrpc', FALSE))
 
 /**
  * XML-RPC server class
+ * XML-RPC 服务器类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -74,6 +75,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Debug Message
+	 * 调试信息
 	 *
 	 * @var string
 	 */
@@ -81,6 +83,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * XML RPC Server methods
+	 * XML RPC服务器方法
 	 *
 	 * @var array
 	 */
@@ -88,6 +91,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Configuration object
+	 * 配置对象
 	 *
 	 * @var object
 	 */
@@ -95,6 +99,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Initialize XMLRPC class
+	 * 初始化XMLRPC类
 	 *
 	 * @param	array	$config
 	 * @return	void
@@ -116,6 +121,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Initialize Prefs and Serve
+	 * 初始化Prefs并服务
 	 *
 	 * @param	mixed
 	 * @return	void
@@ -147,6 +153,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Setting of System Methods
+	 * 系统设置方法
 	 *
 	 * @return	void
 	 */
@@ -193,6 +200,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Add Method to Class
+	 * 向类添加方法
 	 *
 	 * @param	string	method name
 	 * @param	string	function
@@ -213,6 +221,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Parse Server Request
+	 * 解析服务器请求
 	 *
 	 * @param	string	data
 	 * @return	object	xmlrpc response
@@ -314,6 +323,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 
 	/**
 	 * Executes the Method
+	 * 执行方法
 	 *
 	 * @param	object
 	 * @return	mixed

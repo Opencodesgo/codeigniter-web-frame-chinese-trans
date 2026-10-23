@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache Wincache
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Wincache Caching Class
+ * CodeIgniter Wincache缓存类。
  *
  * Read more about Wincache functions here:
  * http://www.php.net/manual/en/ref.wincache.php
@@ -53,9 +58,11 @@ class CI_Cache_wincache extends CI_Driver {
 
 	/**
 	 * Class constructor
+	 * 类构造函数。
 	 *
 	 * Only present so that an error message is logged
 	 * if APC is not available.
+	 * 仅在 APC 不可用时才显示，以便记录错误消息。
 	 *
 	 * @return	void
 	 */

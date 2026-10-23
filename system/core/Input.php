@@ -50,9 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Input Class
- * 输入类
+ * 输入类。
  *
  * Pre-processes global input data for security
+ * 为了安全，预处理全局输入数据。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -72,9 +73,10 @@ class CI_Input {
 
 	/**
 	 * Allow GET array flag
-	 * 允许得到数组标记
+	 * 允许得到数组标记。
 	 *
 	 * If set to FALSE, then $_GET will be set to an empty array.
+	 * 如果设置为FALSE，则$_GET将设置为空数组。
 	 *
 	 * @var	bool
 	 */
@@ -82,9 +84,10 @@ class CI_Input {
 
 	/**
 	 * Standardize new lines flag
-	 * 标准化标记
+	 * 标准化标记。
 	 *
 	 * If set to TRUE, then newlines are standardized.
+	 * 如果设置为TRUE，则换行符是标准化的。
 	 *
 	 * @var	bool
 	 */
@@ -92,11 +95,13 @@ class CI_Input {
 
 	/**
 	 * Enable XSS flag
-	 * 启用XSS标记
+	 * 启用XSS标记。
 	 *
 	 * Determines whether the XSS filter is always active when
 	 * GET, POST or COOKIE data is encountered.
 	 * Set automatically based on config setting.
+	 * 确定在遇到 GET、POST 或 COOKIE 数据时，XSS 过滤器是否始终处于启用状态。
+	 * 根据配置设置自动设置。
 	 *
 	 * @var	bool
 	 */
@@ -104,10 +109,11 @@ class CI_Input {
 
 	/**
 	 * Enable CSRF flag
-	 * 启用CSRF标记
+	 * 启用CSRF标记。
 	 *
 	 * Enables a CSRF cookie token to be set.
 	 * Set automatically based on config setting.
+	 * 允许设置CSRF cookie令牌。根据配置设置自动设置。
 	 *
 	 * @var	bool
 	 */
@@ -149,10 +155,11 @@ class CI_Input {
 
 	/**
 	 * Class constructor
-	 * 类初始化
+	 * 类初始化。
 	 *
 	 * Determines whether to globally enable the XSS processing
 	 * and whether to allow the $_GET array.
+	 * 确定是否全局启用 XSS 处理以及是否允许 $_GET 数组。
 	 *
 	 * @return	void
 	 */
@@ -174,9 +181,11 @@ class CI_Input {
 		}
 
 		// Sanitize global arrays
+		// 清理全局数组
 		$this->_sanitize_globals();
 
 		// CSRF Protection check
+		// CSRF保护检查
 		if ($this->_enable_csrf === TRUE && ! is_cli())
 		{
 			$this->security->csrf_verify();
@@ -189,9 +198,10 @@ class CI_Input {
 
 	/**
 	 * Fetch from array
-	 * 从数组里获取
+	 * 从数组里获取。
 	 *
 	 * Internal method used to retrieve values from global arrays.
+	 * 用于从全局数组检索值的内部方法。
 	 *
 	 * @param	array	&$array		$_GET, $_POST, $_COOKIE, $_SERVER, etc.
 	 * @param	mixed	$index		Index for item to be fetched from $array
@@ -203,6 +213,7 @@ class CI_Input {
 		is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
 
 		// If $index is NULL, it means that the whole $array is requested
+		// 如果$index为NULL，则表示请求整个$数组。
 		isset($index) OR $index = array_keys($array);
 
 		// allow fetching multiple keys at once
@@ -256,6 +267,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the GET array
+	 * 从GET数组中获取一个项
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -270,6 +282,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the POST array
+	 * 从POST数组中获取一个项目
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_POST
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -284,6 +297,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from POST data with fallback to GET
+	 * 从POST数据中获取项目，并回退到GET。
 	 *
 	 * @param	string	$index		Index for item to be fetched from $_POST or $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -300,6 +314,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from GET data with fallback to POST
+	 * 从回退到POST的GET数据中获取项
 	 *
 	 * @param	string	$index		Index for item to be fetched from $_GET or $_POST
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -316,6 +331,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the COOKIE array
+	 * 从COOKIE数组中获取一个项
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_COOKIE
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -330,6 +346,7 @@ class CI_Input {
 
 	/**
 	 * Fetch an item from the SERVER array
+	 * 从SERVER数组中获取一个项
 	 *
 	 * @param	mixed	$index		Index for item to be fetched from $_SERVER
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
@@ -437,9 +454,10 @@ class CI_Input {
 
 	/**
 	 * Fetch the IP Address
-	 * 获取IP Address
+	 * 获取IP Address。
 	 *
 	 * Determines and validates the visitor's IP address.
+	 * 确定并验证访问者的IP地址。
 	 *
 	 * @return	string	IP address
 	 */
@@ -604,6 +622,7 @@ class CI_Input {
 
 	/**
 	 * Fetch User Agent string
+	 * 获取用户代理字符串
 	 *
 	 * @return	string|null	User Agent string or NULL if it doesn't exist
 	 */
@@ -689,6 +708,7 @@ class CI_Input {
 
 	/**
 	 * Clean Input Data
+	 * 清理输入数据。
 	 *
 	 * Internal method that aids in escaping data and
 	 * standardizing newline characters to PHP_EOL.
@@ -740,6 +760,7 @@ class CI_Input {
 
 	/**
 	 * Clean Keys
+	 * 清理主键。
 	 *
 	 * Internal method that helps to prevent malicious users
 	 * from trying to exploit keys we make sure that keys are
@@ -780,6 +801,7 @@ class CI_Input {
 
 	/**
 	 * Request Headers
+	 * 请求头
 	 *
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	array
@@ -821,8 +843,10 @@ class CI_Input {
 
 	/**
 	 * Get Request Header
+	 * 获取请求头。
 	 *
 	 * Returns the value of a single member of the headers class member
+	 * 返回头类成员的单个成员的值。
 	 *
 	 * @param	string		$index		Header name
 	 * @param	bool		$xss_clean	Whether to apply XSS filtering
@@ -857,6 +881,7 @@ class CI_Input {
 
 	/**
 	 * Is AJAX request?
+	 * AJAX是请求吗？
 	 *
 	 * Test to see if a request contains the HTTP_X_REQUESTED_WITH header.
 	 *
@@ -871,8 +896,10 @@ class CI_Input {
 
 	/**
 	 * Is CLI request?
+	 * CLI请求？
 	 *
 	 * Test to see if a request was made from the command line.
+	 * 测试是否从命令行发出请求。
 	 *
 	 * @deprecated	3.0.0	Use is_cli() instead
 	 * @return	bool
@@ -886,8 +913,10 @@ class CI_Input {
 
 	/**
 	 * Get Request Method
+	 * 使用GET请求方法。
 	 *
 	 * Return the request method
+	 * 返回请求方法。
 	 *
 	 * @param	bool	$upper	Whether to return in upper or lower case
 	 *				(default: FALSE)
@@ -906,6 +935,7 @@ class CI_Input {
 	 * Magic __get()
 	 *
 	 * Allows read access to protected properties
+	 * 允许读取访问保护属性。
 	 *
 	 * @param	string	$name
 	 * @return	mixed

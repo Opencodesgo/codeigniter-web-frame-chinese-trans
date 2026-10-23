@@ -87,10 +87,10 @@ class CI_Benchmark {
 
 	/**
 	 * Elapsed time
-	 * 运行时间
+	 * 运行时间。
 	 *
 	 * Calculates the time difference between two marked points.
-	 * 计算两个标记点之间的时间差
+	 * 计算两个标记点之间的时间差。
 	 *
 	 * If the first parameter is empty this function instead returns the
 	 * {elapsed_time} pseudo-variable. This permits the full system
@@ -133,14 +133,16 @@ class CI_Benchmark {
 
 	/**
 	 * Memory Usage
-	 * 内存占用
+	 * 内存占用。
 	 *
 	 * Simply returns the {memory_usage} marker.
-	 * 简单地返回{ memory_use }标记
+	 * 简单地返回{ memory_use }标记。
 	 *
 	 * This permits it to be put it anywhere in a template
 	 * without the memory being calculated until the end.
 	 * The output class will swap the real value for this variable.
+	 * 这使得它可以在模板的任何位置使用，而无需在最后才计算内存。
+	 * 输出类会将此变量的实际值进行替换。
 	 *
 	 * @return	string	'{memory_usage}'
 	 */

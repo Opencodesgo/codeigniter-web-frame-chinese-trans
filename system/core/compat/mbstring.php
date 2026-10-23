@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，核心，字符串
+ * 系统，核心，mbstring
  * 兼容性字符串处理，加载入CodeIgniter.php
  */
  

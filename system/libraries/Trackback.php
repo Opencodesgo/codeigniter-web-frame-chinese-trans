@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Trackback Class
+ * Trackback 类。
  *
  * Trackback Sending/Receiving Class
  *
@@ -57,7 +58,6 @@ class CI_Trackback {
 	/**
 	 * Character set
 	 * 字节设置
-	 * 
 	 *
 	 * @var	string
 	 */
@@ -79,6 +79,7 @@ class CI_Trackback {
 
 	/**
 	 * Convert ASCII flag
+	 * 转换ASCII标志。
 	 *
 	 * Whether to convert high-ASCII and MS Word
 	 * characters to HTML entities.
@@ -89,6 +90,7 @@ class CI_Trackback {
 
 	/**
 	 * Response
+	 * 响应
 	 *
 	 * @var	string
 	 */
@@ -96,6 +98,7 @@ class CI_Trackback {
 
 	/**
 	 * Error messages list
+	 * 错误信息表
 	 *
 	 * @var	string[]
 	 */

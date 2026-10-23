@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysql，mysql 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQL Result Class
+ * MySQL结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -50,6 +55,7 @@ class CI_DB_mysql_result extends CI_DB_result {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	object	&$driver_object
 	 * @return	void
@@ -67,6 +73,7 @@ class CI_DB_mysql_result extends CI_DB_result {
 
 	/**
 	 * Number of rows in the result set
+	 * 结果集中的行数
 	 *
 	 * @return	int
 	 */
@@ -79,6 +86,7 @@ class CI_DB_mysql_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中的字段数
 	 *
 	 * @return	int
 	 */
@@ -91,8 +99,10 @@ class CI_DB_mysql_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
+	 * 生成列名数组。
 	 *
 	 * @return	array
 	 */

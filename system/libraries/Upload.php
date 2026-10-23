@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，文件上传类
  */
 
 /**
@@ -40,13 +40,10 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * 文件上传类
- */
  
 /**
  * File Uploading Class
+ * 文件上传类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -106,6 +103,7 @@ class CI_Upload {
 
 	/**
 	 * Maximum duplicate filename increment ID
+	 * 最大重复文件名增量ID
 	 *
 	 * @var	int
 	 */
@@ -121,6 +119,7 @@ class CI_Upload {
 
 	/**
 	 * Temporary filename
+	 * 临时文件名
 	 *
 	 * @var	string
 	 */
@@ -136,6 +135,7 @@ class CI_Upload {
 
 	/**
 	 * Original filename
+	 * 原始文件名
 	 *
 	 * @var	string
 	 */
@@ -167,6 +167,7 @@ class CI_Upload {
 
 	/**
 	 * Force filename extension to lowercase
+	 * 强制文件名扩展名为小写
 	 *
 	 * @var	string
 	 */
@@ -174,6 +175,7 @@ class CI_Upload {
 
 	/**
 	 * Upload path
+	 * 上载路径
 	 *
 	 * @var	string
 	 */
@@ -181,6 +183,7 @@ class CI_Upload {
 
 	/**
 	 * Overwrite flag
+	 * 覆盖标记
 	 *
 	 * @var	bool
 	 */
@@ -188,6 +191,7 @@ class CI_Upload {
 
 	/**
 	 * Obfuscate filename flag
+	 * 混淆文件名标志
 	 *
 	 * @var	bool
 	 */

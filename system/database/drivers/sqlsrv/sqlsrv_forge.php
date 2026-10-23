@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlsrv，sqlsrv forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLSRV Forge Class
+ * SQLSRV Forge 类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_sqlsrv_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 如果语句创建表
 	 *
 	 * @var	string
 	 */
@@ -55,6 +61,7 @@ class CI_DB_sqlsrv_forge extends CI_DB_forge {
 
 	/**
 	 * DROP TABLE IF statement
+	 * 删除表格
 	 *
 	 * @var	string
 	 */
@@ -103,8 +110,10 @@ class CI_DB_sqlsrv_forge extends CI_DB_forge {
 
 	/**
 	 * Field attribute TYPE
+	 * 字段属性类型。
 	 *
 	 * Performs a data type mapping between different databases.
+	 * 在不同数据库之间执行数据类型映射。
 	 *
 	 * @param	array	&$attributes
 	 * @return	void
@@ -133,6 +142,7 @@ class CI_DB_sqlsrv_forge extends CI_DB_forge {
 
 	/**
 	 * Field attribute AUTO_INCREMENT
+	 * 字段属性AUTO_INCREMENT
 	 *
 	 * @param	array	&$attributes
 	 * @param	array	&$field

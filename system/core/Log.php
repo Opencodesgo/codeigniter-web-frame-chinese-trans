@@ -81,6 +81,7 @@ class CI_Log {
 
 	/**
 	 * Array of threshold levels to log
+	 * 要记录的阈值级别数组
 	 *
 	 * @var array
 	 */
@@ -211,6 +212,7 @@ class CI_Log {
 		{
 			$newfile = TRUE;
 			// Only add protection to php files
+			// 只对php文件添加保护
 			if ($this->_file_ext === 'php')
 			{
 				$message .= "<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>\n\n";
@@ -225,6 +227,7 @@ class CI_Log {
 		flock($fp, LOCK_EX);
 
 		// Instantiating DateTime with microseconds appended to initial date is needed for proper support of this format
+		// 为了正确支持这种格式，需要实例化DateTime，并在初始日期后面添加微秒。
 		if (strpos($this->_date_fmt, 'u') !== FALSE)
 		{
 			$microtime_full = microtime(TRUE);
@@ -263,10 +266,11 @@ class CI_Log {
 
 	/**
 	 * Format the log line.
-	 * 格式化日志行
+	 * 格式化日志行。
 	 *
 	 * This is for extensibility of log formatting
 	 * If you want to change the log format, extend the CI_Log class and override this method
+	 * 这是为了日志格式的可扩展性。如果你想更改日志格式，请扩展 CI_Log 类并重写此方法。
 	 *
 	 * @param	string	$level 	The error level
 	 * @param	string	$date 	Formatted date string

@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，mysqli，mysqli 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * mysqli result
- */
-
-/**
  * MySQLi Result Class
+ * MySQLi结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -56,6 +57,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Number of rows in the result set
+	 * 结果集中的行数
 	 *
 	 * @return	int
 	 */
@@ -70,6 +72,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中的字段数
 	 *
 	 * @return	int
 	 */
@@ -82,6 +85,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
 	 *
@@ -103,8 +107,10 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Field data
+	 * 现场数据。
 	 *
 	 * Generates an array of objects containing field meta-data
+	 * 生成包含字段元数据的对象数组。
 	 *
 	 * @return	array
 	 */
@@ -129,6 +135,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Get field type
+	 * 获取字段类型。
 	 *
 	 * Extracts field type info from the bitflags returned by
 	 * mysqli_result::fetch_fields()
@@ -175,6 +182,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Free the result
+	 * 释放结果
 	 *
 	 * @return	void
 	 */
@@ -191,10 +199,12 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Data Seek
+	 * 数据查找。
 	 *
 	 * Moves the internal pointer to the desired offset. We call
 	 * this internally before fetching results to make sure the
 	 * result set starts at zero.
+	 * 将内部指针移动到指定偏移量。我们在获取结果前会调用此方法，以确保结果集从零开始。
 	 *
 	 * @param	int	$n
 	 * @return	bool
@@ -208,8 +218,10 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Result - associative array
+	 * 结果-关联的数组。
 	 *
 	 * Returns the result set as an array
+	 * 将结果集返回为一个数组。
 	 *
 	 * @return	array
 	 */

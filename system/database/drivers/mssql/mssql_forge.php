@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，mssql，mssql forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MS SQL Forge Class
+ * MS SQL Forge 类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -50,6 +55,7 @@ class CI_DB_mssql_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 如果语句创建表
 	 *
 	 * @var	string
 	 */
@@ -57,6 +63,7 @@ class CI_DB_mssql_forge extends CI_DB_forge {
 
 	/**
 	 * DROP TABLE IF statement
+	 * 删除表IF语句
 	 *
 	 * @var	string
 	 */
@@ -64,6 +71,7 @@ class CI_DB_mssql_forge extends CI_DB_forge {
 
 	/**
 	 * UNSIGNED support
+	 * 无符号的支持
 	 *
 	 * @var	array
 	 */
@@ -105,8 +113,10 @@ class CI_DB_mssql_forge extends CI_DB_forge {
 
 	/**
 	 * Field attribute TYPE
+	 * 字段类型属性。
 	 *
 	 * Performs a data type mapping between different databases.
+	 * 在不同数据库之间执行数据类型映射。
 	 *
 	 * @param	array	&$attributes
 	 * @return	void
@@ -135,6 +145,7 @@ class CI_DB_mssql_forge extends CI_DB_forge {
 
 	/**
 	 * Field attribute AUTO_INCREMENT
+	 * 字段属性AUTO_INCREMENT
 	 *
 	 * @param	array	&$attributes
 	 * @param	array	&$field

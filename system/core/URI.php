@@ -46,9 +46,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 /**
  * URI Class
- * URI 类，同Router类一起使用
+ * URI 类，同Router类一起使用。
  *
  * Parses URIs and determines routing
+ * 解析uri并确定路由。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -79,6 +80,7 @@ class CI_URI {
 	 * URI段列表。
 	 *
 	 * Starts at 1 instead of 0.
+	 * 从1开始，而不是0。
 	 *
 	 * @var	array
 	 */
@@ -86,8 +88,10 @@ class CI_URI {
 
 	/**
 	 * List of routed URI segments
+	 * 路由URI段列表。
 	 *
 	 * Starts at 1 instead of 0.
+	 * 从1开始，而不是0。
 	 *
 	 * @var	array
 	 */
@@ -95,8 +99,10 @@ class CI_URI {
 
 	/**
 	 * Permitted URI chars
+	 * 允许的URI字符。
 	 *
 	 * PCRE character group allowed in URI segments
+	 * URI段中允许的PCRE字符组。
 	 *
 	 * @var	string
 	 */
@@ -296,8 +302,10 @@ class CI_URI {
 
 	/**
 	 * Parse CLI arguments
+	 * 解析CLI参数。
 	 *
 	 * Take each command line argument and assume it is a URI segment.
+	 * 取每个命令行参数，并假设它是一个URI段。
 	 *
 	 * @return	string
 	 */
@@ -337,8 +345,10 @@ class CI_URI {
 
 	/**
 	 * Filter URI
+	 * 过滤器URI。
 	 *
 	 * Filters segments for malicious characters.
+	 * 过滤恶意字符段。
 	 *
 	 * @param	string	$str
 	 * @return	void
@@ -355,6 +365,7 @@ class CI_URI {
 
 	/**
 	 * Fetch URI Segment
+	 * 获取URI段
 	 *
 	 * @see		CI_URI::$segments
 	 * @param	int		$n		Index
@@ -417,6 +428,7 @@ class CI_URI {
 
 	/**
 	 * Routed URI to assoc
+	 * 路由URI到关联。
 	 *
 	 * Identical to CI_URI::uri_to_assoc(), only it uses the re-routed
 	 * segment array.
@@ -507,8 +519,10 @@ class CI_URI {
 
 	/**
 	 * Assoc to URI
+	 * 与URI关联。
 	 *
 	 * Generates a URI string from an associative array.
+	 * 从关联数组生成URI字符串。
 	 *
 	 * @param	array	$array	Input array of key/value pairs
 	 * @return	string	URI string
@@ -529,8 +543,10 @@ class CI_URI {
 
 	/**
 	 * Slash segment
+	 * 斜线段。
 	 *
 	 * Fetches an URI segment with a slash.
+	 * 获取带有斜杠的URI段。
 	 *
 	 * @param	int	$n	Index
 	 * @param	string	$where	Where to add the slash ('trailing' or 'leading')
@@ -545,8 +561,10 @@ class CI_URI {
 
 	/**
 	 * Slash routed segment
+	 * 斜线路由段。
 	 *
 	 * Fetches an URI routed segment with a slash.
+	 * 获取带有斜杠的URI路由段
 	 *
 	 * @param	int	$n	Index
 	 * @param	string	$where	Where to add the slash ('trailing' or 'leading')
@@ -561,8 +579,10 @@ class CI_URI {
 
 	/**
 	 * Internal Slash segment
+	 * 内斜线段。
 	 *
 	 * Fetches an URI Segment and adds a slash to it.
+	 * 获取URI段并向其添加斜杠。
 	 *
 	 * @used-by	CI_URI::slash_segment()
 	 * @used-by	CI_URI::slash_rsegment()
@@ -592,6 +612,7 @@ class CI_URI {
 
 	/**
 	 * Segment Array
+	 * 段阵列
 	 *
 	 * @return	array	CI_URI::$segments
 	 */
@@ -604,6 +625,7 @@ class CI_URI {
 
 	/**
 	 * Routed Segment Array
+	 * 清理不良HTML
 	 *
 	 * @return	array	CI_URI::$rsegments
 	 */
@@ -652,6 +674,7 @@ class CI_URI {
 
 	/**
 	 * Fetch Re-routed URI string
+	 * 获取重路由URI字符串
 	 *
 	 * @return	string
 	 */

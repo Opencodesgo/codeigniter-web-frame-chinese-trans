@@ -57,6 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 function &DB($params = '', $query_builder_override = NULL)
 {
 	// Load the DB config file if a DSN string wasn't passed
+	// 如果没有传递DSN字符串，则加载DB配置文件。
 	if (is_string($params) && strpos($params, '://') === FALSE)
 	{
 		// Is the config file in the environment folder?
@@ -71,6 +72,7 @@ function &DB($params = '', $query_builder_override = NULL)
 
 		// Make packages contain database config files,
 		// given that the controller instance already exists
+		// 创建包含数据库配置文件的包，前提是控制器实例已经存在。
 		if (class_exists('CI_Controller', FALSE))
 		{
 			foreach (get_instance()->load->get_package_paths() as $path)
@@ -118,6 +120,7 @@ function &DB($params = '', $query_builder_override = NULL)
 		 * parameters or as a data source name in the first
 		 * parameter. DSNs must have this prototype:
 		 * $dsn = 'driver://username:password@hostname/database';
+		 * 从DSN字符串中解析URL。数据库设置可以作为独立参数传递，也可以作为第一个参数中的数据源名称。
 		 */
 		if (($dsn = @parse_url($params)) === FALSE)
 		{
@@ -134,6 +137,7 @@ function &DB($params = '', $query_builder_override = NULL)
 		);
 
 		// Were additional config items set?
+		// 是否设置了其他配置项？
 		if (isset($dsn['query']))
 		{
 			parse_str($dsn['query'], $extra);
@@ -151,6 +155,7 @@ function &DB($params = '', $query_builder_override = NULL)
 	}
 
 	// No DB specified yet? Beat them senseless...
+	// 没有指定DB ？把他们打晕……
 	if (empty($params['dbdriver']))
 	{
 		show_error('You have not selected a database type to connect to.');
@@ -159,6 +164,7 @@ function &DB($params = '', $query_builder_override = NULL)
 	// Load the DB classes. Note: Since the query builder class is optional
 	// we need to dynamically create a class that extends proper parent class
 	// based on whether we're using the query builder class or not.
+	// 加载数据库类。注意：由于查询构建器类是可选的，我们需要根据是否使用查询构建器类，动态创建一个继承适当父类的类。
 	if ($query_builder_override !== NULL)
 	{
 		$query_builder = $query_builder_override;

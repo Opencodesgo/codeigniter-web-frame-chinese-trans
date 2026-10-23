@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，ibase，ibase forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Interbase/Firebird Forge Class
+ * Interbase/Firebird Forge 类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -48,6 +53,7 @@ class CI_DB_ibase_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE IF statement
+	 * 如果语句创建表
 	 *
 	 * @var	string
 	 */
@@ -55,6 +61,7 @@ class CI_DB_ibase_forge extends CI_DB_forge {
 
 	/**
 	 * RENAME TABLE statement
+	 * RENAME TABLE语句
 	 *
 	 * @var	string
 	 */

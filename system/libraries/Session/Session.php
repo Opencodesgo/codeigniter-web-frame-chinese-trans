@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，Session
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Class
+ * CodeIgniter 会话类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Session {
 
 	/**
 	 * Userdata array
+	 * 用户数据数组。
 	 *
 	 * Just a reference to $_SESSION, for BC purposes.
 	 */
@@ -63,6 +69,7 @@ class CI_Session {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
@@ -130,6 +137,7 @@ class CI_Session {
 		}
 
 		// Sanitize the cookie, because apparently PHP doesn't do that for userspace handlers
+		// 清理cookie，因为显然PHP不会对用户空间处理程序这样做。
 		if (isset($_COOKIE[$this->_config['cookie_name']])
 			&& (
 				! is_string($_COOKIE[$this->_config['cookie_name']])
@@ -180,10 +188,12 @@ class CI_Session {
 
 	/**
 	 * CI Load Classes
+	 * CI加载类。
 	 *
 	 * An internal method to load all possible dependency and extension
 	 * classes. It kind of emulates the CI_Driver library, but is
 	 * self-sufficient.
+	 * 一个内部方法，用于加载所有可能的依赖和扩展类。它类似于 CI_Driver 库，但具备自给自足的能力。
 	 *
 	 * @param	string	$driver	Driver name
 	 * @return	string	Driver class name
@@ -252,8 +262,10 @@ class CI_Session {
 
 	/**
 	 * Configuration
+	 * 配置。
 	 *
 	 * Handle input parameters and configuration defaults
+	 * 处理输入参数和配置默认值。
 	 *
 	 * @param	array	&$params	Input parameters
 	 * @return	void
@@ -323,6 +335,7 @@ class CI_Session {
 
 	/**
 	 * Configure session ID length
+	 * 配置会话ID长度。
 	 *
 	 * To make life easier, we used to force SHA-1 and 4 bits per
 	 * character on everyone. And of course, someone was unhappy.
@@ -397,6 +410,7 @@ class CI_Session {
 
 	/**
 	 * Handle temporary variables
+	 * 处理临时变量。
 	 *
 	 * Clears old "flash" data, marks the new one for deletion and handles
 	 * "temp" data deletion.
@@ -436,6 +450,7 @@ class CI_Session {
 
 	/**
 	 * Mark as flash
+	 * 标记为闪存
 	 *
 	 * @param	mixed	$key	Session data key(s)
 	 * @return	bool
@@ -474,6 +489,7 @@ class CI_Session {
 
 	/**
 	 * Get flash keys
+	 * 获取闪存键
 	 *
 	 * @return	array
 	 */
@@ -497,6 +513,7 @@ class CI_Session {
 
 	/**
 	 * Unmark flash
+	 * 取消标记闪光
 	 *
 	 * @param	mixed	$key	Session data key(s)
 	 * @return	void
@@ -528,6 +545,7 @@ class CI_Session {
 
 	/**
 	 * Mark as temp
+	 * 标记为临时
 	 *
 	 * @param	mixed	$key	Session data key(s)
 	 * @param	int	$ttl	Time-to-live in seconds
@@ -582,6 +600,7 @@ class CI_Session {
 
 	/**
 	 * Get temp keys
+	 * 获取临时密钥
 	 *
 	 * @return	array
 	 */

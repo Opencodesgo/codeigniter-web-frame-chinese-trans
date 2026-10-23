@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，日历
+ * 系统，类，加密
  */
 
 /**
@@ -42,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 加密
- */
-
-/**
  * CodeIgniter Encryption Class
+ * CodeIgniter 加密类。
  *
  * Provides two-way keyed encryption via PHP's MCrypt and/or OpenSSL extensions.
  *
@@ -60,6 +57,7 @@ class CI_Encryption {
 
 	/**
 	 * Encryption cipher
+	 * 密码加密
 	 *
 	 * @var	string
 	 */
@@ -67,6 +65,7 @@ class CI_Encryption {
 
 	/**
 	 * Cipher mode
+	 * 密码模式
 	 *
 	 * @var	string
 	 */

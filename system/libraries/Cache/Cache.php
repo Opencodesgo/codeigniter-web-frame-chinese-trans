@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，Cache
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Cache类
- */
-
-/**
  * CodeIgniter Caching Class
+ * CodeIgniter Caching 类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -54,6 +55,7 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Valid cache drivers
+	 * 有效的缓存驱动程序
 	 *
 	 * @var array
 	 */
@@ -68,6 +70,7 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Path of cache files (if file-based cache)
+	 * 缓存文件的路径（如果基于文件的缓存）
 	 *
 	 * @var string
 	 */
@@ -75,6 +78,7 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Reference to the driver
+	 * 参考驱动
 	 *
 	 * @var mixed
 	 */
@@ -82,6 +86,7 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Fallback driver
+	 * 后备驱动
 	 *
 	 * @var string
 	 */

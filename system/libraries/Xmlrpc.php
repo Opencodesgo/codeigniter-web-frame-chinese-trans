@@ -50,6 +50,7 @@ if ( ! function_exists('xml_parser_create'))
 
 /**
  * XML-RPC request handler class
+ * XML-RPC 请求处理程序类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -61,6 +62,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Debug flag
+	 * 调试标记
 	 *
 	 * @var	bool
 	 */
@@ -75,6 +77,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Integer data type
+	 * 整数数据类型
 	 *
 	 * @var	string
 	 */
@@ -82,6 +85,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Boolean data type
+	 * 布尔数据类型
 	 *
 	 * @var	string
 	 */
@@ -89,6 +93,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Double data type
+	 * 双重数据类型
 	 *
 	 * @var	string
 	 */
@@ -96,6 +101,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * String data type
+	 * 字符串数据类型
 	 *
 	 * @var	string
 	 */
@@ -103,6 +109,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * DateTime format
+	 * 数据时格式
 	 *
 	 * @var	string
 	 */
@@ -110,6 +117,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Base64 data type
+	 * Base64数据类型
 	 *
 	 * @var	string
 	 */
@@ -124,6 +132,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Struct data type
+	 * 结构数据类型
 	 *
 	 * @var	string
 	 */

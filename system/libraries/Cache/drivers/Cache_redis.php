@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache Redis
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Redis Caching Class
+ * CodeIgniter Redis缓存类。
  *
  * @package	   CodeIgniter
  * @subpackage Libraries
@@ -50,6 +55,7 @@ class CI_Cache_redis extends CI_Driver
 {
 	/**
 	 * Default config
+	 * 默认配置
 	 *
 	 * @static
 	 * @var	array
@@ -64,6 +70,7 @@ class CI_Cache_redis extends CI_Driver
 
 	/**
 	 * Redis connection
+	 * Redis 连接
 	 *
 	 * @var	Redis
 	 */
@@ -71,6 +78,7 @@ class CI_Cache_redis extends CI_Driver
 
 	/**
 	 * An internal cache for storing keys of serialized values.
+	 * 用于存储序列化值的键的内部缓存
 	 *
 	 * @var	array
 	 */

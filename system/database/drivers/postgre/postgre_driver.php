@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，postgre，postgre 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Postgre Database Adapter Class
+ * Postgre 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -61,6 +67,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Database schema
+	 * 数据库模式
 	 *
 	 * @var	string
 	 */
@@ -70,6 +77,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 按随机关键字排序
 	 *
 	 * @var	array
 	 */
@@ -143,6 +151,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Database connection
+	 * 数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	resource
@@ -191,6 +200,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Set client character set
+	 * 设置客户端字符集
 	 *
 	 * @param	string	$charset
 	 * @return	bool
@@ -204,6 +214,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -233,6 +244,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行查询
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	resource
@@ -246,6 +258,7 @@ class CI_DB_postgre_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
