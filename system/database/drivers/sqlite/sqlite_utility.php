@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite，sqlite 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite Utility Class
+ * SQLite 工具类。
  *
  * @category	Database
  * @author		EllisLab Dev Team

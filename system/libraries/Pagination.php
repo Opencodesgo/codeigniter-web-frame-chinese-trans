@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Pagination Class
+ * 分页类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -61,8 +62,10 @@ class CI_Pagination {
 
 	/**
 	 * Base URL
+	 * 基本URL。
 	 *
 	 * The page that we're linking to
+	 * 我们要链接的页面。
 	 *
 	 * @var	string
 	 */
@@ -86,6 +89,7 @@ class CI_Pagination {
 
 	/**
 	 * Total number of items
+	 * 物品总数
 	 *
 	 * @var	int
 	 */
@@ -93,6 +97,7 @@ class CI_Pagination {
 
 	/**
 	 * Number of links to show
+	 * 要显示的链接数。
 	 *
 	 * Relates to "digit" type links shown before/after
 	 * the currently viewed page.
@@ -119,8 +124,10 @@ class CI_Pagination {
 
 	/**
 	 * Use page numbers flag
+	 * 使用页面编号标志。
 	 *
 	 * Whether to use actual page numbers instead of an offset
+	 * 是否使用实际页码而不是偏移量。
 	 *
 	 * @var	bool
 	 */
@@ -128,6 +135,7 @@ class CI_Pagination {
 
 	/**
 	 * First link
+	 * 第一链接
 	 *
 	 * @var	string
 	 */
@@ -135,6 +143,7 @@ class CI_Pagination {
 
 	/**
 	 * Next link
+	 * 下一链接
 	 *
 	 * @var	string
 	 */

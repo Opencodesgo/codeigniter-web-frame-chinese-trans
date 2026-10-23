@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，文件助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 文件相关函数
- */
-
-/**
  * CodeIgniter File Helpers
+ * CodeIgniter 文件助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers

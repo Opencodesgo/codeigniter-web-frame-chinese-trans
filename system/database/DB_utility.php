@@ -243,6 +243,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Generate CSV from a query result object
+	 * 从查询结果对象生成CSV
 	 *
 	 * @param	object	$query		Query result object
 	 * @param	string	$delim		Delimiter (default: ,)
@@ -284,6 +285,7 @@ abstract class CI_DB_utility {
 
 	/**
 	 * Generate XML data from a query result object
+	 * 从查询结果对象生成XML数据
 	 *
 	 * @param	object	$query	Query result object
 	 * @param	array	$params	Any preferences

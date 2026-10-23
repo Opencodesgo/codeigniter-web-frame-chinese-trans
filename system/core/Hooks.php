@@ -89,9 +89,10 @@ class CI_Hooks {
 
 	/**
 	 * In progress flag
-	 * 在进行中标志
+	 * 在进行中标志。
 	 *
 	 * Determines whether hook is in progress, used to prevent infinte loops
+	 * 确定钩子是否正在进行中，用于防止无限循环。
 	 *
 	 * @var	bool
 	 */
@@ -99,6 +100,7 @@ class CI_Hooks {
 
 	/**
 	 * Class constructor
+	 * 类构造器。
 	 *
 	 * @return	void
 	 */
@@ -142,9 +144,10 @@ class CI_Hooks {
 
 	/**
 	 * Call Hook
-	 * 调取钩子，被CodeIgniter文件调用
+	 * 调取钩子，被CodeIgniter文件调用。
 	 *
 	 * Calls a particular hook. Called by CodeIgniter.php.
+	 * 调用一个特定的钩子。由CodeIgniter.php调用。
 	 *
 	 * @uses	CI_Hooks::_run_hook()
 	 *
@@ -177,9 +180,10 @@ class CI_Hooks {
 
 	/**
 	 * Run Hook
-	 * 运行钩子，子方法
+	 * 运行钩子，子方法。
 	 *
 	 * Runs a particular hook
+	 * 运行一个特定的钩子。
 	 *
 	 * @param	array	$data	Hook details	文件及参数
 	 * @return	bool	TRUE on success or FALSE on failure
@@ -202,10 +206,12 @@ class CI_Hooks {
 
 		// -----------------------------------
 		// Safety - Prevents run-away loops
+		// 安全-防止失控的循环
 		// -----------------------------------
 
 		// If the script being called happens to have the same
 		// hook call within it a loop can happen
+		// 如果被调用的脚本内部恰好包含相同的钩子调用，就可能发生循环。
 		if ($this->_in_progress === TRUE)
 		{
 			return;
@@ -240,9 +246,11 @@ class CI_Hooks {
 		}
 
 		// Set the _in_progress flag
+		// 设置_in_progress标志
 		$this->_in_progress = TRUE;
 
 		// Call the requested class and/or function
+		// 调用请求的类和/或函数
 		if ($class !== FALSE)
 		{
 			// The object is stored?
@@ -267,6 +275,7 @@ class CI_Hooks {
 				}
 
 				// Store the object and execute the method
+				// 存储对象并执行方法
 				$this->_objects[$class] = new $class();
 				$this->_objects[$class]->$function($params);
 			}

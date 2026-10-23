@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，ibase，ibase 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Interbase/Firebird Utility Class
+ * 基础/Firebird工具类。
  *
  * @category	Database
  * @author		EllisLab Dev Team
@@ -59,6 +64,7 @@ class CI_DB_ibase_utility extends CI_DB_utility {
 			$res = ibase_backup($service, $this->db->database, $filename.'.fbk');
 
 			// Close the service connection
+			// 关闭服务连接
 			ibase_service_detach($service);
 			return $res;
 		}

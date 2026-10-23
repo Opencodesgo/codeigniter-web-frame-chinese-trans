@@ -135,6 +135,7 @@ class CI_Upload {
 
 	/**
 	 * Original filename
+	 * 原始文件名
 	 *
 	 * @var	string
 	 */
@@ -166,6 +167,7 @@ class CI_Upload {
 
 	/**
 	 * Force filename extension to lowercase
+	 * 强制文件名扩展名为小写
 	 *
 	 * @var	string
 	 */
@@ -173,6 +175,7 @@ class CI_Upload {
 
 	/**
 	 * Upload path
+	 * 上载路径
 	 *
 	 * @var	string
 	 */
@@ -180,6 +183,7 @@ class CI_Upload {
 
 	/**
 	 * Overwrite flag
+	 * 覆盖标记
 	 *
 	 * @var	bool
 	 */
@@ -187,6 +191,7 @@ class CI_Upload {
 
 	/**
 	 * Obfuscate filename flag
+	 * 混淆文件名标志
 	 *
 	 * @var	bool
 	 */

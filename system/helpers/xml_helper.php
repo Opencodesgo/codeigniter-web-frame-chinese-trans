@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，xml 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * XML相关函数
- */
-
-/**
  * CodeIgniter XML Helpers
+ * CodeIgniter XML 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -69,6 +70,7 @@ if ( ! function_exists('xml_convert'))
 
 		// Replace entities to temporary markers so that
 		// ampersands won't get messed up
+		// 将实体替换为临时标记，以避免井号被误处理。
 		$str = preg_replace('/&#(\d+);/', $temp.'\\1;', $str);
 
 		if ($protect_all === TRUE)

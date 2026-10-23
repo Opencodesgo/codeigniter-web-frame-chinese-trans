@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，ibase，ibase 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Interbase/Firebird Result Class
+ * Interbase/Firebird 结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -50,6 +55,7 @@ class CI_DB_ibase_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中字段的数目
 	 *
 	 * @return	int
 	 */
@@ -62,8 +68,10 @@ class CI_DB_ibase_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
+	 * 生成列名数组。
 	 *
 	 * @return	array
 	 */
@@ -83,8 +91,10 @@ class CI_DB_ibase_result extends CI_DB_result {
 
 	/**
 	 * Field data
+	 * 现场数据。
 	 *
 	 * Generates an array of objects containing field meta-data
+	 * 生成包含字段元数据的对象数组。
 	 *
 	 * @return	array
 	 */
@@ -108,6 +118,7 @@ class CI_DB_ibase_result extends CI_DB_result {
 
 	/**
 	 * Free the result
+	 * 释放结果
 	 *
 	 * @return	void
 	 */

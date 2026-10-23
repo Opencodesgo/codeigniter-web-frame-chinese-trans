@@ -43,8 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
 /**
  * User Agent Class
+ * 用户代理类。
  *
  * Identifies the platform, browser, robot, or mobile device of the browsing agent
+ * 标识浏览代理的平台、浏览器、机器人或移动设备。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -56,6 +58,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent
+	 * 当前用户代理
 	 *
 	 * @var string
 	 */
@@ -63,6 +66,7 @@ class CI_User_agent {
 
 	/**
 	 * Flag for if the user-agent belongs to a browser
+	 * 用户代理是否属于浏览器的标志
 	 *
 	 * @var bool
 	 */
@@ -70,6 +74,7 @@ class CI_User_agent {
 
 	/**
 	 * Flag for if the user-agent is a robot
+	 * 如果用户代理是机器人，则标志。
 	 *
 	 * @var bool
 	 */
@@ -77,6 +82,7 @@ class CI_User_agent {
 
 	/**
 	 * Flag for if the user-agent is a mobile browser
+	 * 如果用户代理是移动浏览器，则标志。
 	 *
 	 * @var bool
 	 */
@@ -84,6 +90,7 @@ class CI_User_agent {
 
 	/**
 	 * Languages accepted by the current user agent
+	 * 当前用户代理接受的语言
 	 *
 	 * @var array
 	 */
@@ -91,6 +98,7 @@ class CI_User_agent {
 
 	/**
 	 * Character sets accepted by the current user agent
+	 * 当前用户代理接受的字符集
 	 *
 	 * @var array
 	 */
@@ -98,6 +106,7 @@ class CI_User_agent {
 
 	/**
 	 * List of platforms to compare against current user agent
+	 * 与当前用户代理进行比较的平台列表
 	 *
 	 * @var array
 	 */
@@ -105,6 +114,7 @@ class CI_User_agent {
 
 	/**
 	 * List of browsers to compare against current user agent
+	 * 要与当前用户代理进行比较的浏览器列表
 	 *
 	 * @var array
 	 */
@@ -112,6 +122,7 @@ class CI_User_agent {
 
 	/**
 	 * List of mobile browsers to compare against current user agent
+	 * 要与当前用户代理进行比较的移动浏览器列表
 	 *
 	 * @var array
 	 */
@@ -119,6 +130,7 @@ class CI_User_agent {
 
 	/**
 	 * List of robots to compare against current user agent
+	 * 要与当前用户代理进行比较的机器人列表
 	 *
 	 * @var array
 	 */
@@ -126,6 +138,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent platform
+	 * 当前用户代理平台
 	 *
 	 * @var string
 	 */
@@ -133,6 +146,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent browser
+	 * 当前用户代理浏览器
 	 *
 	 * @var string
 	 */
@@ -140,6 +154,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent version
+	 * 当前用户代理版本
 	 *
 	 * @var string
 	 */
@@ -147,6 +162,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent mobile name
+	 * 当前用户代理手机名
 	 *
 	 * @var string
 	 */
@@ -154,6 +170,7 @@ class CI_User_agent {
 
 	/**
 	 * Current user-agent robot name
+	 * 当前用户代理机器人名称
 	 *
 	 * @var string
 	 */
@@ -161,6 +178,7 @@ class CI_User_agent {
 
 	/**
 	 * HTTP Referer
+	 * HTTP引用页
 	 *
 	 * @var	mixed
 	 */
@@ -170,6 +188,7 @@ class CI_User_agent {
 
 	/**
 	 * Constructor
+	 * 构造函数。
 	 *
 	 * Sets the User Agent and runs the compilation routine
 	 *
@@ -192,6 +211,7 @@ class CI_User_agent {
 
 	/**
 	 * Compile the User Agent Data
+	 * 编译用户代理数据
 	 *
 	 * @return	bool
 	 */
@@ -250,6 +270,7 @@ class CI_User_agent {
 
 	/**
 	 * Compile the User Agent Data
+	 * 编译用户代理数据
 	 *
 	 * @return	bool
 	 */
@@ -270,6 +291,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the Platform
+	 * 设置平台
 	 *
 	 * @return	bool
 	 */
@@ -295,6 +317,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the Browser
+	 * 设置浏览器
 	 *
 	 * @return	bool
 	 */
@@ -322,6 +345,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the Robot
+	 * 设置机器人
 	 *
 	 * @return	bool
 	 */
@@ -348,6 +372,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the Mobile Device
+	 * 设置移动设备
 	 *
 	 * @return	bool
 	 */
@@ -373,6 +398,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the accepted languages
+	 * 设置可接受的语言
 	 *
 	 * @return	void
 	 */
@@ -393,6 +419,7 @@ class CI_User_agent {
 
 	/**
 	 * Set the accepted character sets
+	 * 设置接受的字符集
 	 *
 	 * @return	void
 	 */
@@ -413,6 +440,7 @@ class CI_User_agent {
 
 	/**
 	 * Is Browser
+	 * 是浏览器
 	 *
 	 * @param	string	$key
 	 * @return	bool
@@ -658,6 +686,7 @@ class CI_User_agent {
 
 	/**
 	 * Parse a custom user-agent string
+	 * 解析自定义用户代理字符串
 	 *
 	 * @param	string	$string
 	 * @return	void
@@ -674,6 +703,7 @@ class CI_User_agent {
 		$this->robot = '';
 
 		// Set the new user-agent string and parse it, unless empty
+		// 设置新的user-agent字符串并解析它，除非为空。
 		$this->agent = $string;
 
 		if ( ! empty($string))

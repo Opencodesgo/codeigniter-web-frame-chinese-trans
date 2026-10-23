@@ -55,6 +55,7 @@ class CI_Form_validation {
 
 	/**
 	 * Reference to the CodeIgniter instance
+	 * 对CodeIgniter实例的引用
 	 *
 	 * @var object
 	 */
@@ -62,6 +63,7 @@ class CI_Form_validation {
 
 	/**
 	 * Validation data for the current form submission
+	 * 当前表单提交的验证数据
 	 *
 	 * @var array
 	 */
@@ -69,6 +71,7 @@ class CI_Form_validation {
 
 	/**
 	 * Validation rules for the current form
+	 * 当前表单的验证规则
 	 *
 	 * @var array
 	 */
@@ -76,6 +79,7 @@ class CI_Form_validation {
 
 	/**
 	 * Array of validation errors
+	 * 验证错误数组
 	 *
 	 * @var array
 	 */
@@ -83,6 +87,7 @@ class CI_Form_validation {
 
 	/**
 	 * Array of custom error messages
+	 * 自定义错误消息的数组
 	 *
 	 * @var array
 	 */
@@ -90,6 +95,7 @@ class CI_Form_validation {
 
 	/**
 	 * Start tag for error wrapping
+	 * 错误包装的开始标签
 	 *
 	 * @var string
 	 */
@@ -97,6 +103,7 @@ class CI_Form_validation {
 
 	/**
 	 * End tag for error wrapping
+	 * 错误包装的开始标签
 	 *
 	 * @var string
 	 */
@@ -104,6 +111,7 @@ class CI_Form_validation {
 
 	/**
 	 * Custom error message
+	 * 定制错误消息
 	 *
 	 * @var string
 	 */
@@ -111,6 +119,7 @@ class CI_Form_validation {
 
 	/**
 	 * Whether the form data has been validated as safe
+	 * 表单数据是否被验证为安全的
 	 *
 	 * @var bool
 	 */
@@ -118,6 +127,7 @@ class CI_Form_validation {
 
 	/**
 	 * Custom data to validate
+	 * 自定义数据来验证
 	 *
 	 * @var array
 	 */

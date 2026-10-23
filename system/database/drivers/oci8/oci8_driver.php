@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，oci8，oci8 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * oci8 Database Adapter Class
+ * oci8数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -53,9 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * oci8 Database Adapter Class
+ * oci8数据库适配器类。
  *
  * This is a modification of the DB_driver class to
  * permit access to oracle databases
+ * 这是对 DB_driver 类的修改，用于允许访问 Oracle 数据库。
  *
  * @author	  Kelly McArdle
  */
@@ -63,6 +70,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -70,6 +78,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * Statement ID
+	 * 语句ID
 	 *
 	 * @var	resource
 	 */
@@ -77,6 +86,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * Cursor ID
+	 * 游标ID
 	 *
 	 * @var	resource
 	 */
@@ -84,6 +94,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * Commit mode flag
+	 * 提交模式标志
 	 *
 	 * @var	int
 	 */
@@ -91,6 +102,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * Limit used flag
+	 * 限制使用标志。
 	 *
 	 * If we use LIMIT, we'll add a field that will
 	 * throw off num_fields later.
@@ -111,6 +123,7 @@ class CI_DB_oci8_driver extends CI_DB {
 
 	/**
 	 * List of reserved identifiers
+	 * 保留标识符列表。
 	 *
 	 * Identifiers that must NOT be escaped.
 	 *

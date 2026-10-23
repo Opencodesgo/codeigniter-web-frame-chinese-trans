@@ -59,6 +59,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动程序
 	 *
 	 * @var	string
 	 */
@@ -66,6 +67,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Compression flag
+	 * 压缩标记
 	 *
 	 * @var	bool
 	 */
@@ -73,6 +75,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * DELETE hack flag
+	 * 删除黑客标志
 	 *
 	 * Whether to use the MySQL "delete hack" which allows the number
 	 * of affected rows to be shown. Uses a preg_replace when enabled,
@@ -84,8 +87,10 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Strict ON flag
+	 * 严格ON标志。
 	 *
 	 * Whether we're running in strict SQL mode.
+	 * 我们是否在严格的SQL模式下运行。
 	 *
 	 * @var	bool
 	 */
@@ -95,6 +100,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Identifier escape character
+	 * 标识符转义字符
 	 *
 	 * @var	string
 	 */
@@ -115,6 +121,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Database connection
+	 * 数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	object
@@ -230,6 +237,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Reconnect
+	 * 重连。
 	 *
 	 * Keep / reestablish the db connection if no queries have been
 	 * sent for a length of time exceeding the server's idle timeout
@@ -248,6 +256,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Select the database
+	 * 选择数据库
 	 *
 	 * @param	string	$database
 	 * @return	bool
@@ -273,6 +282,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Set client character set
+	 * 设置客户端字符集
 	 *
 	 * @param	string	$charset
 	 * @return	bool
@@ -286,6 +296,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -303,6 +314,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行查询
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	mixed
@@ -316,8 +328,10 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Prep the query
+	 * 准备查询。
 	 *
 	 * If needed, each database adapter can prep the query string
+	 * 如果需要，每个数据库适配器都可以准备查询字符串。
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	string
@@ -338,6 +352,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始交易
 	 *
 	 * @return	bool
 	 */
@@ -353,6 +368,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交交易
 	 *
 	 * @return	bool
 	 */
@@ -371,6 +387,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚交易
 	 *
 	 * @return	bool
 	 */
@@ -389,6 +406,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * Platform-dependent string escape
+	 * 与平台相关的字符串转义
 	 *
 	 * @param	string
 	 * @return	string

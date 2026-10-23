@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，cubrid，cubrid Forge
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CUBRID Forge Class
+ * CUBRID Forge 类。
  *
  * @category	Database
  * @author		Esen Sagynov
@@ -48,6 +53,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE DATABASE statement
+	 * 创建数据库语句
 	 *
 	 * @var	string
 	 */
@@ -55,6 +61,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE keys flag
+	 * 创建表键标志。
 	 *
 	 * Whether table keys are created from within the
 	 * CREATE TABLE statement.
@@ -65,6 +72,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 
 	/**
 	 * DROP DATABASE statement
+	 * 删除数据库语句
 	 *
 	 * @var	string
 	 */

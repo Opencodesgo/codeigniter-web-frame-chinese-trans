@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache Dummy
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Dummy Caching Class
+ * CodeIgniter 虚拟缓存类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Get
+	 * 获得。
 	 *
 	 * Since this is the dummy class, it's always going to return FALSE.
 	 *

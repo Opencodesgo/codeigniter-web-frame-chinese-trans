@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache Memcached
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Memcached Caching Class
+ * CodeIgniter Memcached 缓存类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Holds the memcached object
+	 * 保存memcached对象
 	 *
 	 * @var object
 	 */
@@ -57,6 +63,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Memcached configuration
+	 * Memcached的配置
 	 *
 	 * @var array
 	 */
@@ -72,6 +79,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * Setup Memcache(d)
 	 *
@@ -133,6 +141,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Fetch from cache
+	 * 从缓存中读取
 	 *
 	 * @param	string	$id	Cache ID
 	 * @return	mixed	Data on success, FALSE on failure
@@ -178,6 +187,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Delete from Cache
+	 * 从缓存中删除
 	 *
 	 * @param	mixed	$id	key to be deleted.
 	 * @return	bool	true on success, false on failure
@@ -191,6 +201,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Increment a raw value
+	 * 增值原始价值
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to add
@@ -210,6 +221,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Decrement a raw value
+	 * 对原始值进行减量
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to reduce by
@@ -229,6 +241,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Clean the Cache
+	 * 清理缓存
 	 *
 	 * @return	bool	false on failure/true on success
 	 */
@@ -241,6 +254,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Cache Info
+	 * 回复信息缓存
 	 *
 	 * @return	mixed	array on success, false on failure
 	 */
@@ -253,6 +267,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Get Cache Metadata
+	 * 获取缓存元数据
 	 *
 	 * @param	mixed	$id	key to get cache metadata on
 	 * @return	mixed	FALSE on failure, array on success.

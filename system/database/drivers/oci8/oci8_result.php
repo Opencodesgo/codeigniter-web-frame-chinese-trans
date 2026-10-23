@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，oci8，oci8 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * oci8 Result Class
+ * oci8 结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -50,6 +55,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Statement ID
+	 * 语句ID
 	 *
 	 * @var	resource
 	 */
@@ -57,6 +63,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Cursor ID
+	 * 光标标识符
 	 *
 	 * @var	resource
 	 */
@@ -64,6 +71,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Limit used flag
+	 * 限制使用标志
 	 *
 	 * @var	bool
 	 */
@@ -71,6 +79,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Commit mode flag
+	 * 提交模式标志
 	 *
 	 * @var	int
 	 */
@@ -80,6 +89,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @param	object	&$driver_object
 	 * @return	void
@@ -99,6 +109,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中字段的数目
 	 *
 	 * @return	int
 	 */
@@ -114,6 +125,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
 	 *

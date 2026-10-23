@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，驱动，ibase，ibase 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Firebird/Interbase Database Adapter Class
+ * Firebird / Interbase数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动程序
 	 *
 	 * @var	string
 	 */
@@ -63,6 +69,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 随机关键字顺序
 	 *
 	 * @var	array
 	 */
@@ -70,6 +77,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * IBase Transaction status flag
+	 * IBase事务状态标志
 	 *
 	 * @var	resource
 	 */
@@ -79,6 +87,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Non-persistent database connection
+	 * 非持久化数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	resource
@@ -94,6 +103,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -120,6 +130,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	resource
@@ -133,6 +144,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -151,6 +163,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -169,6 +182,7 @@ class CI_DB_ibase_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */

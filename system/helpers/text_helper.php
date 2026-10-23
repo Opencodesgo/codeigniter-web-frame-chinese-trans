@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，文本助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 文本相关函数
- */
-
-/**
  * CodeIgniter Text Helpers
+ * CodeIgniter 文本助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -135,6 +136,7 @@ if ( ! function_exists('ascii_to_entities'))
 {
 	/**
 	 * High ASCII to Entities
+	 * 高ASCII到实体。
 	 *
 	 * Converts high ASCII text and MS Word special characters to character entities
 	 *
@@ -202,6 +204,7 @@ if ( ! function_exists('entities_to_ascii'))
 {
 	/**
 	 * Entities to ASCII
+	 * 实体转换为ASCII。
 	 *
 	 * Converts character entities back to ASCII
 	 *
@@ -257,6 +260,7 @@ if ( ! function_exists('word_censor'))
 {
 	/**
 	 * Word Censoring Function
+	 * 文字审查功能。
 	 *
 	 * Supply a string and an array of disallowed words and any
 	 * matched words will be converted to #### or to the replacement

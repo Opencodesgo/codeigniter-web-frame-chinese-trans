@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Cookie Helpers
+ * CodeIgniter Cookie 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers

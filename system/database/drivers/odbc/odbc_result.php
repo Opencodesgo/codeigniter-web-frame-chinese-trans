@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，odbc，odbc 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * ODBC Result Class
+ * ODBC 结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -52,6 +57,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 
 	/**
 	 * Number of rows in the result set
+	 * 结果集中的行数
 	 *
 	 * @return	int
 	 */
@@ -83,6 +89,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 
 	/**
 	 * Number of fields in the result set
+	 * 结果集中字段的数目
 	 *
 	 * @return	int
 	 */
@@ -95,6 +102,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
 	 *
@@ -145,6 +153,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 
 	/**
 	 * Free the result
+	 * 释放结果
 	 *
 	 * @return	void
 	 */
@@ -240,6 +249,7 @@ if ( ! function_exists('odbc_fetch_object'))
 {
 	/**
 	 * ODBC Fetch object
+	 * ODBC获取对象。
 	 *
 	 * Emulates the native odbc_fetch_object() function when
 	 * it is not available.

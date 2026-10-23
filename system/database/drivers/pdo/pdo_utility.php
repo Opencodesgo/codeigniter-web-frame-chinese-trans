@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，pdo，pdo 工具
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * PDO Utility Class
+ * PDO 工具类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers

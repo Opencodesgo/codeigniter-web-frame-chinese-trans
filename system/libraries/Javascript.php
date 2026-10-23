@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Javascript Class
+ * Javascript 类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -55,6 +56,7 @@ class CI_Javascript {
 
 	/**
 	 * JavaScript location
+	 * JavaScript的位置
 	 *
 	 * @var	string
 	 */
@@ -64,6 +66,7 @@ class CI_Javascript {
 
 	/**
 	 * Constructor
+	 * 构造方法
 	 *
 	 * @param	array	$params
 	 * @return	void
@@ -93,7 +96,7 @@ class CI_Javascript {
 	}
 
 	// --------------------------------------------------------------------
-	// Event Code
+	// Event Code	事件代码
 	// --------------------------------------------------------------------
 
 	/**

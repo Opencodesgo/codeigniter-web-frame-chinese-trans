@@ -67,6 +67,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Compression flag
+	 * 压缩标记
 	 *
 	 * @var	bool
 	 */
@@ -74,6 +75,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * DELETE hack flag
+	 * 删除黑客标志。
 	 *
 	 * Whether to use the MySQL "delete hack" which allows the number
 	 * of affected rows to be shown. Uses a preg_replace when enabled,
@@ -85,8 +87,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Strict ON flag
+	 * 严格ON标志。
 	 *
 	 * Whether we're running in strict SQL mode.
+	 * 我们是否在严格的SQL模式下运行。
 	 *
 	 * @var	bool
 	 */
@@ -96,6 +100,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Identifier escape character
+	 * 标识符转义字符
 	 *
 	 * @var	string
 	 */
@@ -105,6 +110,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @param	array	$params
 	 * @return	void
@@ -123,6 +129,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Non-persistent database connection
+	 * 非持久化数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	resource
@@ -137,6 +144,7 @@ class CI_DB_mysql_driver extends CI_DB {
 		}
 
 		// Error suppression is necessary mostly due to PHP 5.5+ issuing E_DEPRECATED messages
+		// 错误抑制是必要的，主要是由于PHP 5.5+发出E_DEPRECATED消息。
 		$this->conn_id = ($persistent === TRUE)
 			? mysql_pconnect($this->hostname, $this->username, $this->password, $client_flags)
 			: mysql_connect($this->hostname, $this->username, $this->password, TRUE, $client_flags);
@@ -182,6 +190,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Reconnect
+	 * 重连
 	 *
 	 * Keep / reestablish the db connection if no queries have been
 	 * sent for a length of time exceeding the server's idle timeout
@@ -200,6 +209,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Select the database
+	 * 选择数据库
 	 *
 	 * @param	string	$database
 	 * @return	bool
@@ -225,6 +235,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Set client character set
+	 * 设置客户端字符集
 	 *
 	 * @param	string	$charset
 	 * @return	bool
@@ -238,6 +249,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -260,6 +272,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	mixed
@@ -273,8 +286,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Prep the query
+	 * 准备查询。
 	 *
 	 * If needed, each database adapter can prep the query string
+	 * 如果需要，每个数据库适配器都可以准备查询字符串。
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	string
@@ -295,6 +310,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -308,6 +324,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -326,6 +343,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -344,6 +362,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Platform-dependent string escape
+	 * 与平台相关的字符串转义
 	 *
 	 * @param	string
 	 * @return	string
@@ -357,6 +376,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Affected Rows
+	 * 受影响的行
 	 *
 	 * @return	int
 	 */
@@ -369,6 +389,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Insert ID
+	 * 插入ID
 	 *
 	 * @return	int
 	 */
@@ -381,8 +402,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * List table query
+	 * 表查询。
 	 *
 	 * Generates a platform-specific query string so that the table names can be fetched
+	 * 生成特定于平台的查询字符串，以便获取表名。
 	 *
 	 * @param	bool	$prefix_limit
 	 * @return	string
@@ -403,8 +426,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Show column query
+	 * 显示列查询。
 	 *
 	 * Generates a platform-specific query string so that the column names can be fetched
+	 * 生成特定于平台的查询字符串，以便获取列名。
 	 *
 	 * @param	string	$table
 	 * @return	string
@@ -418,6 +443,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Returns an object with field data
+	 * 返回一个带有字段数据的对象
 	 *
 	 * @param	string	$table
 	 * @return	array
@@ -452,9 +478,11 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Error
+	 * 错误。
 	 *
 	 * Returns an array containing code and message of the last
 	 * database error that has occurred.
+	 * 返回一个包含最近发生数据库错误的代码和消息的数组。
 	 *
 	 * @return	array
 	 */
@@ -467,9 +495,11 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * FROM tables
+	 * 从表。
 	 *
 	 * Groups tables in FROM clauses if needed, so there is no confusion
 	 * about operator precedence.
+	 * 根据需要在 FROM 子句中使用分组表，以避免对运算符优先级产生混淆。
 	 *
 	 * @return	string
 	 */
@@ -487,6 +517,7 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	/**
 	 * Close DB Connection
+	 * 关闭DB连接
 	 *
 	 * @return	void
 	 */
@@ -494,6 +525,7 @@ class CI_DB_mysql_driver extends CI_DB {
 	{
 		// Error suppression to avoid annoying E_WARNINGs in cases
 		// where the connection has already been closed for some reason.
+		// 错误抑制,以避免在casesesof中避免恼人的e_警告,由于某些原因,连接已经关闭。
 		@mysql_close($this->conn_id);
 	}
 

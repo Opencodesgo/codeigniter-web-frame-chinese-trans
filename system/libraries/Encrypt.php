@@ -43,8 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Encryption Class
+ * CodeIgniter 加密类。
  *
  * Provides two-way keyed encoding using Mcrypt
+ * 使用Mcrypt提供双向键控编码。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -56,6 +58,7 @@ class CI_Encrypt {
 
 	/**
 	 * Reference to the user's encryption key
+	 * 对用户加密密钥的引用
 	 *
 	 * @var string
 	 */
@@ -63,6 +66,7 @@ class CI_Encrypt {
 
 	/**
 	 * Type of hash operation
+	 * 哈希操作的类型
 	 *
 	 * @var string
 	 */
@@ -70,6 +74,7 @@ class CI_Encrypt {
 
 	/**
 	 * Flag for the existence of mcrypt
+	 * 存在加密的标志
 	 *
 	 * @var bool
 	 */
@@ -77,6 +82,7 @@ class CI_Encrypt {
 
 	/**
 	 * Current cipher to be used with mcrypt
+	 * 与加密一起使用的当前密码
 	 *
 	 * @var string
 	 */
@@ -84,6 +90,7 @@ class CI_Encrypt {
 
 	/**
 	 * Method for encrypting/decrypting data
+	 * 加密/解密数据的方法
 	 *
 	 * @var int
 	 */
@@ -91,6 +98,7 @@ class CI_Encrypt {
 
 	/**
 	 * Initialize Encryption class
+	 * 初始化加密类
 	 *
 	 * @return	void
 	 */
@@ -108,9 +116,11 @@ class CI_Encrypt {
 
 	/**
 	 * Fetch the encryption key
+	 * 获取加密密钥。
 	 *
 	 * Returns it as MD5 in order to have an exact-length 128 bit key.
 	 * Mcrypt is sensitive to keys that are not the correct length
+	 * 返回 MD5 值，以便获得长度精确的 128 位密钥。Mcrypt 对长度不正确的密钥很敏感。
 	 *
 	 * @param	string
 	 * @return	string

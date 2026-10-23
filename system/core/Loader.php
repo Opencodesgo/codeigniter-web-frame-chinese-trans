@@ -147,7 +147,7 @@ class CI_Loader {
 
 	/**
 	 * Class constructor
-	 * 构造函数
+	 * 构造函数。
 	 *
 	 * Sets component load paths, gets the initial output buffering level.
 	 * 设置组件加载路径，获取初始输出缓冲级别。
@@ -200,10 +200,11 @@ class CI_Loader {
 
 	/**
 	 * Library Loader
-	 * 加载类，在控制器调用时才加载
+	 * 加载类，在控制器调用时才加载。
 	 *
 	 * Loads and instantiates libraries.
 	 * Designed to be called from application controllers.
+	 * 加载并初始化库。设计用于从应用程序控制器中调用。
 	 *
 	 * @param	mixed	$library	Library name
 	 * @param	array	$params		Optional parameters to pass to the library class constructor
@@ -246,7 +247,7 @@ class CI_Loader {
 
 	/**
 	 * Model Loader
-	 * 引入模型，在控制器里需要使用时才加载
+	 * 引入模型，在控制器里需要使用时才加载。
 	 *
 	 * Loads and instantiates models.
 	 *
@@ -274,6 +275,7 @@ class CI_Loader {
 		$path = '';
 
 		// Is the model in a sub-folder? If so, parse out the filename and path.
+		// 模型是否在子文件夹中？如果是，解析出文件名和路径。
 		if (($last_slash = strrpos($model, '/')) !== FALSE)
 		{
 			// The path is in front of the last slash
@@ -536,6 +538,7 @@ class CI_Loader {
 
 	/**
 	 * Generic File Loader
+	 * 通用文件加载器
 	 *
 	 * @param	string	$path	File path
 	 * @param	bool	$return	Whether to return the file output
@@ -550,9 +553,11 @@ class CI_Loader {
 
 	/**
 	 * Set Variables
+	 * 设置环境变量。
 	 *
 	 * Once variables are set they become available within
 	 * the controller class and its "view" files.
+	 * 一旦变量被设置，它们就会在控制器类及其“视图”文件中可用。
 	 *
 	 * @param	array|object|string	$vars
 	 *					An associative array or object containing values
@@ -578,8 +583,10 @@ class CI_Loader {
 
 	/**
 	 * Clear Cached Variables
+	 * 清除缓存变量。
 	 *
 	 * Clears the cached variables.
+	 * 清除缓存的变量。
 	 *
 	 * @return	CI_Loader
 	 */
@@ -593,8 +600,10 @@ class CI_Loader {
 
 	/**
 	 * Get Variable
+	 * 获取变量值。
 	 *
 	 * Check if a variable is set and retrieve it.
+	 * 检查是否设置了变量并检索它。
 	 *
 	 * @param	string	$key	Variable name
 	 * @return	mixed	The variable or NULL if not found
@@ -696,6 +705,7 @@ class CI_Loader {
 
 	/**
 	 * Load Helpers
+	 * 负载助手。
 	 *
 	 * An alias for the helper() method in case the developer has
 	 * written the plural form of it.
@@ -748,8 +758,10 @@ class CI_Loader {
 
 	/**
 	 * Driver Loader
+	 * 驱动程序加载器。
 	 *
 	 * Loads a driver library.
+	 * 加载驱动程序库。
 	 *
 	 * @param	string|string[]	$library	Driver name(s)
 	 * @param	array		$params		Optional parameters to pass to the driver
@@ -801,6 +813,7 @@ class CI_Loader {
 
 	/**
 	 * Add Package Path
+	 * 添加包路径。
 	 *
 	 * Prepends a parent path to the library, model, helper and config
 	 * path arrays.
@@ -835,8 +848,10 @@ class CI_Loader {
 
 	/**
 	 * Get Package Paths
+	 * 获取包路径。
 	 *
 	 * Return a list of all package paths.
+	 * 返回所有包路径的列表。
 	 *
 	 * @param	bool	$include_base	Whether to include BASEPATH (default: FALSE)
 	 * @return	array
@@ -850,6 +865,7 @@ class CI_Loader {
 
 	/**
 	 * Remove Package Path
+	 * 移除包路径。
 	 *
 	 * Remove a path from the library, model, helper and/or config
 	 * path arrays if it exists. If no path is provided, the most recently
@@ -906,9 +922,10 @@ class CI_Loader {
 
 	/**
 	 * Internal CI Data Loader
-	 * CI 数据加载，用于加载视图和文件
+	 * CI 数据加载，用于加载视图和文件。
 	 *
 	 * Used to load views and files.
+	 * 用于加载视图和文件。
 	 *
 	 * Variables are prefixed with _ci_ to avoid symbol collision with
 	 * variables made available to view files.
@@ -1043,6 +1060,7 @@ class CI_Loader {
 
 	/**
 	 * Internal CI Library Loader
+	 * 内部CI库加载器
 	 *
 	 * @used-by	CI_Loader::library()
 	 * @uses	CI_Loader::_ci_init_library()
@@ -1137,6 +1155,7 @@ class CI_Loader {
 
 	/**
 	 * Internal CI Stock Library Loader
+	 * 内部CI库存库加载器
 	 *
 	 * @used-by	CI_Loader::_ci_load_library()
 	 * @uses	CI_Loader::_ci_init_library()
@@ -1221,6 +1240,7 @@ class CI_Loader {
 
 	/**
 	 * Internal CI Library Instantiator
+	 * 内部CI库实例器
 	 *
 	 * @used-by	CI_Loader::_ci_load_stock_library()
 	 * @used-by	CI_Loader::_ci_load_library()
@@ -1328,10 +1348,10 @@ class CI_Loader {
 
 	/**
 	 * CI Autoloader
-	 * CI 自动加载
+	 * CI 自动加载。
 	 *
 	 * Loads component listed in the config/autoload.php file.
-	 * 加载组件在config下配置好的列表
+	 * 加载组件在config下配置好的列表。
 	 *
 	 * @used-by	CI_Loader::initialize()
 	 * @return	void
@@ -1413,7 +1433,7 @@ class CI_Loader {
 
 	/**
 	 * Prepare variables for _ci_vars, to be later extract()-ed inside views
-	 * 为_ci_vars做准备，在后面视图里提取
+	 * 为_ci_vars做准备，在后面视图里提取。
 	 *
 	 * Converts objects to associative arrays and filters-out internal
 	 * variable names (i.e. keys prefixed with '_ci_').
@@ -1445,8 +1465,10 @@ class CI_Loader {
 
 	/**
 	 * CI Component getter
+	 * CI组件getter。
 	 *
 	 * Get a reference to a specific library or model.
+	 * 获取对特定库或模型的引用。
 	 *
 	 * @param 	string	$component	Component name
 	 * @return	bool

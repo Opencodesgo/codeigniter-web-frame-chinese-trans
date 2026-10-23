@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlite3，sqlite3 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLite3 Database Adapter Class
+ * SQLite3 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -63,6 +69,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 按随机关键字排序
 	 *
 	 * @var	array
 	 */
@@ -72,6 +79,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Non-persistent database connection
+	 * 非持久数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	SQLite3
@@ -99,6 +107,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -117,6 +126,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行语句
 	 *
 	 * @todo	Implement use of SQLite3::querySingle(), if needed
 	 * @param	string	$sql
@@ -133,6 +143,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -145,6 +156,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -157,6 +169,7 @@ class CI_DB_sqlite3_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */

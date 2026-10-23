@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlsrv，sqlsrv 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLSRV Database Adapter Class
+ * SQLSRV 数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -61,8 +67,10 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 
 	/**
 	 * Scrollable flag
+	 * 可滚动标志。
 	 *
 	 * Determines what cursor type to use when executing queries.
+	 * 确定在执行查询时使用的光标类型。
 	 *
 	 * FALSE or SQLSRV_CURSOR_FORWARD would increase performance,
 	 * but would disable num_rows() (and possibly insert_id())
@@ -75,6 +83,7 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 
 	/**
 	 * ORDER BY random keyword
+	 * 随机关键字顺序
 	 *
 	 * @var	array
 	 */
@@ -82,6 +91,7 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 
 	/**
 	 * Quoted identifier flag
+	 * 引用标识符标志。
 	 *
 	 * Whether to use SQL-92 standard quoted identifier
 	 * (double quotes) or brackets for identifier escaping.
@@ -115,6 +125,7 @@ class CI_DB_sqlsrv_driver extends CI_DB {
 
 	/**
 	 * Database connection
+	 * 数据库连接
 	 *
 	 * @param	bool	$pooling
 	 * @return	resource

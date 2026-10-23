@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，odbc，odbc 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * ODBC Database Adapter Class
+ * ODBC数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -61,6 +67,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Database schema
+	 * 数据库模式
 	 *
 	 * @var	string
 	 */
@@ -70,6 +77,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Identifier escape character
+	 * 标识符转义字符。
 	 *
 	 * Must be empty for ODBC.
 	 *
@@ -213,6 +221,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Execute the query
+	 * 执行查询
 	 *
 	 * @param	string	$sql	an SQL query
 	 * @return	resource
@@ -244,6 +253,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -256,6 +266,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -274,6 +285,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -335,6 +347,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Insert ID
+	 * 插入ID
 	 *
 	 * @return	bool
 	 */
@@ -347,6 +360,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Show table query
+	 * 显示表查询。
 	 *
 	 * Generates a platform-specific query string so that the table names can be fetched
 	 *
@@ -370,8 +384,10 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Show column query
+	 * 显示列查询。
 	 *
 	 * Generates a platform-specific query string so that the column names can be fetched
+	 * 生成特定于平台的查询字符串，以便获取列名。
 	 *
 	 * @param	string	$table
 	 * @return	string
@@ -385,8 +401,10 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Field data query
+	 * 现场数据查询。
 	 *
 	 * Generates a platform-specific query so that the column data can be retrieved
+	 * 生成特定于平台的查询，以便检索列数据。
 	 *
 	 * @param	string	$table
 	 * @return	string
@@ -415,6 +433,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 
 	/**
 	 * Close DB Connection
+	 * 关闭DB连接
 	 *
 	 * @return	void
 	 */

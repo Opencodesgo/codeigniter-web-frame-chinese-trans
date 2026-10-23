@@ -43,9 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Driver Library Class
+ * CodeIgniter 驱动程序库类。
  *
  * This class enables you to create "Driver" libraries that add runtime ability
  * to extend the capabilities of a class via additional driver objects
+ * 该类使您能够创建“驱动”库，通过附加的驱动对象为类添加运行时扩展功能。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -57,6 +59,7 @@ class CI_Driver_Library {
 
 	/**
 	 * Array of drivers that are available to use with the driver class
+	 * 可用于驱动程序类的驱动程序数组
 	 *
 	 * @var array
 	 */
@@ -64,6 +67,7 @@ class CI_Driver_Library {
 
 	/**
 	 * Name of the current class - usually the driver class
+	 * 当前类的名称-通常是驱动程序类
 	 *
 	 * @var string
 	 */
@@ -71,9 +75,11 @@ class CI_Driver_Library {
 
 	/**
 	 * Get magic method
+	 * 获取魔法方法。
 	 *
 	 * The first time a child is used it won't exist, so we instantiate it
 	 * subsequents calls will go straight to the proper child.
+	 * 第一次使用时，该对象将不存在，因此我们进行实例化，后续调用将直接指向正确的子对象。
 	 *
 	 * @param	string	Child class name
 	 * @return	object	Child class
@@ -86,8 +92,10 @@ class CI_Driver_Library {
 
 	/**
 	 * Load driver
+	 * 加载驱动程序。
 	 *
 	 * Separate load_driver call to support explicit driver load by library or user
+	 * 单独的load_driver调用以支持显式驱动程序加载的库或用户。
 	 *
 	 * @param	string	Driver name (w/o parent prefix)
 	 * @return	object	Child class
@@ -199,9 +207,11 @@ class CI_Driver_Library {
 
 /**
  * CodeIgniter Driver Class
+ * CodeIgniter 驱动类。
  *
  * This class enables you to create drivers for a Library based on the Driver Library.
  * It handles the drivers' access to the parent library
+ * 本课程将帮助您根据驱动库创建基于库的驱动程序。它负责处理驱动程序对父级库的访问。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -213,6 +223,7 @@ class CI_Driver {
 
 	/**
 	 * Instance of the parent class
+	 * 父类的实例
 	 *
 	 * @var object
 	 */
@@ -220,6 +231,7 @@ class CI_Driver {
 
 	/**
 	 * List of methods in the parent class
+	 * 父类中的方法列表
 	 *
 	 * @var array
 	 */
@@ -227,6 +239,7 @@ class CI_Driver {
 
 	/**
 	 * List of properties in the parent class
+	 * 父类中的属性列表
 	 *
 	 * @var array
 	 */

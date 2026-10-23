@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Typography Class
+ * Typography 类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -54,6 +55,7 @@ class CI_Typography {
 
 	/**
 	 * Block level elements that should not be wrapped inside <p> tags
+	 * 块级元素不应该被包装在<p>标签中
 	 *
 	 * @var string
 	 */
@@ -68,6 +70,7 @@ class CI_Typography {
 
 	/**
 	 * Tags we want the parser to completely ignore when splitting the string.
+	 * 我们希望解析器在分割字符串时完全忽略的标记
 	 *
 	 * @var string
 	 */
@@ -75,6 +78,7 @@ class CI_Typography {
 
 	/**
 	 * array of block level elements that require inner content to be within another block level element
+	 * 要求内部内容位于另一个块级元素中的块级元素数组
 	 *
 	 * @var array
 	 */
@@ -82,6 +86,7 @@ class CI_Typography {
 
 	/**
 	 * the last block element parsed
+	 * 解析的最后一个块元素
 	 *
 	 * @var string
 	 */
@@ -89,6 +94,7 @@ class CI_Typography {
 
 	/**
 	 * whether or not to protect quotes within { curly braces }
+	 * 是否保护{花括号}内的引号
 	 *
 	 * @var bool
 	 */
@@ -286,6 +292,7 @@ class CI_Typography {
 
 	/**
 	 * Format Characters
+	 * 日期格式字符。
 	 *
 	 * This function mainly converts double and single quotes
 	 * to curly entities, but it also converts em-dashes,
@@ -351,6 +358,7 @@ class CI_Typography {
 
 	/**
 	 * Format Newlines
+	 * 格式新线路。
 	 *
 	 * Converts newline characters into either <p> tags or <br />
 	 *

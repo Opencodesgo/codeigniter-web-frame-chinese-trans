@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，类，ZIP 编码
+ * 系统，类，ZIP 压缩
  */
 
 /**
@@ -101,6 +101,7 @@ class CI_Zip {
 
 	/**
 	 * Reference to time at init
+	 * 引用初始化时的时间
 	 *
 	 * @var int
 	 */
@@ -108,9 +109,10 @@ class CI_Zip {
 
 	/**
 	 * The level of compression
-	 * 压缩级别
+	 * 压缩级别。
 	 *
 	 * Ranges from 0 to 9, with 9 being the highest level.
+	 * 取值范围为0 ~ 9，其中9为最高级别。
 	 *
 	 * @var	int
 	 */
@@ -118,6 +120,7 @@ class CI_Zip {
 
 	/**
 	 * mbstring.func_overload flag
+	 * mbstring.func_overload标记
 	 *
 	 * @var	bool
 	 */
@@ -125,6 +128,7 @@ class CI_Zip {
 
 	/**
 	 * Initialize zip compression class
+	 * 初始化zip压缩类
 	 *
 	 * @return	void
 	 */
@@ -140,9 +144,10 @@ class CI_Zip {
 
 	/**
 	 * Add Directory
-	 * 添加目录
+	 * 添加目录。
 	 *
 	 * Lets you add a virtual directory into which you can place files.
+	 * 允许您添加一个可以放置文件的虚拟目录。
 	 *
 	 * @param	mixed	$directory	the directory name. Can be string or array
 	 * @return	void
@@ -165,6 +170,7 @@ class CI_Zip {
 
 	/**
 	 * Get file/directory modification time
+	 * 获取文件/目录修改时间。
 	 *
 	 * If this is a newly created file/dir, we will set the time to 'now'
 	 *
@@ -186,6 +192,7 @@ class CI_Zip {
 
 	/**
 	 * Add Directory
+	 * 添加目录
 	 *
 	 * @param	string	$dir	the directory name
 	 * @param	int	$file_mtime

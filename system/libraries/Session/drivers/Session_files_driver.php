@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，驱动，会话文件驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Files Driver
+ * CodeIgniter会话文件驱动程序。
  *
  * @package	CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * Save path
+	 * 保存路径
 	 *
 	 * @var	string
 	 */
@@ -57,6 +63,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * File handle
+	 * 文件句柄
 	 *
 	 * @var	resource
 	 */
@@ -64,6 +71,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * File name
+	 * 文件名称
 	 *
 	 * @var	resource
 	 */
@@ -71,6 +79,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * File new flag
+	 * 文件新标志
 	 *
 	 * @var	bool
 	 */

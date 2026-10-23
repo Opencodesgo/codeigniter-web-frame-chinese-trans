@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，驱动，会话 redis驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Redis Driver
+ * CodeIgniter 会话Redis驱动程序。
  *
  * @package	CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * phpRedis instance
+	 * phpRedis实例
 	 *
 	 * @var	Redis
 	 */
@@ -57,6 +63,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * Key prefix
+	 * 键前缀
 	 *
 	 * @var	string
 	 */
@@ -64,6 +71,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * Lock key
+	 * 锁主键
 	 *
 	 * @var	string
 	 */
@@ -71,6 +79,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * Key exists flag
+	 * 键存在标志
 	 *
 	 * @var bool
 	 */

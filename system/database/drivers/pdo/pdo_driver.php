@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，pdo，pdo 驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * PDO Database Adapter Class
+ * PDO数据库适配器类。
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
@@ -54,6 +59,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Database driver
+	 * 数据库驱动
 	 *
 	 * @var	string
 	 */
@@ -61,6 +67,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * PDO Options
+	 * PDO 选项
 	 *
 	 * @var	array
 	 */
@@ -70,8 +77,10 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Class constructor
+	 * 类构造器。
 	 *
 	 * Validates the DSN string and/or detects the subdriver.
+	 * 验证DSN字符串和/或检测子驱动程序。
 	 *
 	 * @param	array	$params
 	 * @return	void
@@ -120,6 +129,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Database connection
+	 * 数据库连接
 	 *
 	 * @param	bool	$persistent
 	 * @return	object
@@ -150,6 +160,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Database version number
+	 * 数据库版本号
 	 *
 	 * @return	string
 	 */
@@ -175,6 +186,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Execute the query
+	 * 执行查询
 	 *
 	 * @param	string	$sql	SQL query
 	 * @return	mixed
@@ -188,6 +200,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Begin Transaction
+	 * 开始事务
 	 *
 	 * @return	bool
 	 */
@@ -200,6 +213,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Commit Transaction
+	 * 提交事务
 	 *
 	 * @return	bool
 	 */
@@ -212,6 +226,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Rollback Transaction
+	 * 回滚事务
 	 *
 	 * @return	bool
 	 */
@@ -224,6 +239,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Platform-dependent string escape
+	 * 与平台相关的字符串转义
 	 *
 	 * @param	string
 	 * @return	string
@@ -243,6 +259,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Affected Rows
+	 * 受影响的行
 	 *
 	 * @return	int
 	 */
@@ -255,6 +272,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Insert ID
+	 * 插入ID
 	 *
 	 * @param	string	$name
 	 * @return	int
@@ -268,6 +286,7 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Field data query
+	 * 现场数据查询。
 	 *
 	 * Generates a platform-specific query so that the column data can be retrieved
 	 *
@@ -312,8 +331,10 @@ class CI_DB_pdo_driver extends CI_DB {
 
 	/**
 	 * Truncate statement
+	 * 截断声明。
 	 *
 	 * Generates a platform-specific truncate string from the supplied data
+	 * 从提供的数据生成特定于平台的截断字符串。
 	 *
 	 * If the database does not support the TRUNCATE statement,
 	 * then this method maps to 'DELETE FROM table'

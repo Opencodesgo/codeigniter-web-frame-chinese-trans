@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，表单助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 表单相关函数
- */
-
-/**
  * CodeIgniter Form Helpers
+ * CodeIgniter 表单助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -148,6 +149,7 @@ if ( ! function_exists('form_open_multipart'))
 {
 	/**
 	 * Form Declaration - Multipart type
+	 * 表单声明-多部分类型。
 	 *
 	 * Creates the opening portion of the form, but with "multipart/form-data".
 	 *

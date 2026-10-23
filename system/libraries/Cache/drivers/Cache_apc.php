@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，Cache，驱动，Cache Apc
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter APC Caching Class
+ * CodeIgniter APC缓存类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -50,9 +55,11 @@ class CI_Cache_apc extends CI_Driver {
 
 	/**
 	 * Class constructor
+	 * 类构造器。
 	 *
 	 * Only present so that an error message is logged
 	 * if APC is not available.
+	 * 仅在 APC 不可用时才显示，以便记录错误消息。
 	 *
 	 * @return	void
 	 */
@@ -103,6 +110,7 @@ class CI_Cache_apc extends CI_Driver {
 
 	/**
 	 * Delete from Cache
+	 * 从缓存中删除
 	 *
 	 * @param	mixed	unique identifier of the item in the cache
 	 * @return	bool	true on success/false on failure
@@ -116,6 +124,7 @@ class CI_Cache_apc extends CI_Driver {
 
 	/**
 	 * Increment a raw value
+	 * 增加原始值
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to add

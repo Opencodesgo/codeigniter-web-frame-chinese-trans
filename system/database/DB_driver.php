@@ -269,6 +269,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Strict transaction mode flag
+	 * 严格的事务模式标志
 	 *
 	 * @var	bool
 	 */
@@ -276,6 +277,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction depth level
+	 * 事务深度级别
 	 *
 	 * @var	int
 	 */
@@ -283,6 +285,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction status flag
+	 * 事务状态标志。
 	 *
 	 * Used with transactions to determine if a rollback should occur.
 	 *
@@ -292,6 +295,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Transaction failure flag
+	 * 事务失败标志。
 	 *
 	 * Used with transactions to determine if a transaction has failed.
 	 *
@@ -301,6 +305,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Cache On flag
+	 * 缓存开启标志
 	 *
 	 * @var	bool
 	 */
@@ -308,6 +313,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Cache directory path
+	 * 缓存目录路径
 	 *
 	 * @var	bool
 	 */

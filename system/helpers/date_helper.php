@@ -138,6 +138,7 @@ if ( ! function_exists('standard_date'))
 	 * 标准化日期
 	 *
 	 * Returns a date formatted according to the submitted standard.
+	 * 根据提交的标准返回格式化的日期。
 	 *
 	 * As of PHP 5.2, the DateTime extension provides constants that
 	 * serve for the exact same purpose and are used with date().
@@ -176,6 +177,7 @@ if ( ! function_exists('timespan'))
 {
 	/**
 	 * Timespan
+	 * 时间间隔。
 	 *
 	 * Returns a span of seconds in this format:
 	 *	10 days 14 hours 36 minutes 47 seconds
@@ -280,6 +282,7 @@ if ( ! function_exists('days_in_month'))
 {
 	/**
 	 * Number of days in a month
+	 * 一个月的天数。
 	 *
 	 * Takes a month/year as input and returns the number of days
 	 * for the given month/year. Takes leap years into consideration.
@@ -328,6 +331,7 @@ if ( ! function_exists('local_to_gmt'))
 {
 	/**
 	 * Converts a local Unix timestamp to GMT
+	 * 将本地Unix时间戳转换为GMT
 	 *
 	 * @param	int	Unix timestamp
 	 * @return	int
@@ -356,6 +360,7 @@ if ( ! function_exists('gmt_to_local'))
 {
 	/**
 	 * Converts GMT time to a localized value
+	 * 将GMT时间转换为本地化值。
 	 *
 	 * Takes a Unix timestamp (in GMT) as input, and returns
 	 * at the local value based on the timezone and DST setting

@@ -125,8 +125,10 @@ class CI_Security {
 
 	/**
 	 * CSRF Token name
+	 * 令牌名称。
 	 *
 	 * Token name for Cross Site Request Forgery protection cookie.
+	 * 跨站点请求伪造保护cookie的令牌名称。
 	 *
 	 * @var	string
 	 */
@@ -134,8 +136,10 @@ class CI_Security {
 
 	/**
 	 * CSRF Cookie name
+	 * CSRF Cookie名称。
 	 *
 	 * Cookie name for Cross Site Request Forgery protection cookie.
+	 * 跨站点请求伪造保护Cookie的名称。
 	 *
 	 * @var	string
 	 */
@@ -143,6 +147,7 @@ class CI_Security {
 
 	/**
 	 * List of never allowed strings
+	 * 不允许的字符串列表
 	 *
 	 * @var	array
 	 */
@@ -163,6 +168,7 @@ class CI_Security {
 
 	/**
 	 * List of never allowed regex replacements
+	 * 不允许的正则表达式替换列表
 	 *
 	 * @var	array
 	 */
@@ -180,6 +186,7 @@ class CI_Security {
 
 	/**
 	 * Class constructor
+	 * 类构造函数
 	 *
 	 * @return	void
 	 */
@@ -272,6 +279,7 @@ class CI_Security {
 
 	/**
 	 * CSRF Set Cookie
+	 * CSRF集合Cookie
 	 *
 	 * @codeCoverageIgnore
 	 * @return	CI_Security
@@ -304,6 +312,7 @@ class CI_Security {
 
 	/**
 	 * Show CSRF Error
+	 * 显示CSRF错误
 	 *
 	 * @return	void
 	 */
@@ -316,6 +325,7 @@ class CI_Security {
 
 	/**
 	 * Get CSRF Hash
+	 * 获取CSRF哈希值
 	 *
 	 * @see		CI_Security::$_csrf_hash
 	 * @return 	string	CSRF hash
@@ -329,6 +339,7 @@ class CI_Security {
 
 	/**
 	 * Get CSRF Token Name
+	 * 获取CSRF令牌名称
 	 *
 	 * @see		CI_Security::$_csrf_token_name
 	 * @return	string	CSRF token name
@@ -342,6 +353,7 @@ class CI_Security {
 
 	/**
 	 * XSS Clean
+	 * XSS清理。
 	 *
 	 * Sanitizes data so that Cross Site Scripting Hacks can be
 	 * prevented.  This method does a fair amount of work but
@@ -593,8 +605,10 @@ class CI_Security {
 
 	/**
 	 * XSS Hash
+	 * XSS散列。
 	 *
 	 * Generates the XSS hash if needed and returns it.
+	 * 如果需要，生成XSS散列并返回它。
 	 *
 	 * @see		CI_Security::$_xss_hash
 	 * @return	string	XSS hash
@@ -616,6 +630,7 @@ class CI_Security {
 
 	/**
 	 * Get random bytes
+	 * 获取随机字节
 	 *
 	 * @param	int	$length	Output length
 	 * @return	string
@@ -674,6 +689,7 @@ class CI_Security {
 
 	/**
 	 * HTML Entities Decode
+	 * HTML实体解码。
 	 *
 	 * A replacement for html_entity_decode()
 	 *
@@ -759,6 +775,7 @@ class CI_Security {
 
 	/**
 	 * Sanitize Filename
+	 * Sanitize文件名
 	 *
 	 * @param	string	$str		Input file name
 	 * @param 	bool	$relative_path	Whether to preserve paths
@@ -811,6 +828,7 @@ class CI_Security {
 
 	/**
 	 * URL-decode taking spaces into account
+	 * 考虑到空格的url解码
 	 *
 	 * @see		https://github.com/bcit-ci/CodeIgniter/issues/4877
 	 * @param	array	$matches
@@ -829,6 +847,7 @@ class CI_Security {
 
 	/**
 	 * Compact Exploded Words
+	 * 紧凑的展开词。
 	 *
 	 * Callback method for xss_clean() to remove whitespace from
 	 * things like 'j a v a s c r i p t'.
@@ -846,6 +865,7 @@ class CI_Security {
 
 	/**
 	 * Sanitize Naughty HTML
+	 * 清理不良HTML。
 	 *
 	 * Callback method for xss_clean() to remove naughty HTML elements.
 	 *
@@ -937,8 +957,10 @@ class CI_Security {
 
 	/**
 	 * JS Link Removal
+	 * JS链接移除。
 	 *
 	 * Callback method for xss_clean() to sanitize links.
+	 * xss_clean（）用于清理链接的回调方法。
 	 *
 	 * This limits the PCRE backtracks, making it more performance friendly
 	 * and prevents PREG_BACKTRACK_LIMIT_ERROR from being triggered in
@@ -1093,6 +1115,7 @@ class CI_Security {
 			// We don't necessarily want to regenerate it with
 			// each page load since a page could contain embedded
 			// sub-pages causing this feature to fail
+			// 如果cookie存在，我们将使用它的值。
 			if (isset($_COOKIE[$this->_csrf_cookie_name]) && is_string($_COOKIE[$this->_csrf_cookie_name])
 				&& preg_match('#^[0-9a-f]{32}$#iS', $_COOKIE[$this->_csrf_cookie_name]) === 1)
 			{

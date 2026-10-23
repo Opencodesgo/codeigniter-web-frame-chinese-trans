@@ -73,6 +73,7 @@ class CI_DB_result {
 
 	/**
 	 * Result Array
+	 * 结果集
 	 *
 	 * @var	array[]
 	 */
@@ -80,6 +81,7 @@ class CI_DB_result {
 
 	/**
 	 * Result Object
+	 * 结果对象
 	 *
 	 * @var	object[]
 	 */
@@ -87,6 +89,7 @@ class CI_DB_result {
 
 	/**
 	 * Custom Result Object
+	 * 自定义结果对象
 	 *
 	 * @var	object[]
 	 */
@@ -94,6 +97,7 @@ class CI_DB_result {
 
 	/**
 	 * Current Row index
+	 * 当前行索引
 	 *
 	 * @var	int
 	 */
@@ -101,6 +105,7 @@ class CI_DB_result {
 
 	/**
 	 * Number of rows
+	 * 行数
 	 *
 	 * @var	int
 	 */
@@ -108,6 +113,7 @@ class CI_DB_result {
 
 	/**
 	 * Row data
+	 * 行数据
 	 *
 	 * @var	array
 	 */
@@ -117,6 +123,7 @@ class CI_DB_result {
 
 	/**
 	 * Constructor
+	 * 构造方法
 	 *
 	 * @param	object	$driver_object
 	 * @return	void
@@ -131,6 +138,7 @@ class CI_DB_result {
 
 	/**
 	 * Number of rows in the result set
+	 * 结果集中的行数
 	 *
 	 * @return	int
 	 */
@@ -156,6 +164,7 @@ class CI_DB_result {
 
 	/**
 	 * Query result. Acts as a wrapper function for the following functions.
+	 * 查询结果。作为以下函数的包装函数。
 	 *
 	 * @param	string	$type	'object', 'array' or a custom class name
 	 * @return	array
@@ -178,6 +187,7 @@ class CI_DB_result {
 
 	/**
 	 * Custom query result.
+	 * 自定义查询结果
 	 *
 	 * @param	string	$class_name
 	 * @return	array
@@ -349,6 +359,7 @@ class CI_DB_result {
 
 	/**
 	 * Assigns an item into a particular column slot
+	 * 将一个项目分配到特定的列槽中
 	 *
 	 * @param	mixed	$key
 	 * @param	mixed	$value
@@ -381,6 +392,7 @@ class CI_DB_result {
 
 	/**
 	 * Returns a single result row - custom object version
+	 * 返回一个结果行自定义对象版本
 	 *
 	 * @param	int	$n
 	 * @param	string	$type
@@ -407,6 +419,7 @@ class CI_DB_result {
 
 	/**
 	 * Returns a single result row - object version
+	 * 返回一个结果行-对象版本
 	 *
 	 * @param	int	$n
 	 * @return	object
@@ -431,6 +444,7 @@ class CI_DB_result {
 
 	/**
 	 * Returns a single result row - array version
+	 * 返回单个结果行数组版本
 	 *
 	 * @param	int	$n
 	 * @return	array

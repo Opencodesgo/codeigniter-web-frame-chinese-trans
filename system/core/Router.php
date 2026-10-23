@@ -122,9 +122,10 @@ class CI_Router {
 
 	/**
 	 * Enable query strings flag
-	 * 开启query string 标志
+	 * 开启query string 标志。
 	 *
 	 * Determines whether to use GET parameters or segment URIs
+	 * 确定是否使用GET参数或段uri。
 	 *
 	 * @var	bool
 	 */
@@ -134,9 +135,10 @@ class CI_Router {
 
 	/**
 	 * Class constructor
-	 * 构造函数
+	 * 构造函数。
 	 *
 	 * Runs the route mapping function.
+	 * 运行路由映射功能。
 	 *
 	 * @param	array	$routing
 	 * @return	void
@@ -171,7 +173,7 @@ class CI_Router {
 
 	/**
 	 * Set route mapping
-	 * 进行路由解析映射
+	 * 进行路由解析映射。
 	 *
 	 * Determines what should be served based on the URI request,
 	 * as well as any "routes" that have been set in the routing config file.
@@ -354,9 +356,10 @@ class CI_Router {
 
 	/**
 	 * Validate request
-	 * 验证请求，主要是识别目录
+	 * 验证请求，主要是识别目录。
 	 *
 	 * Attempts validate the URI request and determine the controller path.
+	 * 尝试验证URI请求并确定控制器路径。
 	 *
 	 * @used-by	CI_Router::_set_request()
 	 * @param	array	$segments	URI segments

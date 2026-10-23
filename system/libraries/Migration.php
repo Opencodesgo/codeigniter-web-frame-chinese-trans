@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Migration Class
+ * 迁移类。
  *
  * All migrations should implement this, forces up() and down() and gives
  * access to the CI super-global.
@@ -57,6 +58,7 @@ class CI_Migration {
 
 	/**
 	 * Whether the library is enabled
+	 * 是否启用库
 	 *
 	 * @var bool
 	 */
@@ -64,6 +66,7 @@ class CI_Migration {
 
 	/**
 	 * Migration numbering type
+	 * 迁移编号类型
 	 *
 	 * @var	bool
 	 */
@@ -71,6 +74,7 @@ class CI_Migration {
 
 	/**
 	 * Path to migration classes
+	 * 迁移类的路径
 	 *
 	 * @var string
 	 */
@@ -78,6 +82,7 @@ class CI_Migration {
 
 	/**
 	 * Current migration version
+	 * 当前迁移版本
 	 *
 	 * @var mixed
 	 */
@@ -85,6 +90,7 @@ class CI_Migration {
 
 	/**
 	 * Database table with migration info
+	 * 带有迁移信息的数据库表
 	 *
 	 * @var string
 	 */
@@ -92,6 +98,7 @@ class CI_Migration {
 
 	/**
 	 * Whether to automatically run migrations
+	 * 是否自动运行迁移
 	 *
 	 * @var	bool
 	 */
@@ -99,6 +106,7 @@ class CI_Migration {
 
 	/**
 	 * Migration basename regex
+	 * 迁移basename regex
 	 *
 	 * @var string
 	 */

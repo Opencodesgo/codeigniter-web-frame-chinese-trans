@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，数据库，sqlsrv，sqlsrv 结果
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * SQLSRV Result Class
+ * SQLSRV 结果类。
  *
  * This class extends the parent result class: CI_DB_result
  *
@@ -50,6 +55,7 @@ class CI_DB_sqlsrv_result extends CI_DB_result {
 
 	/**
 	 * Scrollable flag
+	 * 可滚动的标记
 	 *
 	 * @var	mixed
 	 */

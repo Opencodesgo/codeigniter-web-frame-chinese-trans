@@ -1,6 +1,6 @@
 <?php
 /**
- * 系统，助手，验证码相关函数
+ * 系统，助手，验证码助手
  */
 
 /**
@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter CAPTCHA Helper
+ * CodeIgniter 验证码助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -107,7 +108,7 @@ if ( ! function_exists('create_captcha'))
 		}
 
 		// -----------------------------------
-		// Remove old images
+		// Remove old images	删除旧图像
 		// -----------------------------------
 
 		$now = microtime(TRUE);

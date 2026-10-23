@@ -1,5 +1,10 @@
 <?php
 /**
+ * index，这是主入口文件。
+ * 此文件的主要目的，是进行一些初始化设置及加载core/CodeIgniter.php
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -35,20 +40,16 @@
  * @since	Version 1.0.0
  * @filesource
  */ 
- 
-/**
- * 这是主入口文件
- * 此文件的主要目的，是进行一些初始化设置及加载core/CodeIgniter.php
- */
 
 /*
  *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
+ * APPLICATION ENVIRONMENT	应用环境
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
  * current environment. Setting the environment also influences
  * things like logging and error reporting.
+ * 您可以根据当前环境加载不同的配置。设置环境还会影响日志记录和错误报告等功能。
  *
  * This can be set to anything, but default usage is:
  *
@@ -68,7 +69,7 @@
 
 /*
  *---------------------------------------------------------------
- * ERROR REPORTING
+ * ERROR REPORTING	错误报告
  *---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
@@ -104,7 +105,7 @@ switch (ENVIRONMENT)
 
 /*
  *---------------------------------------------------------------
- * SYSTEM DIRECTORY NAME
+ * SYSTEM DIRECTORY NAME	系统目录名称
  *---------------------------------------------------------------
  *
  * This variable must contain the name of your "system" directory.
@@ -115,7 +116,7 @@ switch (ENVIRONMENT)
 
 /*
  *---------------------------------------------------------------
- * APPLICATION DIRECTORY NAME
+ * APPLICATION DIRECTORY NAME	应用程序目录名称
  *---------------------------------------------------------------
  *
  * If you want this front controller to use a different "application"
@@ -123,6 +124,7 @@ switch (ENVIRONMENT)
  * can also be renamed or relocated anywhere on your server. If you do,
  * use an absolute (full) server path.
  * For more info please see the user guide:
+ * 如果你想让这个前端控制器使用不同于默认的“应用程序”目录，可以在这里设置其名称。
  *
  * https://codeigniter.com/user_guide/general/managing_apps.html
  *
@@ -134,7 +136,7 @@ switch (ENVIRONMENT)
 
 /*
  *---------------------------------------------------------------
- * VIEW DIRECTORY NAME
+ * VIEW DIRECTORY NAME	查看目录名称
  *---------------------------------------------------------------
  *
  * If you want to move the view directory out of the application
@@ -142,6 +144,8 @@ switch (ENVIRONMENT)
  * and relocated anywhere on your server. If blank, it will default
  * to the standard location inside your application directory.
  * If you do move this, use an absolute (full) server path.
+ * 如果你想将视图目录移出应用程序目录，请在此处设置其路径。
+ * 该目录可以重命名并移动到服务器上的任意位置。
  *
  * NO TRAILING SLASH!
  *
@@ -152,7 +156,7 @@ switch (ENVIRONMENT)
 
 /*
  * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
+ * DEFAULT CONTROLLER	默认控制器
  * --------------------------------------------------------------------
  *
  * Normally you will set your default controller in the routes.php file.
@@ -161,6 +165,7 @@ switch (ENVIRONMENT)
  * WILL NOT set your routing here, but it's an option for those
  * special instances where you might want to override the standard
  * routing in a specific front controller that shares a common CI installation.
+ * 通常你会在routes.php文件中设置你的默认控制器。
  *
  * IMPORTANT: If you set the routing here, NO OTHER controller will be
  * callable. In essence, this preference limits your application to ONE
@@ -182,7 +187,7 @@ switch (ENVIRONMENT)
 
 /*
  * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
+ *  CUSTOM CONFIG VALUES	自定义配置值
  * -------------------------------------------------------------------
  *
  * The $assign_to_config array below will be passed dynamically to the
@@ -191,6 +196,8 @@ switch (ENVIRONMENT)
  * This can be handy as it permits you to share one application between
  * multiple front controller files, with each file containing different
  * config values.
+ * 以下的 $assign_to_config 数组将在初始化时动态传递给配置类。
+ * 这使您能够设置自定义配置项，或覆盖 config.php 文件中任何默认的配置值。
  *
  * Un-comment the $assign_to_config array below to use this feature
  */
@@ -200,11 +207,13 @@ switch (ENVIRONMENT)
 
 // --------------------------------------------------------------------
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// 用户可配置设置结束。不要在这行以下编辑。
 // --------------------------------------------------------------------
 
 /*
  * ---------------------------------------------------------------
  *  Resolve the system path for increased reliability
+ *  解析系统路径以提高可靠性
  * ---------------------------------------------------------------
  */
 
@@ -244,6 +253,7 @@ switch (ENVIRONMENT)
 /*
  * -------------------------------------------------------------------
  *  Now that we know the path, set the main path constants
+ *  现在我们知道了路径，设置主路径常量。
  * -------------------------------------------------------------------
  */
 	// The name of THIS file

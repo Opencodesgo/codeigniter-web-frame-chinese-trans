@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Shopping Cart Class
+ * 购物车类。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -56,6 +57,7 @@ class CI_Cart {
 	/**
 	 * These are the regular expression rules that we use to validate the product ID and product name
 	 * alpha-numeric, dashes, underscores, or periods
+	 * 这些是我们用于验证产品ID和产品名称的正则表达式规则，允许使用字母、数字、连字符、下划线或句点。
 	 *
 	 * @var string
 	 */
@@ -64,6 +66,7 @@ class CI_Cart {
 	/**
 	 * These are the regular expression rules that we use to validate the product ID and product name
 	 * alpha-numeric, dashes, underscores, colons or periods
+	 * 这些是我们用于验证产品ID和产品名称的正则表达式规则，允许使用字母、数字、连字符、下划线、冒号或句点。
 	 *
 	 * @var string
 	 */
@@ -71,6 +74,7 @@ class CI_Cart {
 
 	/**
 	 * only allow safe product names
+	 * 只允许安全的产品名称
 	 *
 	 * @var bool
 	 */
@@ -80,6 +84,7 @@ class CI_Cart {
 
 	/**
 	 * Reference to CodeIgniter instance
+	 * CodeIgniter实例的引用
 	 *
 	 * @var object
 	 */
@@ -87,6 +92,7 @@ class CI_Cart {
 
 	/**
 	 * Contents of the cart
+	 * 购物车的内容
 	 *
 	 * @var array
 	 */
@@ -94,6 +100,7 @@ class CI_Cart {
 
 	/**
 	 * Shopping Class Constructor
+	 * 购物类构造函数。
 	 *
 	 * The constructor loads the Session class, used to store the shopping cart contents.
 	 *
@@ -126,6 +133,7 @@ class CI_Cart {
 
 	/**
 	 * Insert items into the cart and save it to the session table
+	 * 将项目插入购物车并将其保存到会话表中
 	 *
 	 * @param	array
 	 * @return	bool
@@ -180,6 +188,7 @@ class CI_Cart {
 
 	/**
 	 * Insert
+	 * 插入
 	 *
 	 * @param	array
 	 * @return	bool
@@ -279,11 +288,13 @@ class CI_Cart {
 
 	/**
 	 * Update the cart
+	 * 更新购物车。
 	 *
 	 * This function permits the quantity of a given item to be changed.
 	 * Typically it is called from the "view cart" page if a user makes
 	 * changes to the quantity before checkout. That array must contain the
 	 * product ID and quantity for each item.
+	 * 此函数允许更改给定项目的数量。
 	 *
 	 * @param	array
 	 * @return	bool
@@ -336,6 +347,7 @@ class CI_Cart {
 
 	/**
 	 * Update the cart
+	 * 更新购物车。
 	 *
 	 * This function permits changing item properties.
 	 * Typically it is called from the "view cart" page if a user makes
@@ -387,6 +399,7 @@ class CI_Cart {
 
 	/**
 	 * Save the cart array to the session DB
+	 * 将购物车数组保存到会话DB
 	 *
 	 * @return	bool
 	 */

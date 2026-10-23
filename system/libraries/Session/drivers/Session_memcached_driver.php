@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，类，会话，驱动，会话 Memcached驱动
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -39,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Session Memcached Driver
+ * CodeIgniter Session Memcached驱动程序。
  *
  * @package	CodeIgniter
  * @subpackage	Libraries
@@ -50,6 +55,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 
 	/**
 	 * Memcached instance
+	 * Memcached实例
 	 *
 	 * @var	Memcached
 	 */
@@ -57,6 +63,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 
 	/**
 	 * Key prefix
+	 * 键前缀
 	 *
 	 * @var	string
 	 */

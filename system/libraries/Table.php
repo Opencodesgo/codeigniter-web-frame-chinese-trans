@@ -43,8 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * HTML Table Generating Class
+ * HTML表生成类。
  *
  * Lets you create tables manually or from database result objects, or arrays.
+ * 允许您手动或从数据库结果对象或数组创建表。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -56,6 +58,7 @@ class CI_Table {
 
 	/**
 	 * Data for table rows
+	 * 表行数据
 	 *
 	 * @var array
 	 */
@@ -63,6 +66,7 @@ class CI_Table {
 
 	/**
 	 * Data for table heading
+	 * 表标题数据
 	 *
 	 * @var array
 	 */
@@ -70,6 +74,7 @@ class CI_Table {
 
 	/**
 	 * Whether or not to automatically create the table header
+	 * 是否自动创建表头
 	 *
 	 * @var bool
 	 */
@@ -77,6 +82,7 @@ class CI_Table {
 
 	/**
 	 * Table caption
+	 * 表格标题
 	 *
 	 * @var string
 	 */
@@ -84,6 +90,7 @@ class CI_Table {
 
 	/**
 	 * Table layout template
+	 * 表布局模板
 	 *
 	 * @var array
 	 */
@@ -91,6 +98,7 @@ class CI_Table {
 
 	/**
 	 * Newline setting
+	 * 换行符设置
 	 *
 	 * @var string
 	 */

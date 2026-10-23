@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQLi Forge Class
+ * MySQLi Forge 类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -54,6 +55,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE DATABASE statement
+	 * 创建数据库语句
 	 *
 	 * @var	string
 	 */
@@ -61,9 +63,11 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE keys flag
+	 * 创建表键标志。
 	 *
 	 * Whether table keys are created from within the
 	 * CREATE TABLE statement.
+	 * 表键是否在 CREATE TABLE 语句内部创建。
 	 *
 	 * @var	bool
 	 */
@@ -100,6 +104,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * CREATE TABLE attributes
+	 * 创建表属性
 	 *
 	 * @param	array	$attributes	Associative array of table attributes
 	 * @return	string
@@ -133,6 +138,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * ALTER TABLE
+	 * 更改表
 	 *
 	 * @param	string	$alter_type	ALTER type
 	 * @param	string	$table		Table name

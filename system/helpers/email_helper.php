@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，email 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 邮件相关函数
- */
-
-/**
  * CodeIgniter Email Helpers
+ * CodeIgniter 电子邮件助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,6 +58,7 @@ if ( ! function_exists('valid_email'))
 {
 	/**
 	 * Validate email address
+	 * 验证电子邮件地址
 	 *
 	 * @deprecated	3.0.0	Use PHP's filter_var() instead
 	 * @param	string	$email
@@ -74,6 +76,7 @@ if ( ! function_exists('send_email'))
 {
 	/**
 	 * Send an email
+	 * 发送电子邮件
 	 *
 	 * @deprecated	3.0.0	Use PHP's mail() instead
 	 * @param	string	$recipient

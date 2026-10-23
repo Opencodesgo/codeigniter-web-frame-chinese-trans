@@ -138,9 +138,10 @@ class CI_Utf8 {
 
 	/**
 	 * Convert to UTF-8
+	 * 转换为UTF-8。
 	 *
 	 * Attempts to convert a string to UTF-8.
-	 * 尝试转换字符串为UTF-8
+	 * 尝试转换字符串为UTF-8。
 	 *
 	 * @param	string	$str		Input string
 	 * @param	string	$encoding	Input encoding
@@ -167,6 +168,7 @@ class CI_Utf8 {
 	 * 是否ASCII？ 
 	 *
 	 * Tests if a string is standard 7-bit ASCII or not.
+	 * 测试字符串是否为标准7位ASCII。
 	 *
 	 * @param	string	$str	String to check
 	 * @return	bool

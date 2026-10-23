@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，路径助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 路径相关函数
- */
-
-/**
  * CodeIgniter Path Helpers
+ * CodeIgniter 路径助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -57,6 +58,7 @@ if ( ! function_exists('set_realpath'))
 {
 	/**
 	 * Set Realpath
+	 * 设置Realpath
 	 *
 	 * @param	string
 	 * @param	bool	checks to see if the path exists
@@ -81,6 +83,7 @@ if ( ! function_exists('set_realpath'))
 		}
 
 		// Add a trailing slash, if this is a directory
+		// 如果这是一个目录，添加一个尾斜杠。
 		return is_dir($path) ? rtrim($path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR : $path;
 	}
 }

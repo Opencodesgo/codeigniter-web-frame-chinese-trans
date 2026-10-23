@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，目录助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,11 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 目录相关函数
- */
-
-/**
  * CodeIgniter Directory Helpers
+ * CodeIgniter 目录助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -62,6 +63,7 @@ if ( ! function_exists('directory_map'))
 	 * Reads the specified directory and builds an array
 	 * representation of it. Sub-folders contained with the
 	 * directory will be mapped as well.
+	 * 读取指定的目录并构建它的数组表示。目录中包含的子文件夹也将被映射。
 	 *
 	 * @param	string	$source_dir		Path to source
 	 * @param	int	$directory_depth	Depth of directories to traverse

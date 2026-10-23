@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * MySQLi Utility Class
- * MySQLi 公共类
+ * MySQLi 公共类。
  *
  * @package		CodeIgniter
  * @subpackage	Drivers
@@ -55,6 +55,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 
 	/**
 	 * List databases statement
+	 * 列表数据库语句
 	 *
 	 * @var	string
 	 */
@@ -62,6 +63,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 
 	/**
 	 * OPTIMIZE TABLE statement
+	 * 优化表语句
 	 *
 	 * @var	string
 	 */
@@ -69,6 +71,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 
 	/**
 	 * REPAIR TABLE statement
+	 * 修理表语句
 	 *
 	 * @var	string
 	 */
@@ -78,6 +81,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 
 	/**
 	 * Export
+	 * 导出
 	 *
 	 * @param	array	$params	Preferences
 	 * @return	mixed
@@ -205,6 +209,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 		}
 
 		// Do we need to include a statement to re-enable foreign key checks?
+		// 我们是否需要包含一个语句来重新启用外键检查？
 		if ($foreign_key_checks === FALSE)
 		{
 			$output .= 'SET foreign_key_checks = 1;'.$newline;

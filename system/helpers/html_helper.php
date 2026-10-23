@@ -1,5 +1,9 @@
 <?php
 /**
+ * 系统，助手，html 助手
+ */
+
+/**
  * CodeIgniter
  *
  * An open source application development framework for PHP
@@ -38,12 +42,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * html相关函数
- */
-
-
-/**
  * CodeIgniter HTML Helpers
+ * CodeIgniter HTML 助手。
  *
  * @package		CodeIgniter
  * @subpackage	Helpers
@@ -58,6 +58,7 @@ if ( ! function_exists('heading'))
 {
 	/**
 	 * Heading
+	 * 标题。
 	 *
 	 * Generates an HTML heading tag.
 	 *

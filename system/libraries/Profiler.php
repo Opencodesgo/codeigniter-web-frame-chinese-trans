@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Profiler Class
+ * CodeIgniter 分析器类。
  *
  * This class enables you to display benchmark, query, and other data
  * in order to help with debugging and optimization.
@@ -60,6 +61,7 @@ class CI_Profiler {
 
 	/**
 	 * List of profiler sections available to show
+	 * 可显示的分析器部分列表
 	 *
 	 * @var array
 	 */
@@ -78,6 +80,7 @@ class CI_Profiler {
 
 	/**
 	 * Number of queries to show before making the additional queries togglable
+	 * 在使其他查询可切换之前要显示的查询数
 	 *
 	 * @var int
 	 */
@@ -85,6 +88,7 @@ class CI_Profiler {
 
 	/**
 	 * Reference to the CodeIgniter singleton
+	 * 对CodeIgniter单例的引用
 	 *
 	 * @var object
 	 */
