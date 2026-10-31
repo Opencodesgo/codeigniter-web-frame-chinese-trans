@@ -422,6 +422,7 @@ abstract class CI_DB_utility {
 			}
 
 			// Load the Zip class and output it
+			// 加载Zip类并输出它
 			$CI =& get_instance();
 			$CI->load->library('zip');
 			$CI->zip->add_data($prefs['filename'], $this->_backup($prefs));

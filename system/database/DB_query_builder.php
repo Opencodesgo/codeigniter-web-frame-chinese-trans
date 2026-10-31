@@ -328,8 +328,10 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Select Max
+	 * 选择最大。
 	 *
 	 * Generates a SELECT MAX(field) portion of a query
+	 * 生成查询的SELECT MAX（字段）部分。
 	 *
 	 * @param	string	the field
 	 * @param	string	an alias
@@ -360,6 +362,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 	/**
 	 * Select Average
+	 * 选择平均。
 	 *
 	 * Generates a SELECT AVG(field) portion of a query
 	 *

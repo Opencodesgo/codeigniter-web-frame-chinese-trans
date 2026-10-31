@@ -85,6 +85,7 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Fetch Field Names
+	 * 获取字段名称。
 	 *
 	 * Generates an array of column names
 	 *
@@ -105,8 +106,10 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Field data
+	 * 现场数据。
 	 *
 	 * Generates an array of objects containing field meta-data
+	 * 生成包含字段元数据的对象数组。
 	 *
 	 * @return	array
 	 */
@@ -128,6 +131,7 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Free the result
+	 * 释放结果
 	 *
 	 * @return	void
 	 */
@@ -144,6 +148,7 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Data Seek
+	 * 数据寻求。
 	 *
 	 * Moves the internal pointer to the desired offset. We call
 	 * this internally before fetching results to make sure the
@@ -161,8 +166,10 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Result - associative array
+	 * Result -关联数组。
 	 *
 	 * Returns the result set as an array
+	 * 将结果集作为数组返回。
 	 *
 	 * @return	array
 	 */
@@ -175,8 +182,10 @@ class CI_DB_postgre_result extends CI_DB_result {
 
 	/**
 	 * Result - object
+	 * 结果对象。
 	 *
 	 * Returns the result set as an object
+	 * 将结果集作为对象返回。
 	 *
 	 * @param	string	$class_name
 	 * @return	object

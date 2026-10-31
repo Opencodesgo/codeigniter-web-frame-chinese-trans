@@ -268,6 +268,7 @@ class CI_Email {
 
 	/**
 	 * Message body
+	 * 消息体
 	 *
 	 * @var	string
 	 */
@@ -275,6 +276,7 @@ class CI_Email {
 
 	/**
 	 * Final message body to be sent.
+	 * 要发送的最终消息体
 	 *
 	 * @var	string
 	 */
@@ -282,6 +284,7 @@ class CI_Email {
 
 	/**
 	 * Final headers to send
+	 * 发送的最终报头
 	 *
 	 * @var	string
 	 */
@@ -289,6 +292,7 @@ class CI_Email {
 
 	/**
 	 * SMTP Connection socket placeholder
+	 * SMTP连接socket占位符
 	 *
 	 * @var	resource
 	 */
@@ -296,6 +300,7 @@ class CI_Email {
 
 	/**
 	 * Mail encoding
+	 * 邮件编码
 	 *
 	 * @var	string	'8bit' or '7bit'
 	 */
@@ -303,6 +308,7 @@ class CI_Email {
 
 	/**
 	 * Whether to perform SMTP authentication
+	 * 是否进行SMTP身份验证
 	 *
 	 * @var	bool
 	 */
@@ -310,6 +316,7 @@ class CI_Email {
 
 	/**
 	 * Whether to send a Reply-To header
+	 * 是否发送Reply-To报头
 	 *
 	 * @var	bool
 	 */
@@ -317,6 +324,7 @@ class CI_Email {
 
 	/**
 	 * Debug messages
+	 * 调试信息
 	 *
 	 * @see	CI_Email::print_debugger()
 	 * @var	string
@@ -325,6 +333,7 @@ class CI_Email {
 
 	/**
 	 * Recipients
+	 * 收件人
 	 *
 	 * @var	string[]
 	 */
@@ -332,6 +341,7 @@ class CI_Email {
 
 	/**
 	 * CC Recipients
+	 * CC 收件人
 	 *
 	 * @var	string[]
 	 */
@@ -339,6 +349,7 @@ class CI_Email {
 
 	/**
 	 * BCC Recipients
+	 * BCC 收件人
 	 *
 	 * @var	string[]
 	 */
@@ -346,6 +357,7 @@ class CI_Email {
 
 	/**
 	 * Message headers
+	 * 消息头
 	 *
 	 * @var	string[]
 	 */

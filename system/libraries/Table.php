@@ -106,6 +106,7 @@ class CI_Table {
 
 	/**
 	 * Contents of empty cells
+	 * 空单元格内容
 	 *
 	 * @var string
 	 */
@@ -113,6 +114,7 @@ class CI_Table {
 
 	/**
 	 * Callback for custom table layout
+	 * 自定义表布局的回调
 	 *
 	 * @var function
 	 */
@@ -120,6 +122,7 @@ class CI_Table {
 
 	/**
 	 * Set the template from the table config file if it exists
+	 * 从表配置文件设置模板（如果存在）
 	 *
 	 * @param	array	$config	(default: array())
 	 * @return	void
@@ -139,6 +142,7 @@ class CI_Table {
 
 	/**
 	 * Set the template
+	 * 设置模板
 	 *
 	 * @param	array	$template
 	 * @return	bool

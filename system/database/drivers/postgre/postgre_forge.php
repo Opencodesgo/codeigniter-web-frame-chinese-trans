@@ -73,6 +73,7 @@ class CI_DB_postgre_forge extends CI_DB_forge {
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
+	 * 在CREATE/ALTER TABLE语句中表示NULL值
 	 *
 	 * @var	string
 	 */
@@ -101,6 +102,7 @@ class CI_DB_postgre_forge extends CI_DB_forge {
 
 	/**
 	 * ALTER TABLE
+	 * 修改表
 	 *
 	 * @param	string	$alter_type	ALTER type
 	 * @param	string	$table		Table name

@@ -234,6 +234,7 @@ class CI_DB_mysqli_result extends CI_DB_result {
 
 	/**
 	 * Result - object
+	 * 结果对象。
 	 *
 	 * Returns the result set as an object
 	 *

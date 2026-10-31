@@ -125,6 +125,7 @@ if ( ! function_exists('plural'))
 {
 	/**
 	 * Plural
+	 * 复数。
 	 *
 	 * Takes a singular word and makes it plural
 	 *

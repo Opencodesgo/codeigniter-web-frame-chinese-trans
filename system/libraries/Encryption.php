@@ -46,6 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * CodeIgniter 加密类。
  *
  * Provides two-way keyed encryption via PHP's MCrypt and/or OpenSSL extensions.
+ * 通过PHP的MCrypt和/或OpenSSL扩展提供双向密钥加密。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -73,6 +74,7 @@ class CI_Encryption {
 
 	/**
 	 * Cipher handle
+	 * 密码处理
 	 *
 	 * @var	mixed
 	 */
@@ -80,6 +82,7 @@ class CI_Encryption {
 
 	/**
 	 * Encryption key
+	 * 加密密钥
 	 *
 	 * @var	string
 	 */
@@ -87,6 +90,7 @@ class CI_Encryption {
 
 	/**
 	 * PHP extension to be used
+	 * 要使用的PHP扩展
 	 *
 	 * @var	string
 	 */
@@ -94,6 +98,7 @@ class CI_Encryption {
 
 	/**
 	 * List of usable drivers (PHP extensions)
+	 * 可用驱动程序列表（PHP扩展）
 	 *
 	 * @var	array
 	 */
@@ -101,6 +106,7 @@ class CI_Encryption {
 
 	/**
 	 * List of available modes
+	 * 可用模式列表
 	 *
 	 * @var	array
 	 */
@@ -129,6 +135,7 @@ class CI_Encryption {
 
 	/**
 	 * List of supported HMAC algorithms
+	 * 支持的HMAC算法列表
 	 *
 	 * name => digest size pairs
 	 *
@@ -152,6 +159,7 @@ class CI_Encryption {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
@@ -183,6 +191,7 @@ class CI_Encryption {
 
 	/**
 	 * Initialize
+	 * 初始化
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	CI_Encryption
@@ -227,6 +236,7 @@ class CI_Encryption {
 
 	/**
 	 * Initialize MCrypt
+	 * 初始化MCrypt
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
@@ -286,6 +296,7 @@ class CI_Encryption {
 
 	/**
 	 * Initialize OpenSSL
+	 * 初始化OpenSSL
 	 *
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
@@ -336,6 +347,7 @@ class CI_Encryption {
 
 	/**
 	 * Create a random key
+	 * 创建一个随机密钥
 	 *
 	 * @param	int	$length	Output length
 	 * @return	string
@@ -370,6 +382,7 @@ class CI_Encryption {
 
 	/**
 	 * Encrypt
+	 * 加密
 	 *
 	 * @param	string	$data	Input data
 	 * @param	array	$params	Input parameters
@@ -404,6 +417,7 @@ class CI_Encryption {
 
 	/**
 	 * Encrypt via MCrypt
+	 * 通过MCrypt加密
 	 *
 	 * @param	string	$data	Input data
 	 * @param	array	$params	Input parameters
@@ -469,6 +483,7 @@ class CI_Encryption {
 
 	/**
 	 * Encrypt via OpenSSL
+	 * 使用OpenSSL加密
 	 *
 	 * @param	string	$data	Input data
 	 * @param	array	$params	Input parameters
@@ -505,6 +520,7 @@ class CI_Encryption {
 
 	/**
 	 * Decrypt
+	 * 解密
 	 *
 	 * @param	string	$data	Encrypted data
 	 * @param	array	$params	Input parameters

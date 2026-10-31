@@ -135,6 +135,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * DROP TABLE IF EXISTS statement
+	 * 删除表中存在的语句
 	 *
 	 * @var	string
 	 */
@@ -142,6 +143,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * RENAME TABLE statement
+	 * RENAME TABLE语句
 	 *
 	 * @var	string
 	 */
@@ -149,6 +151,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * UNSIGNED support
+	 * 无符号的支持
 	 *
 	 * @var	bool|array
 	 */
@@ -156,6 +159,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
+	 * 在CREATE/ALTER TABLE语句中表示NULL值
 	 *
 	 * @var	string
 	 */
@@ -172,6 +176,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Class constructor
+	 * 类构造器
 	 *
 	 * @param	object	&$db	Database object
 	 * @return	void
@@ -443,6 +448,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * CREATE TABLE attributes
+	 * 创建表属性
 	 *
 	 * @param	array	$attributes	Associative array of table attributes
 	 * @return	string
@@ -576,6 +582,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Column Add
+	 * 添加列
 	 *
 	 * @todo	Remove deprecated $_after option in 3.1+
 	 * @param	string	$table	Table name
@@ -621,6 +628,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Column Drop
+	 * 列删除
 	 *
 	 * @param	string	$table		Table name
 	 * @param	string	$column_name	Column name
@@ -641,6 +649,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Column Modify
+	 * 列编辑
 	 *
 	 * @param	string	$table	Table name
 	 * @param	string	$field	Column definition
@@ -717,6 +726,7 @@ abstract class CI_DB_forge {
 
 	/**
 	 * Process fields
+	 * 列字段
 	 *
 	 * @param	bool	$create_table
 	 * @return	array

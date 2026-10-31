@@ -340,6 +340,7 @@ if ( ! function_exists('get_mime_by_extension'))
 {
 	/**
 	 * Get Mime by Extension
+	 * 通过扩展获取Mime。
 	 *
 	 * Translates a file extension into a mime type based on config/mimes.php.
 	 * Returns FALSE if it can't determine the type, or open the mime config file
@@ -451,6 +452,7 @@ if ( ! function_exists('octal_permissions'))
 {
 	/**
 	 * Octal Permissions
+	 * 八进制权限。
 	 *
 	 * Takes a numeric value representing a file's permissions and returns
 	 * a three character string representing the file's octal permissions

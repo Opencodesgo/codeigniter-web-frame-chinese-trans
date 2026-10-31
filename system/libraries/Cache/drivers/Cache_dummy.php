@@ -58,6 +58,7 @@ class CI_Cache_dummy extends CI_Driver {
 	 * 获得。
 	 *
 	 * Since this is the dummy class, it's always going to return FALSE.
+	 * 因为这是一个虚拟类，所以它总是返回FALSE。
 	 *
 	 * @param	string
 	 * @return	bool	FALSE
@@ -71,6 +72,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Cache Save
+	 * Cache 保存
 	 *
 	 * @param	string	Unique Key
 	 * @param	mixed	Data to store
@@ -87,6 +89,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Delete from Cache
+	 * 从缓存中删除
 	 *
 	 * @param	mixed	unique identifier of the item in the cache
 	 * @return	bool	TRUE, simulating success
@@ -100,6 +103,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Increment a raw value
+	 * 增加原始值
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to add
@@ -114,6 +118,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Decrement a raw value
+	 * 对原始值进行减量
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	int	$offset	Step/value to reduce by
@@ -128,6 +133,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Clean the cache
+	 * 清理缓存
 	 *
 	 * @return	bool	TRUE, simulating success
 	 */
@@ -140,6 +146,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Cache Info
+	 * 缓存信息
 	 *
 	 * @param	string	user/filehits
 	 * @return	bool	FALSE
@@ -153,6 +160,7 @@ class CI_Cache_dummy extends CI_Driver {
 
 	/**
 	 * Get Cache Metadata
+	 * 获取缓存元数据
 	 *
 	 * @param	mixed	key to get cache metadata on
 	 * @return	bool	FALSE
@@ -167,6 +175,7 @@ class CI_Cache_dummy extends CI_Driver {
 	/**
 	 * Is this caching driver supported on the system?
 	 * Of course this one is.
+	 * 这个缓存驱动是否在系统上得到支持？当然支持。
 	 *
 	 * @return	bool	TRUE
 	 */

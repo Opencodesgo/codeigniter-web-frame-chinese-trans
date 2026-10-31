@@ -110,6 +110,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 	/**
 	 * MySQLi object
+	 * MySQLi 对象。
 	 *
 	 * Has to be preserved without being assigned to $conn_id.
 	 *

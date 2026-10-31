@@ -66,6 +66,7 @@ class CI_DB_Cache {
 	 *
 	 * Allows passing of DB object so that multiple database connections
 	 * and returned DB objects can be supported.
+	 * 允许传递数据库对象，从而支持多个数据库连接以及返回的数据库对象。
 	 *
 	 * @var	object
 	 */
@@ -112,6 +113,7 @@ class CI_DB_Cache {
 		}
 
 		// Add a trailing slash to the path if needed
+		// 如果需要，在路径中添加一个尾斜杠。
 		$path = realpath($path)
 			? rtrim(realpath($path), DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR
 			: rtrim($path, '/').'/';

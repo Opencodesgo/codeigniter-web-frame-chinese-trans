@@ -95,8 +95,10 @@ class CI_FTP {
 
 	/**
 	 * Debug flag
+	 * 调试标记。
 	 *
 	 * Specifies whether to display error messages.
+	 * 指定是否显示错误消息。
 	 *
 	 * @var	bool
 	 */
@@ -106,6 +108,7 @@ class CI_FTP {
 
 	/**
 	 * Connection ID
+	 * 连接ID 
 	 *
 	 * @var	resource
 	 */
@@ -115,6 +118,7 @@ class CI_FTP {
 
 	/**
 	 * Constructor
+	 * 构造函数
 	 *
 	 * @param	array	$config
 	 * @return	void
@@ -198,6 +202,7 @@ class CI_FTP {
 
 	/**
 	 * FTP Login
+	 * FTP登录
 	 *
 	 * @return	bool
 	 */
@@ -210,6 +215,7 @@ class CI_FTP {
 
 	/**
 	 * Validates the connection ID
+	 * 验证连接ID
 	 *
 	 * @return	bool
 	 */
@@ -232,6 +238,7 @@ class CI_FTP {
 
 	/**
 	 * Change directory
+	 * 更改目录。
 	 *
 	 * The second parameter lets us momentarily turn off debugging so that
 	 * this function can be used to test for the existence of a folder

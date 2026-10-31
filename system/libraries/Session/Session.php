@@ -58,6 +58,7 @@ class CI_Session {
 	 * 用户数据数组。
 	 *
 	 * Just a reference to $_SESSION, for BC purposes.
+	 * 只是对$_SESSION的引用，用于BC目的。
 	 */
 	public $userdata;
 

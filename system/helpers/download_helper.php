@@ -58,9 +58,10 @@ if ( ! function_exists('force_download'))
 {
 	/**
 	 * Force Download
-	 * 强制下载
+	 * 强制下载。
 	 *
 	 * Generates headers that force a download to happen
+	 * 生成强制下载的头文件。
 	 *
 	 * @param	string	filename
 	 * @param	mixed	the data to be downloaded

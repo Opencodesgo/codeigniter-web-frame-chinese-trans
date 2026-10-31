@@ -125,6 +125,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Array data type
+	 * 数组数据类型
 	 *
 	 * @var	string
 	 */
@@ -140,6 +141,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Data types list
+	 * 数据类型列表
 	 *
 	 * @var	array
 	 */
@@ -147,6 +149,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Valid parents list
+	 * 有效父母列表
 	 *
 	 * @var	array
 	 */
@@ -154,6 +157,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Response error numbers list
+	 * 响应错误编号列表
 	 *
 	 * @var	array
 	 */
@@ -161,6 +165,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Response error messages list
+	 * 响应错误消息列表
 	 *
 	 * @var	string[]
 	 */
@@ -168,6 +173,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Encoding charset
+	 * 字符编码
 	 *
 	 * @var	string
 	 */
@@ -175,6 +181,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * XML-RPC client name
+	 * XML-RPC客户端名称
 	 *
 	 * @var	string
 	 */
@@ -182,6 +189,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * XML-RPC version
+	 * xml-rpc版本
 	 *
 	 * @var	string
 	 */
@@ -189,6 +197,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Start of user errors
+	 * 用户错误开始
 	 *
 	 * @var	int
 	 */
@@ -196,6 +205,7 @@ class CI_Xmlrpc {
 
 	/**
 	 * Start of XML parse errors
+	 * XML解析错误的开始
 	 *
 	 * @var	int
 	 */

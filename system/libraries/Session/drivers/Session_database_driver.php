@@ -127,8 +127,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 	/**
 	 * Open
+	 * 打开。
 	 *
 	 * Initializes the database connection
+	 * 初始化数据库连接。
 	 *
 	 * @param	string	$save_path	Table name
 	 * @param	string	$name		Session cookie name, unused
@@ -150,8 +152,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 	/**
 	 * Read
+	 * 读取。
 	 *
 	 * Reads session data and acquires a lock
+	 * 读取会话数据并获得锁。
 	 *
 	 * @param	string	$session_id	Session ID
 	 * @return	string	Serialized session data
