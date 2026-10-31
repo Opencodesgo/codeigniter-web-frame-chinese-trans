@@ -57,6 +57,7 @@ class CI_Security {
 
 	/**
 	 * List of sanitize filename strings
+	 * 清理文件名字符串的列表
 	 *
 	 * @var	array
 	 */
@@ -223,6 +224,7 @@ class CI_Security {
 
 	/**
 	 * CSRF Verify
+	 * CSRF验证
 	 *
 	 * @return	CI_Security
 	 */

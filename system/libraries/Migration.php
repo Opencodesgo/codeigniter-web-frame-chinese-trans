@@ -47,6 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * All migrations should implement this, forces up() and down() and gives
  * access to the CI super-global.
+ * 所有迁移都应实现此功能，强制使用 up() 和 down() 方法，并提供对 CI 超全局变量的访问。
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -114,6 +115,7 @@ class CI_Migration {
 
 	/**
 	 * Error message
+	 * 错误消息
 	 *
 	 * @var string
 	 */
@@ -121,6 +123,7 @@ class CI_Migration {
 
 	/**
 	 * Initialize Migration Class
+	 * 初始化迁移类
 	 *
 	 * @param	array	$config
 	 * @return	void
@@ -198,6 +201,7 @@ class CI_Migration {
 
 	/**
 	 * Migrate to a schema version
+	 * 迁移到模式版本。
 	 *
 	 * Calls each migration step required to get to the schema version of
 	 * choice
@@ -336,6 +340,7 @@ class CI_Migration {
 
 	/**
 	 * Sets the schema to the latest migration
+	 * 将模式设置为最新的迁移
 	 *
 	 * @return	mixed	Current version string on success, FALSE on failure
 	 */
@@ -360,6 +365,7 @@ class CI_Migration {
 
 	/**
 	 * Sets the schema to the migration version set in config
+	 * 将架构设置为配置中的迁移版本集
 	 *
 	 * @return	mixed	TRUE if no migrations are found, current version string on success, FALSE on failure
 	 */
@@ -372,6 +378,7 @@ class CI_Migration {
 
 	/**
 	 * Error string
+	 * 错误字串
 	 *
 	 * @return	string	Error message returned as a string
 	 */
@@ -384,6 +391,7 @@ class CI_Migration {
 
 	/**
 	 * Retrieves list of available migration scripts
+	 * 检索可用迁移脚本的列表
 	 *
 	 * @return	array	list of migration file paths sorted by version
 	 */
@@ -420,6 +428,7 @@ class CI_Migration {
 
 	/**
 	 * Extracts the migration number from a filename
+	 * 从文件名中提取迁移号
 	 *
 	 * @param	string	$migration
 	 * @return	string	Numeric portion of a migration filename
@@ -434,6 +443,7 @@ class CI_Migration {
 
 	/**
 	 * Extracts the migration class name from a filename
+	 * 从文件名中提取迁移类名
 	 *
 	 * @param	string	$migration
 	 * @return	string	text portion of a migration filename
@@ -449,6 +459,7 @@ class CI_Migration {
 
 	/**
 	 * Retrieves current schema version
+	 * 检索当前架构版本
 	 *
 	 * @return	string	Current migration version
 	 */
@@ -462,6 +473,7 @@ class CI_Migration {
 
 	/**
 	 * Stores the current schema version
+	 * 存储当前架构版本
 	 *
 	 * @param	string	$migration	Migration reached
 	 * @return	void
@@ -477,6 +489,7 @@ class CI_Migration {
 
 	/**
 	 * Enable the use of CI super-global
+	 * 启用CI超全局的使用
 	 *
 	 * @param	string	$var
 	 * @return	mixed

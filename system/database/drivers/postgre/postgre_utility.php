@@ -73,6 +73,7 @@ class CI_DB_postgre_utility extends CI_DB_utility {
 
 	/**
 	 * Export
+	 * 出口
 	 *
 	 * @param	array	$params	Preferences
 	 * @return	mixed

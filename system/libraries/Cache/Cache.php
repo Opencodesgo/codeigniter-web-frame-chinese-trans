@@ -94,6 +94,7 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Cache key prefix
+	 * 缓存键前缀
 	 *
 	 * @var	string
 	 */
@@ -101,8 +102,10 @@ class CI_Cache extends CI_Driver_Library {
 
 	/**
 	 * Constructor
+	 * 构造函数。
 	 *
 	 * Initialize class properties based on the configuration array.
+	 * 基于配置数组初始化类属性。
 	 *
 	 * @param	array	$config = array()
 	 * @return	void
@@ -114,6 +117,7 @@ class CI_Cache extends CI_Driver_Library {
 		isset($config['key_prefix']) && $this->key_prefix = $config['key_prefix'];
 
 		// If the specified adapter isn't available, check the backup.
+		// 如果指定的适配器无法使用,请检查备份。
 		if ( ! $this->is_supported($this->_adapter))
 		{
 			if ( ! $this->is_supported($this->_backup_driver))

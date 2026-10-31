@@ -242,6 +242,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Query times
+	 * 查询时间。
 	 *
 	 * A list of times that queries took to execute.
 	 *
@@ -321,6 +322,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Cache auto-delete flag
+	 * 缓存自动删除标志
 	 *
 	 * @var	bool
 	 */
@@ -328,6 +330,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * DB Cache object
+	 * DB缓存对象
 	 *
 	 * @see	CI_DB_cache
 	 * @var	object
@@ -336,6 +339,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Protect identifiers flag
+	 * 保护标识符标志
 	 *
 	 * @var	bool
 	 */
@@ -343,6 +347,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * List of reserved identifiers
+	 * 保留标识符列表。
 	 *
 	 * Identifiers that must NOT be escaped.
 	 *
@@ -352,6 +357,7 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Identifier escape character
+	 * 标识符逃逸字符
 	 *
 	 * @var	string
 	 */

@@ -75,6 +75,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * UNSIGNED support
+	 * 无符号的支持
 	 *
 	 * @var	array
 	 */
@@ -95,6 +96,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
+	 * 在CREATE/ALTER TABLE语句中表示NULL值
 	 *
 	 * @var	string
 	 */
@@ -183,6 +185,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * Process column
+	 * 处理列
 	 *
 	 * @param	array	$field
 	 * @return	string
@@ -213,6 +216,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 
 	/**
 	 * Process indexes
+	 * 过程索引
 	 *
 	 * @param	string	$table	(ignored)
 	 * @return	string

@@ -87,6 +87,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * Validate SID regular expression
+	 * 验证SID正则表达式
 	 *
 	 * @var	string
 	 */
@@ -94,6 +95,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 	/**
 	 * mbstring.func_overload flag
+	 * mbstring.func_overload标志
 	 *
 	 * @var	bool
 	 */

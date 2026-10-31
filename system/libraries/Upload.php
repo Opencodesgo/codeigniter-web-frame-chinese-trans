@@ -199,6 +199,7 @@ class CI_Upload {
 
 	/**
 	 * Is image flag
+	 * 是图像标志
 	 *
 	 * @var	bool
 	 */
@@ -206,6 +207,7 @@ class CI_Upload {
 
 	/**
 	 * Image width
+	 * 图像宽
 	 *
 	 * @var	int
 	 */
@@ -213,6 +215,7 @@ class CI_Upload {
 
 	/**
 	 * Image height
+	 * 图像高
 	 *
 	 * @var	int
 	 */
@@ -220,6 +223,7 @@ class CI_Upload {
 
 	/**
 	 * Image type
+	 * 图像类型
 	 *
 	 * @var	string
 	 */
@@ -227,6 +231,7 @@ class CI_Upload {
 
 	/**
 	 * Image size string
+	 * 图像大小字符串
 	 *
 	 * @var	string
 	 */
@@ -234,6 +239,7 @@ class CI_Upload {
 
 	/**
 	 * Error messages list
+	 * 错误信息表
 	 *
 	 * @var	array
 	 */
@@ -241,6 +247,7 @@ class CI_Upload {
 
 	/**
 	 * Remove spaces flag
+	 * 移除空格标志
 	 *
 	 * @var	bool
 	 */
@@ -248,6 +255,7 @@ class CI_Upload {
 
 	/**
 	 * MIME detection flag
+	 * MIME检测标志
 	 *
 	 * @var	bool
 	 */
@@ -255,6 +263,7 @@ class CI_Upload {
 
 	/**
 	 * XSS filter flag
+	 * XSS过滤标志
 	 *
 	 * @var	bool
 	 */
@@ -262,6 +271,7 @@ class CI_Upload {
 
 	/**
 	 * Apache mod_mime fix flag
+	 * Apache mod_mime修复标志
 	 *
 	 * @var	bool
 	 */
@@ -269,6 +279,7 @@ class CI_Upload {
 
 	/**
 	 * Temporary filename prefix
+	 * 临时文件名前缀
 	 *
 	 * @var	string
 	 */
@@ -276,6 +287,7 @@ class CI_Upload {
 
 	/**
 	 * Filename sent by the client
+	 * 客户端发送的文件名
 	 *
 	 * @var	bool
 	 */

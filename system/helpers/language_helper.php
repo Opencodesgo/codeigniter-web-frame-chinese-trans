@@ -58,8 +58,10 @@ if ( ! function_exists('lang'))
 {
 	/**
 	 * Lang
+	 * 语言。
 	 *
 	 * Fetches a language variable and optionally outputs a form label
+	 * 获取语言变量并可选地输出表单标签。
 	 *
 	 * @param	string	$line		The language line
 	 * @param	string	$for		The "for" value (id of the form element)

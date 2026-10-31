@@ -565,7 +565,7 @@ if ( ! is_php('5.4'))
 
 /*
  * ------------------------------------------------------
- *  Is there a "pre_controller" hook?
+ *  Is there a "pre_controller" hook?	是否有一个“pre_controller”钩子？
  * ------------------------------------------------------
  */
 	$EXT->call_hook('pre_controller');

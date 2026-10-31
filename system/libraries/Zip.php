@@ -242,6 +242,7 @@ class CI_Zip {
 
 	/**
 	 * Add Data to Zip
+	 * 将数据添加到Zip中。
 	 *
 	 * Lets you add files to the archive. If the path is included
 	 * in the filename it will be placed within a directory. Make
@@ -272,6 +273,7 @@ class CI_Zip {
 
 	/**
 	 * Add Data to Zip
+	 * 将数据添加到Zip中
 	 *
 	 * @param	string	$filepath	the file name/path
 	 * @param	string	$data	the data to be encoded
@@ -325,6 +327,7 @@ class CI_Zip {
 
 	/**
 	 * Read the contents of a file and add it to the zip
+	 * 读取文件的内容并将其添加到zip中
 	 *
 	 * @param	string	$path
 	 * @param	bool	$archive_filepath
@@ -359,6 +362,7 @@ class CI_Zip {
 
 	/**
 	 * Read a directory and add it to the zip.
+	 * 读取目录并将其添加到zip文件中。
 	 *
 	 * This function recursively reads a folder and everything it contains (including
 	 * sub-folders) and creates a zip based on it. Whatever directory structure
@@ -414,6 +418,7 @@ class CI_Zip {
 
 	/**
 	 * Get the Zip file
+	 * 获取Zip文件
 	 *
 	 * @return	string	(binary encoded)
 	 */

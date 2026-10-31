@@ -103,6 +103,7 @@ class CI_Cart {
 	 * 购物类构造函数。
 	 *
 	 * The constructor loads the Session class, used to store the shopping cart contents.
+	 * 构造函数加载会话类,用于存储购物车内容。
 	 *
 	 * @param	array
 	 * @return	void

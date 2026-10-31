@@ -108,7 +108,7 @@ if ( ! function_exists('delete_cookie'))
 {
 	/**
 	 * Delete a COOKIE
-	 * 删除COOKIE，设置为空即可
+	 * 删除COOKIE，设置为空即可。
 	 *
 	 * @param	mixed
 	 * @param	string	the cookie domain. Usually: .yourdomain.com

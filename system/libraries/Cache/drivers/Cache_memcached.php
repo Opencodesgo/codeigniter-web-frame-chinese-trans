@@ -88,6 +88,7 @@ class CI_Cache_memcached extends CI_Driver {
 	public function __construct()
 	{
 		// Try to load memcached server info from the config file.
+		// 尝试从配置文件中加载memcached服务器信息
 		$CI =& get_instance();
 		$defaults = $this->_config['default'];
 
@@ -119,6 +120,7 @@ class CI_Cache_memcached extends CI_Driver {
 			if ($this->_memcached instanceof Memcache)
 			{
 				// Third parameter is persistence and defaults to TRUE.
+				// 第三个参数是持久性，默认为TRUE。
 				$this->_memcached->addServer(
 					$cache_server['hostname'],
 					$cache_server['port'],
@@ -157,6 +159,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Save
+	 * 保存
 	 *
 	 * @param	string	$id	Cache ID
 	 * @param	mixed	$data	Data being cached
@@ -294,6 +297,7 @@ class CI_Cache_memcached extends CI_Driver {
 
 	/**
 	 * Is supported
+	 * 支持。
 	 *
 	 * Returns FALSE if memcached is not supported on the system.
 	 * If it is, we setup the memcached object & return TRUE

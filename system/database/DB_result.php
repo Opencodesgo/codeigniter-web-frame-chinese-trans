@@ -285,6 +285,7 @@ class CI_DB_result {
 
 	/**
 	 * Query result. "array" version.
+	 * 查询结果。“数组”版本。
 	 *
 	 * @return	array
 	 */

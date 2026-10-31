@@ -216,6 +216,7 @@ function &DB($params = '', $query_builder_override = NULL)
 	$DB = new $driver($params);
 
 	// Check for a subdriver
+	// 检查子驱动程序
 	if ( ! empty($DB->subdriver))
 	{
 		$driver_file = BASEPATH.'database/drivers/'.$DB->dbdriver.'/subdrivers/'.$DB->dbdriver.'_'.$DB->subdriver.'_driver.php';

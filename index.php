@@ -52,6 +52,7 @@
  * 您可以根据当前环境加载不同的配置。设置环境还会影响日志记录和错误报告等功能。
  *
  * This can be set to anything, but default usage is:
+ * 这可以设置为任何值，但默认用法是：
  *
  *     development
  *     testing
@@ -125,6 +126,7 @@ switch (ENVIRONMENT)
  * use an absolute (full) server path.
  * For more info please see the user guide:
  * 如果你想让这个前端控制器使用不同于默认的“应用程序”目录，可以在这里设置其名称。
+ * 目录也可以重命名或移动到服务器上的任意位置。如果进行此类操作，请使用绝对（完整）的服务器路径。
  *
  * https://codeigniter.com/user_guide/general/managing_apps.html
  *
@@ -166,6 +168,8 @@ switch (ENVIRONMENT)
  * special instances where you might want to override the standard
  * routing in a specific front controller that shares a common CI installation.
  * 通常你会在routes.php文件中设置你的默认控制器。
+ * 不过，你可以通过在此处硬编码特定的控制器类/函数来强制自定义路由。
+ * 对于大多数应用程序，你不会在这里设置路由，但这是在某些特殊情况下的一种选择，例如当某个前端控制器与共享的CI安装共用时，你可能希望覆盖标准路由。
  *
  * IMPORTANT: If you set the routing here, NO OTHER controller will be
  * callable. In essence, this preference limits your application to ONE
@@ -234,6 +238,7 @@ switch (ENVIRONMENT)
 	else
 	{
 		// Ensure there's a trailing slash
+		// 确保后面有一个斜杠
 		$system_path = strtr(
 			rtrim($system_path, '/\\'),
 			'/\\',
@@ -257,6 +262,7 @@ switch (ENVIRONMENT)
  * -------------------------------------------------------------------
  */
 	// The name of THIS file
+	// 这个文件的名称
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
 	// Path to the system directory
@@ -264,6 +270,7 @@ switch (ENVIRONMENT)
 	define('BASEPATH', $system_path);
 
 	// Path to the front controller (this file) directory
+	// 前控制器（该文件）目录的路径
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
 	// Name of the "system" directory

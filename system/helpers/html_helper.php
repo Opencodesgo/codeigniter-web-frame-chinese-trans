@@ -79,8 +79,10 @@ if ( ! function_exists('ul'))
 {
 	/**
 	 * Unordered List
+	 * 无序列表。
 	 *
 	 * Generates an HTML unordered list from an single or multi-dimensional array.
+	 * 从单个或多维数组生成HTML无序列表。
 	 *
 	 * @param	array
 	 * @param	mixed
@@ -98,8 +100,10 @@ if ( ! function_exists('ol'))
 {
 	/**
 	 * Ordered List
+	 * 有序列表。
 	 *
 	 * Generates an HTML ordered list from an single or multi-dimensional array.
+	 * 从单个或多维数组生成HTML有序列表。
 	 *
 	 * @param	array
 	 * @param	mixed
@@ -117,8 +121,10 @@ if ( ! function_exists('_list'))
 {
 	/**
 	 * Generates the list
+	 * 生成列表。
 	 *
 	 * Generates an HTML ordered list from an single or multi-dimensional array.
+	 * 从单个或多维数组生成HTML有序列表。
 	 *
 	 * @param	string
 	 * @param	mixed
@@ -225,8 +231,10 @@ if ( ! function_exists('doctype'))
 {
 	/**
 	 * Doctype
+	 * 文档类型。
 	 *
 	 * Generates a page document type declaration
+	 * 生成页面文档类型声明。
 	 *
 	 * Examples of valid options: html5, xhtml-11, xhtml-strict, xhtml-trans,
 	 * xhtml-frame, html4-strict, html4-trans, and html4-frame.
