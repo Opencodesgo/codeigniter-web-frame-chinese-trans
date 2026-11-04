@@ -1,0 +1,81 @@
+#!/usr/bin/env php
+<?php
+/**
+ * spark，火花
+ */
+
+// Valid PHP Version?
+$minPHPVersion = '7.2';
+if (version_compare(PHP_VERSION, $minPHPVersion, '<'))
+{
+	die("Your PHP version must be {$minPHPVersion} or higher to run CodeIgniter. Current version: " . PHP_VERSION);
+}
+unset($minPHPVersion);
+
+/*
+ * --------------------------------------------------------------------
+ * CodeIgniter command-line tools	CodeIgniter命令行工具
+ * --------------------------------------------------------------------
+ * The main entry point into the CLI system and allows you to run
+ * commands and perform maintenance on your application.
+ * 进入 CLI 系统的主要入口，可让您运行命令并对应用程序执行维护操作。
+ *
+ * Because CodeIgniter can handle CLI requests as just another web request
+ * this class mainly acts as a passthru to the framework itself.
+ * 由于 CodeIgniter 可以将 CLI 请求当作普通网络请求来处理，因此该类主要充当框架本身的直接通道。
+ */
+
+define('SPARKED', true);
+
+/*
+ *---------------------------------------------------------------
+ * BOOTSTRAP THE APPLICATION	引导应用程序
+ *---------------------------------------------------------------
+ * This process sets up the path constants, loads and registers
+ * our autoloader, along with Composer's, loads our constants
+ * and fires up an environment-specific bootstrapping.
+ * 该过程会设置路径常量，加载并注册我们的自动加载器以及 Composer 的自动加载器，加载常量，并启动特定环境的初始化流程。
+ */
+
+// Refuse to run when called from php-cgi
+// 当从php-cgi调用时拒绝运行
+if (strpos(PHP_SAPI, 'cgi') === 0)
+{
+	die("The cli tool is not supported when running php-cgi. It needs php-cli to function!\n\n");
+}
+
+// Path to the front controller
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+
+// Load our paths config file
+require realpath('app/Config/Paths.php') ?: 'app/Config/Paths.php';
+// ^^^ Change this line if you move your application folder
+
+$paths = new Config\Paths();
+
+// Ensure the current directory is pointing to the front controller's directory
+chdir(FCPATH);
+
+$bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
+$app       = require realpath($bootstrap) ?: $bootstrap;
+
+// Grab our Console
+// 抓住我们的控制台
+$console = new CodeIgniter\CLI\Console($app);
+
+// We want errors to be shown when using it from the CLI.
+// 我们希望在CLI中使用它时显示错误
+error_reporting(-1);
+ini_set('display_errors', '1');
+
+// Show basic information before we do anything else.
+// 在我们做其他事情之前展示基本信息
+$console->showHeader();
+
+// fire off the command in the main framework.
+// 在主框架中启动命令
+$response = $console->run();
+if ($response->getStatusCode() >= 300)
+{
+	exit($response->getStatusCode());
+}

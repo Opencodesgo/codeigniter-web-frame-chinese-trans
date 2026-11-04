@@ -1,0 +1,1313 @@
+<?php
+/**
+ * CodeIgniter，HTTP，URI
+ */
+
+/**
+ * This file is part of the CodeIgniter 4 framework.
+ *
+ * (c) CodeIgniter Foundation <admin@codeigniter.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace CodeIgniter\HTTP;
+
+use CodeIgniter\HTTP\Exceptions\HTTPException;
+use Config\App;
+use InvalidArgumentException;
+
+/**
+ * Abstraction for a uniform resource identifier (URI).
+ * 统一资源标识符（URI）的抽象。
+ */
+class URI
+{
+	/**
+	 * Sub-delimiters used in query strings and fragments.
+	 * 查询字符串和片段中使用的子分隔符
+	 *
+	 * @const string
+	 */
+	const CHAR_SUB_DELIMS = '!\$&\'\(\)\*\+,;=';
+
+	/**
+	 * Unreserved characters used in paths, query strings, and fragments.
+	 * 在路径、查询字符串和片段中使用的非保留字符。
+	 *
+	 * @const string
+	 */
+	const CHAR_UNRESERVED = 'a-zA-Z0-9_\-\.~';
+
+	/**
+	 * Current URI string
+	 * 当前URI字符串
+	 *
+	 * @var string
+	 */
+	protected $uriString;
+
+	/**
+	 * List of URI segments.
+	 * URI段列表。
+	 *
+	 * Starts at 1 instead of 0
+	 *
+	 * @var array
+	 */
+	protected $segments = [];
+
+	/**
+	 * The URI Scheme.
+	 * URI方案
+	 *
+	 * @var string
+	 */
+	protected $scheme = 'http';
+
+	/**
+	 * URI User Info
+	 * URI用户信息
+	 *
+	 * @var string
+	 */
+	protected $user;
+
+	/**
+	 * URI User Password
+	 * URI用户密码
+	 *
+	 * @var string
+	 */
+	protected $password;
+
+	/**
+	 * URI Host
+	 * URI主机
+	 *
+	 * @var string
+	 */
+	protected $host;
+
+	/**
+	 * URI Port
+	 * URI端口
+	 *
+	 * @var integer
+	 */
+	protected $port;
+
+	/**
+	 * URI path.
+	 * URI路径
+	 *
+	 * @var string
+	 */
+	protected $path;
+
+	/**
+	 * The name of any fragment.
+	 * 任何片段的名称
+	 *
+	 * @var string
+	 */
+	protected $fragment = '';
+
+	/**
+	 * The query string.
+	 * 查询字符串
+	 *
+	 * @var array
+	 */
+	protected $query = [];
+
+	/**
+	 * Default schemes/ports.
+	 * 默认方案/端口
+	 *
+	 * @var array
+	 */
+	protected $defaultPorts = [
+		'http'  => 80,
+		'https' => 443,
+		'ftp'   => 21,
+		'sftp'  => 22,
+	];
+
+	/**
+	 * Whether passwords should be shown in userInfo/authority calls.
+	 * Default to false because URIs often show up in logs
+	 * 密码是否应在 userInfo/authority 调用中显示。默认为 false，因为 URI 通常会出现在日志中
+	 *
+	 * @var boolean
+	 */
+	protected $showPassword = false;
+
+	/**
+	 * If true, will continue instead of throwing exceptions.
+	 * 如果为true，将继续而不是抛出异常。
+	 *
+	 * @var boolean
+	 */
+	protected $silent = false;
+
+	/**
+	 * If true, will use raw query string.
+	 * 如果为true，将使用原始查询字符串。
+	 *
+	 * @var boolean
+	 */
+	protected $rawQueryString = false;
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Constructor.
+	 * 构造函数
+	 *
+	 * @param string $uri
+	 *
+	 * @throws InvalidArgumentException
+	 */
+	public function __construct(string $uri = null)
+	{
+		if (! is_null($uri))
+		{
+			$this->setURI($uri);
+		}
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * If $silent == true, then will not throw exceptions and will
+	 * attempt to continue gracefully.
+	 * 如果 $silent 为 true，则不会抛出异常，并会优雅地继续执行。
+	 *
+	 * @param boolean $silent
+	 *
+	 * @return URI
+	 */
+	public function setSilent(bool $silent = true)
+	{
+		$this->silent = $silent;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * If $raw == true, then will use parseStr() method
+	 * instead of native parse_str() function.
+	 *
+	 * @param boolean $raw
+	 *
+	 * @return URI
+	 */
+	public function useRawQueryString(bool $raw = true)
+	{
+		$this->rawQueryString = $raw;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets and overwrites any current URI information.
+	 * 设置和覆盖任何当前的URI信息
+	 *
+	 * @param string|null $uri
+	 *
+	 * @return URI
+	 */
+	public function setURI(string $uri = null)
+	{
+		if (! is_null($uri))
+		{
+			$parts = parse_url($uri);
+
+			if ($parts === false)
+			{
+				if ($this->silent)
+				{
+					return $this;
+				}
+
+				throw HTTPException::forUnableToParseURI($uri);
+			}
+
+			$this->applyParts($parts);
+		}
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the scheme component of the URI.
+	 * 检索URI的模式组件。
+	 *
+	 * If no scheme is present, this method MUST return an empty string.
+	 * 如果没有方案，这个方法必须返回一个空字符串。
+	 *
+	 * The value returned MUST be normalized to lowercase, per RFC 3986
+	 * Section 3.1.
+	 *
+	 * The trailing ":" character is not part of the scheme and MUST NOT be
+	 * added.
+	 *
+	 * @see    https://tools.ietf.org/html/rfc3986#section-3.1
+	 * @return string The URI scheme.
+	 */
+	public function getScheme(): string
+	{
+		return $this->scheme;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the authority component of the URI.
+	 * 检索URI的权限组件。
+	 *
+	 * If no authority information is present, this method MUST return an empty
+	 * string.
+	 * 如果不存在权限信息，则此方法必须返回一个空字符串。
+	 *
+	 * The authority syntax of the URI is:
+	 *
+	 * <pre>
+	 * [user-info@]host[:port]
+	 * </pre>
+	 *
+	 * If the port component is not set or is the standard port for the current
+	 * scheme, it SHOULD NOT be included.
+	 *
+	 * @see https://tools.ietf.org/html/rfc3986#section-3.2
+	 *
+	 * @param boolean $ignorePort
+	 *
+	 * @return string The URI authority, in "[user-info@]host[:port]" format.
+	 */
+	public function getAuthority(bool $ignorePort = false): string
+	{
+		if (empty($this->host))
+		{
+			return '';
+		}
+
+		$authority = $this->host;
+
+		if (! empty($this->getUserInfo()))
+		{
+			$authority = $this->getUserInfo() . '@' . $authority;
+		}
+
+		if (! empty($this->port) && ! $ignorePort)
+		{
+			// Don't add port if it's a standard port for
+			// this scheme
+			// 如果端口是该方案的标准端口，则不要添加该端口。
+			if ($this->port !== $this->defaultPorts[$this->scheme])
+			{
+				$authority .= ':' . $this->port;
+			}
+		}
+
+		$this->showPassword = false;
+
+		return $authority;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the user information component of the URI.
+	 * 检索URI的用户信息组件。
+	 *
+	 * If no user information is present, this method MUST return an empty
+	 * string.
+	 * 如果没有用户信息，则此方法必须返回一个空字符串。
+	 *
+	 * If a user is present in the URI, this will return that value;
+	 * additionally, if the password is also present, it will be appended to the
+	 * user value, with a colon (":") separating the values.
+	 *
+	 * NOTE that be default, the password, if available, will NOT be shown
+	 * as a security measure as discussed in RFC 3986, Section 7.5. If you know
+	 * the password is not a security issue, you can force it to be shown
+	 * with $this->showPassword();
+	 *
+	 * The trailing "@" character is not part of the user information and MUST
+	 * NOT be added.
+	 *
+	 * @return string|null The URI user information, in "username[:password]" format.
+	 */
+	public function getUserInfo()
+	{
+		$userInfo = $this->user;
+
+		if ($this->showPassword === true && ! empty($this->password))
+		{
+			$userInfo .= ':' . $this->password;
+		}
+
+		return $userInfo;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Temporarily sets the URI to show a password in userInfo. Will
+	 * reset itself after the first call to authority().
+	 * 暂时将URI设置为在userInfo中显示密码。首次调用authority()后会自动重置。
+	 *
+	 * @param boolean $val
+	 *
+	 * @return URI
+	 */
+	public function showPassword(bool $val = true)
+	{
+		$this->showPassword = $val;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the host component of the URI.
+	 * 检索URI的主机组件。
+	 *
+	 * If no host is present, this method MUST return an empty string.
+	 * 如果没有主机存在，这个方法必须返回一个空字符串。
+	 *
+	 * The value returned MUST be normalized to lowercase, per RFC 3986
+	 * Section 3.2.2.
+	 * 返回的值必须按照 RFC 3986 第 3.2.2 节的规定转换为小写。
+	 *
+	 * @see    http://tools.ietf.org/html/rfc3986#section-3.2.2
+	 * @return string The URI host.
+	 */
+	public function getHost(): string
+	{
+		return $this->host;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the port component of the URI.
+	 * 检索URI的端口组件。
+	 *
+	 * If a port is present, and it is non-standard for the current scheme,
+	 * this method MUST return it as an integer. If the port is the standard port
+	 * used with the current scheme, this method SHOULD return null.
+	 * 如果存在端口，且该端口与当前方案不兼容，则此方法必须将其返回为整数。
+	 * 如果端口是当前方案所使用的标准端口，则此方法应返回 null。
+	 *
+	 * If no port is present, and no scheme is present, this method MUST return
+	 * a null value.
+	 *
+	 * If no port is present, but a scheme is present, this method MAY return
+	 * the standard port for that scheme, but SHOULD return null.
+	 *
+	 * @return null|integer The URI port.
+	 */
+	public function getPort()
+	{
+		return $this->port;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the path component of the URI.
+	 * 检索URI的路径组件。
+	 *
+	 * The path can either be empty or absolute (starting with a slash) or
+	 * rootless (not starting with a slash). Implementations MUST support all
+	 * three syntaxes.
+	 *
+	 * Normally, the empty path "" and absolute path "/" are considered equal as
+	 * defined in RFC 7230 Section 2.7.3. But this method MUST NOT automatically
+	 * do this normalization because in contexts with a trimmed base path, e.g.
+	 * the front controller, this difference becomes significant. It's the task
+	 * of the user to handle both "" and "/".
+	 *
+	 * The value returned MUST be percent-encoded, but MUST NOT double-encode
+	 * any characters. To determine what characters to encode, please refer to
+	 * RFC 3986, Sections 2 and 3.3.
+	 *
+	 * As an example, if the value should include a slash ("/") not intended as
+	 * delimiter between path segments, that value MUST be passed in encoded
+	 * form (e.g., "%2F") to the instance.
+	 *
+	 * @see    https://tools.ietf.org/html/rfc3986#section-2
+	 * @see    https://tools.ietf.org/html/rfc3986#section-3.3
+	 * @return string The URI path.
+	 */
+	public function getPath(): string
+	{
+		return $this->path ?? '';
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve the query string
+	 * 检索查询字符串
+	 *
+	 * @param array $options
+	 *
+	 * @return string
+	 */
+	public function getQuery(array $options = []): string
+	{
+		$vars = $this->query;
+
+		if (array_key_exists('except', $options))
+		{
+			if (! is_array($options['except']))
+			{
+				$options['except'] = [$options['except']];
+			}
+
+			foreach ($options['except'] as $var)
+			{
+				unset($vars[$var]);
+			}
+		}
+		elseif (array_key_exists('only', $options))
+		{
+			$temp = [];
+
+			if (! is_array($options['only']))
+			{
+				$options['only'] = [$options['only']];
+			}
+
+			foreach ($options['only'] as $var)
+			{
+				if (array_key_exists($var, $vars))
+				{
+					$temp[$var] = $vars[$var];
+				}
+			}
+
+			$vars = $temp;
+		}
+
+		return empty($vars) ? '' : http_build_query($vars);
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Retrieve a URI fragment
+	 * 检索URI片段
+	 *
+	 * @return string
+	 */
+	public function getFragment(): string
+	{
+		return $this->fragment ?? '';
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Returns the segments of the path as an array.
+	 * 以数组形式返回路径段
+	 *
+	 * @return array
+	 */
+	public function getSegments(): array
+	{
+		return $this->segments;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Returns the value of a specific segment of the URI path.
+	 * 返回URI路径的特定段的值
+	 *
+	 * @param integer $number  Segment number
+	 * @param string  $default Default value
+	 *
+	 * @return string     The value of the segment. If no segment is found,
+	 *                    throws InvalidArgumentError
+	 */
+	public function getSegment(int $number, string $default = ''): string
+	{
+		// The segment should treat the array as 1-based for the user
+		// but we still have to deal with a zero-based array.
+		$number -= 1;
+
+		if ($number > count($this->segments) && ! $this->silent)
+		{
+			throw HTTPException::forURISegmentOutOfRange($number);
+		}
+
+		return $this->segments[$number] ?? $default;
+	}
+
+	/**
+	 * Set the value of a specific segment of the URI path.
+	 * Allows to set only existing segments or add new one.
+	 * 设置URI路径中特定部分的值。可仅设置已存在的部分，或添加新的部分。
+	 *
+	 * @param integer $number
+	 * @param mixed   $value  (string or int)
+	 *
+	 * @return $this
+	 */
+	public function setSegment(int $number, $value)
+	{
+		// The segment should treat the array as 1-based for the user
+		// but we still have to deal with a zero-based array.
+		$number -= 1;
+
+		if ($number > count($this->segments) + 1)
+		{
+			if ($this->silent)
+			{
+				return $this;
+			}
+
+			throw HTTPException::forURISegmentOutOfRange($number);
+		}
+
+		$this->segments[$number] = $value;
+		$this->refreshPath();
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Returns the total number of segments.
+	 * 返回段的总数
+	 *
+	 * @return integer
+	 */
+	public function getTotalSegments(): int
+	{
+		return count($this->segments);
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Allow the URI to be output as a string by simply casting it to a string
+	 * or echoing out.
+	 * 只需将 URI 转换为字符串或直接输出，即可让其以字符串形式输出。
+	 */
+	public function __toString(): string
+	{
+		// If hosted in a sub-folder, we will have additional
+		// segments that show up prior to the URI path we just
+		// grabbed from the request, so add it on if necessary.
+		$config   = config(App::class);
+		$baseUri  = new self($config->baseURL);
+		$basePath = trim($baseUri->getPath(), '/') . '/';
+		$path     = $this->getPath();
+		$trimPath = ltrim($path, '/');
+
+		if ($basePath !== '/' && strpos($trimPath, $basePath) !== 0)
+		{
+			$path = $basePath . $trimPath;
+		}
+
+		// force https if needed
+		if ($config->forceGlobalSecureRequests)
+		{
+			$this->setScheme('https');
+		}
+
+		return static::createURIString(
+			$this->getScheme(), $this->getAuthority(), $path, // Absolute URIs should use a "/" for an empty path
+			$this->getQuery(), $this->getFragment()
+		);
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Builds a representation of the string from the component parts.
+	 * 从组件部分生成字符串的表示形式
+	 *
+	 * @param string $scheme
+	 * @param string $authority
+	 * @param string $path
+	 * @param string $query
+	 * @param string $fragment
+	 *
+	 * @return string
+	 */
+	public static function createURIString(string $scheme = null, string $authority = null, string $path = null, string $query = null, string $fragment = null): string
+	{
+		$uri = '';
+		if (! empty($scheme))
+		{
+			$uri .= $scheme . '://';
+		}
+
+		if (! empty($authority))
+		{
+			$uri .= $authority;
+		}
+
+		if ($path !== '')
+		{
+			$uri .= substr($uri, -1, 1) !== '/' ? '/' . ltrim($path, '/') : ltrim($path, '/');
+		}
+
+		if ($query)
+		{
+			$uri .= '?' . $query;
+		}
+
+		if ($fragment)
+		{
+			$uri .= '#' . $fragment;
+		}
+
+		return $uri;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Parses the given string an saves the appropriate authority pieces.
+	 * 解析给定的字符串并保存适当的权限片段
+	 *
+	 * @param string $str
+	 *
+	 * @return $this
+	 */
+	public function setAuthority(string $str)
+	{
+		$parts = parse_url($str);
+
+		if (! isset($parts['path']))
+		{
+			$parts['path'] = $this->getPath();
+		}
+
+		if (empty($parts['host']) && $parts['path'] !== '')
+		{
+			$parts['host'] = $parts['path'];
+			unset($parts['path']); // @phpstan-ignore-line
+		}
+
+		$this->applyParts($parts);
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the scheme for this URI.
+	 * 为这个URI设置模式。
+	 *
+	 * Because of the large number of valid schemes we cannot limit this
+	 * to only http or https.
+	 *
+	 * @see https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml
+	 *
+	 * @param string $str
+	 *
+	 * @return $this
+	 */
+	public function setScheme(string $str)
+	{
+		$str = strtolower($str);
+		$str = preg_replace('#:(//)?$#', '', $str);
+
+		$this->scheme = $str;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the userInfo/Authority portion of the URI.
+	 * 设置URI的userInfo/Authority部分
+	 *
+	 * @param string $user The user's username
+	 * @param string $pass The user's password
+	 *
+	 * @return $this
+	 */
+	public function setUserInfo(string $user, string $pass)
+	{
+		$this->user     = trim($user);
+		$this->password = trim($pass);
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the host name to use.
+	 * 设置要使用的主机名
+	 *
+	 * @param string $str
+	 *
+	 * @return $this
+	 */
+	public function setHost(string $str)
+	{
+		$this->host = trim($str);
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the port portion of the URI.
+	 * 设置URI的端口部分
+	 *
+	 * @param integer $port
+	 *
+	 * @return $this
+	 */
+	public function setPort(int $port = null)
+	{
+		if (is_null($port))
+		{
+			return $this;
+		}
+
+		if ($port <= 0 || $port > 65535)
+		{
+			if ($this->silent)
+			{
+				return $this;
+			}
+
+			throw HTTPException::forInvalidPort($port);
+		}
+
+		$this->port = $port;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the path portion of the URI.
+	 * 设置URI的路径部分
+	 *
+	 * @param string $path
+	 *
+	 * @return $this
+	 */
+	public function setPath(string $path)
+	{
+		$this->path = $this->filterPath($path);
+
+		$tempPath = trim($this->path, '/');
+
+		$this->segments = ($tempPath === '') ? [] : explode('/', $tempPath);
+
+		return $this;
+	}
+
+	/**
+	 * Sets the path portion of the URI based on segments.
+	 * 基于段设置URI的路径部分
+	 *
+	 * @return $this
+	 */
+	public function refreshPath()
+	{
+		$this->path = $this->filterPath(implode('/', $this->segments));
+
+		$tempPath = trim($this->path, '/');
+
+		$this->segments = ($tempPath === '') ? [] : explode('/', $tempPath);
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the query portion of the URI, while attempting
+	 * to clean the various parts of the query keys and values.
+	 * 设置URI的查询部分，同时尝试清理查询键值的各种组成部分。
+	 *
+	 * @param string $query
+	 *
+	 * @return $this
+	 */
+	public function setQuery(string $query)
+	{
+		if (strpos($query, '#') !== false)
+		{
+			if ($this->silent)
+			{
+				return $this;
+			}
+
+			throw HTTPException::forMalformedQueryString();
+		}
+
+		// Can't have leading ?
+		if (! empty($query) && strpos($query, '?') === 0)
+		{
+			$query = substr($query, 1);
+		}
+
+		if ($this->rawQueryString)
+		{
+			$this->query = $this->parseStr($query);
+		}
+		else
+		{
+			parse_str($query, $this->query);
+		}
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * A convenience method to pass an array of items in as the Query
+	 * portion of the URI.
+	 * 一种便捷的方法，将数组中的项目作为 URI 的查询部分传递。
+	 *
+	 * @param array $query
+	 *
+	 * @return URI
+	 */
+	public function setQueryArray(array $query)
+	{
+		$query = http_build_query($query);
+
+		return $this->setQuery($query);
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Adds a single new element to the query vars.
+	 * 向查询变量中添加单个新元素
+	 *
+	 * @param string $key
+	 * @param mixed  $value
+	 *
+	 * @return $this
+	 */
+	public function addQuery(string $key, $value = null)
+	{
+		$this->query[$key] = $value;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Removes one or more query vars from the URI.
+	 * 从URI中删除一个或多个查询变量
+	 *
+	 * @param string ...$params
+	 *
+	 * @return $this
+	 */
+	public function stripQuery(...$params)
+	{
+		foreach ($params as $param)
+		{
+			unset($this->query[$param]);
+		}
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Filters the query variables so that only the keys passed in
+	 * are kept. The rest are removed from the object.
+	 * 过滤查询变量，仅保留传入的键，其余键将从对象中移除。
+	 *
+	 * @param string ...$params
+	 *
+	 * @return $this
+	 */
+	public function keepQuery(...$params)
+	{
+		$temp = [];
+
+		foreach ($this->query as $key => $value)
+		{
+			if (! in_array($key, $params, true))
+			{
+				continue;
+			}
+
+			$temp[$key] = $value;
+		}
+
+		$this->query = $temp;
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Sets the fragment portion of the URI.
+	 * 设置URI的片段部分
+	 *
+	 * @see https://tools.ietf.org/html/rfc3986#section-3.5
+	 *
+	 * @param string $string
+	 *
+	 * @return $this
+	 */
+	public function setFragment(string $string)
+	{
+		$this->fragment = trim($string, '# ');
+
+		return $this;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Encodes any dangerous characters, and removes dot segments.
+	 * While dot segments have valid uses according to the spec,
+	 * this URI class does not allow them.
+	 * 编码任何危险字符，并移除点分段。尽管根据规范，点分段具有有效用途，但此URI类不允许使用它们。
+	 *
+	 * @param string|null $path
+	 *
+	 * @return string
+	 */
+	protected function filterPath(string $path = null): string
+	{
+		$orig = $path;
+
+		// Decode/normalize percent-encoded chars so
+		// we can always have matching for Routes, etc.
+		$path = urldecode($path);
+
+		// Remove dot segments
+		$path = $this->removeDotSegments($path);
+
+		// Fix up some leading slash edge cases...
+		if (strpos($orig, './') === 0)
+		{
+			$path = '/' . $path;
+		}
+		if (strpos($orig, '../') === 0)
+		{
+			$path = '/' . $path;
+		}
+
+		// Encode characters
+		$path = preg_replace_callback(
+				'/(?:[^' . static::CHAR_UNRESERVED . ':@&=\+\$,\/;%]+|%(?![A-Fa-f0-9]{2}))/', function (array $matches) {
+					return rawurlencode($matches[0]);
+				}, $path
+		);
+
+		return $path;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Saves our parts from a parse_url call.
+	 * 从parse_url调用中保存我们的部件
+	 *
+	 * @param array $parts
+	 */
+	protected function applyParts(array $parts)
+	{
+		if (! empty($parts['host']))
+		{
+			$this->host = $parts['host'];
+		}
+		if (! empty($parts['user']))
+		{
+			$this->user = $parts['user'];
+		}
+		if (isset($parts['path']) && $parts['path'] !== '')
+		{
+			$this->path = $this->filterPath($parts['path']);
+		}
+		if (! empty($parts['query']))
+		{
+			$this->setQuery($parts['query']);
+		}
+		if (! empty($parts['fragment']))
+		{
+			$this->fragment = $parts['fragment'];
+		}
+
+		// Scheme
+		if (isset($parts['scheme']))
+		{
+			$this->setScheme(rtrim($parts['scheme'], ':/'));
+		}
+		else
+		{
+			$this->setScheme('http');
+		}
+
+		// Port
+		if (isset($parts['port']))
+		{
+			if (! is_null($parts['port']))
+			{
+				// Valid port numbers are enforced by earlier parse_url or setPort()
+				$port       = $parts['port'];
+				$this->port = $port;
+			}
+		}
+
+		if (isset($parts['pass']))
+		{
+			$this->password = $parts['pass'];
+		}
+
+		// Populate our segments array
+		if (isset($parts['path']) && $parts['path'] !== '')
+		{
+			$tempPath = trim($parts['path'], '/');
+
+			$this->segments = ($tempPath === '') ? [] : explode('/', $tempPath);
+		}
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Combines one URI string with this one based on the rules set out in
+	 * RFC 3986 Section 2
+	 * 根据RFC 3986第2部分中设置的规则,将一个URI字符串与这个URI字符串相结合
+	 *
+	 * @see http://tools.ietf.org/html/rfc3986#section-5.2
+	 *
+	 * @param string $uri
+	 *
+	 * @return URI
+	 */
+	public function resolveRelativeURI(string $uri)
+	{
+		/*
+		 * NOTE: We don't use removeDotSegments in this
+		 * algorithm since it's already done by this line!
+		 */
+		$relative = new self();
+		$relative->setURI($uri);
+
+		if ($relative->getScheme() === $this->getScheme())
+		{
+			$relative->setScheme('');
+		}
+
+		$transformed = clone $relative;
+
+		// 5.2.2 Transform References in a non-strict method (no scheme)
+		if (! empty($relative->getAuthority()))
+		{
+			$transformed->setAuthority($relative->getAuthority())
+					->setPath($relative->getPath())
+					->setQuery($relative->getQuery());
+		}
+		else
+		{
+			if ($relative->getPath() === '')
+			{
+				$transformed->setPath($this->getPath());
+
+				if ($relative->getQuery())
+				{
+					$transformed->setQuery($relative->getQuery());
+				}
+				else
+				{
+					$transformed->setQuery($this->getQuery());
+				}
+			}
+			else
+			{
+				if (strpos($relative->getPath(), '/') === 0)
+				{
+					$transformed->setPath($relative->getPath());
+				}
+				else
+				{
+					$transformed->setPath($this->mergePaths($this, $relative));
+				}
+
+				$transformed->setQuery($relative->getQuery());
+			}
+
+			$transformed->setAuthority($this->getAuthority());
+		}
+
+		$transformed->setScheme($this->getScheme());
+
+		$transformed->setFragment($relative->getFragment());
+
+		return $transformed;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Given 2 paths, will merge them according to rules set out in RFC 2986,
+	 * Section 5.2
+	 *
+	 * @see http://tools.ietf.org/html/rfc3986#section-5.2.3
+	 *
+	 * @param URI $base
+	 * @param URI $reference
+	 *
+	 * @return string
+	 */
+	protected function mergePaths(URI $base, URI $reference): string
+	{
+		if (! empty($base->getAuthority()) && $base->getPath() === '')
+		{
+			return '/' . ltrim($reference->getPath(), '/ ');
+		}
+
+		$path = explode('/', $base->getPath());
+
+		if ($path[0] === '')
+		{
+			unset($path[0]);
+		}
+
+		array_pop($path);
+		array_push($path, $reference->getPath());
+
+		return implode('/', $path);
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * Used when resolving and merging paths to correctly interpret and
+	 * remove single and double dot segments from the path per
+	 * RFC 3986 Section 5.2.4
+	 *
+	 * @see http://tools.ietf.org/html/rfc3986#section-5.2.4
+	 *
+	 * @param string $path
+	 *
+	 * @return   string
+	 * @internal param \CodeIgniter\HTTP\URI $uri
+	 */
+	public function removeDotSegments(string $path): string
+	{
+		if ($path === '' || $path === '/')
+		{
+			return $path;
+		}
+
+		$output = [];
+
+		$input = explode('/', $path);
+
+		if ($input[0] === '')
+		{
+			unset($input[0]);
+			$input = array_values($input);
+		}
+
+		// This is not a perfect representation of the
+		// RFC, but matches most cases and is pretty
+		// much what Guzzle uses. Should be good enough
+		// for almost every real use case.
+		foreach ($input as $segment)
+		{
+			if ($segment === '..')
+			{
+				array_pop($output);
+			}
+			elseif ($segment !== '.' && $segment !== '')
+			{
+				array_push($output, $segment);
+			}
+		}
+
+		$output = implode('/', $output);
+		$output = ltrim($output, '/ ');
+
+		if ($output !== '/')
+		{
+			// Add leading slash if necessary
+			if (strpos($path, '/') === 0)
+			{
+				$output = '/' . $output;
+			}
+
+			// Add trailing slash if necessary
+			if (substr($path, -1, 1) === '/')
+			{
+				$output .= '/';
+			}
+		}
+
+		return $output;
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
+	 * This is equivalent to the native PHP parse_str() function.
+	 * This version allows the dot to be used as a key of the query string.
+	 * 这相当于原生的 PHP parse_str() 函数。此版本允许使用点号作为查询字符串的键。
+	 *
+	 * @param string $query
+	 *
+	 * @return array
+	 */
+	protected function parseStr(string $query): array
+	{
+		$return = [];
+		$query  = explode('&', $query);
+
+		$params = array_map(function (string $chunk) {
+			return preg_replace_callback('/^(?<key>[^&=]+?)(?:\[[^&=]*\])?=(?<value>[^&=]+)/', function (array $match) {
+				return str_replace($match['key'], bin2hex($match['key']), $match[0]);
+			}, urldecode($chunk));
+		}, $query);
+
+		$params = implode('&', $params);
+		parse_str($params, $params);
+
+		foreach ($params as $key => $value)
+		{
+			$return[hex2bin($key)] = $value;
+		}
+
+		$query = $params = null;
+
+		return $return;
+	}
+
+	//--------------------------------------------------------------------
+}

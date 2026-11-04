@@ -1,0 +1,95 @@
+<?php
+/**
+ * Kint，解析器，Table 插件
+ */
+
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2013 Jonathan Vollebregt (jnvsor@gmail.com), Rokas Šleinius (raveren@gmail.com)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+namespace Kint\Parser;
+
+use Kint\Object\BasicObject;
+use Kint\Object\Representation\Representation;
+
+class TablePlugin extends Plugin
+{
+    public function getTypes()
+    {
+        return array('array');
+    }
+
+    public function getTriggers()
+    {
+        return Parser::TRIGGER_SUCCESS;
+    }
+
+    public function parse(&$var, BasicObject &$o, $trigger)
+    {
+        if (empty($o->value->contents)) {
+            return;
+        }
+
+        $array = $this->parser->getCleanArray($var);
+
+        if (\count($array) < 2) {
+            return;
+        }
+
+        // Ensure this is an array of arrays and that all child arrays have the
+        // same keys. We don't care about their children - if there's another
+        // "table" inside we'll just make another one down the value tab
+		// 确保这是一个数组的数组，并且所有子数组都具有相同的键。
+		// 我们不关心它们的子项——如果内部还有另一个“表格”，我们只需在值标签下创建一个新的表格即可。
+        $keys = null;
+        foreach ($array as $elem) {
+            if (!\is_array($elem) || \count($elem) < 2) {
+                return;
+            }
+
+            if (null === $keys) {
+                $keys = \array_keys($elem);
+            } elseif (\array_keys($elem) !== $keys) {
+                return;
+            }
+        }
+
+        // Ensure none of the child arrays are recursion or depth limit. We
+        // don't care if their children are since they are the table cells
+		// 确保所有子数组都不包含递归或深度限制。我们不在乎他们的孩子，因为他们是表格上的单元格。
+        foreach ($o->value->contents as $childarray) {
+            if (empty($childarray->value->contents)) {
+                return;
+            }
+        }
+
+        // Objects by reference for the win! We can do a copy-paste of the value
+        // representation contents and just slap a new hint on there and hey
+        // presto we have our table representation with no extra memory used!
+		// 通过引用对象来实现！我们可以直接复制粘贴值的表示内容，然后在上面添加一个新的提示，
+		// 就这样，我们就能得到表格表示，而且没有额外的内存使用！
+        $table = new Representation('Table');
+        $table->contents = $o->value->contents;
+        $table->hints[] = 'table';
+        $o->addRepresentation($table, 0);
+    }
+}
